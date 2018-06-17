@@ -1,0 +1,35 @@
+grammar org.xtext.example.wappm.Wappm with org.eclipse.xtext.common.Terminals
+
+generate wappm "http://www.xtext.org/example/wappm/Wappm"
+
+WebModel :
+  'webapp' name=ID '{'
+    hypertext=HypertextLayer
+    content=ContentLayer
+  '}' ;
+
+HypertextLayer :
+  'hypertext {'
+     pages+=IndexPage+
+  '}' ;
+
+IndexPage :
+  'index' name=ID 'shows'displayedClass=[Class]'{'  '}' ;
+
+
+ContentLayer :
+  'content {'
+    classes+=Class+
+  '}' ;
+
+Class :
+  'class' name=ID '{' 
+  	attributes+=Attribute+
+  '}' ;
+  
+ Attribute : 
+  'attr' name=ID ':' type=AppTypes ';'  ;
+  
+enum AppTypes :
+  String | Integer | Float | Email | Boolean
+;

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="WappmParsingTest.shouldValidateModel" project="org.xtext.example.wappm.tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="shouldValidateModel" classname="org.xtext.example.wappm.tests.WappmParsingTest" time="0.185"/>
+</testrun>

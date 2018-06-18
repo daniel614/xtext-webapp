@@ -20,7 +20,7 @@ public class WappmValidator extends AbstractWappmValidator {
     boolean _isUpperCase = Character.isUpperCase(webmodel.getName().charAt(0));
     boolean _not = (!_isUpperCase);
     if (_not) {
-      this.warning("Name should start with a capital", 
+      this.warning("Name should start with a capital letter", 
         WappmPackage.Literals.WEB_MODEL__NAME);
     }
   }

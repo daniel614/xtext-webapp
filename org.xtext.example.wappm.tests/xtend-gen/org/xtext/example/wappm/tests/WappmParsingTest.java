@@ -4,18 +4,16 @@
 package org.xtext.example.wappm.tests;
 
 import com.google.inject.Inject;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.testing.InjectWith;
 import org.eclipse.xtext.testing.XtextRunner;
 import org.eclipse.xtext.testing.util.ParseHelper;
+import org.eclipse.xtext.testing.validation.ValidationTestHelper;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xtext.example.wappm.tests.WappmInjectorProvider;
+import org.xtext.example.wappm.wappm.WappmPackage;
 import org.xtext.example.wappm.wappm.WebModel;
 
 @RunWith(XtextRunner.class)
@@ -23,22 +21,178 @@ import org.xtext.example.wappm.wappm.WebModel;
 @SuppressWarnings("all")
 public class WappmParsingTest {
   @Inject
-  private ParseHelper<WebModel> parseHelper;
+  private ParseHelper<WebModel> parser;
+  
+  @Inject
+  private ValidationTestHelper validator;
   
   @Test
-  public void loadModel() {
+  public void shouldValidateModel() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("Hello Xtext!");
+      _builder.append("webapp TestApp {");
       _builder.newLine();
-      final WebModel result = this.parseHelper.parse(_builder);
-      Assert.assertNotNull(result);
-      final EList<Resource.Diagnostic> errors = result.eResource().getErrors();
-      StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("Unexpected errors: ");
-      String _join = IterableExtensions.join(errors, ", ");
-      _builder_1.append(_join);
-      Assert.assertTrue(_builder_1.toString(), errors.isEmpty());
+      _builder.append("\t");
+      _builder.append("hypertext TestHyper {");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("detail TestDetail uses SomeClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("path /test/:test");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("links {");
+      _builder.newLine();
+      _builder.append("\t\t\t\t");
+      _builder.append("link {");
+      _builder.newLine();
+      _builder.append("\t\t\t\t\t");
+      _builder.append("page TestIndex");
+      _builder.newLine();
+      _builder.append("\t\t\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("index TestIndex uses TestClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("path /test");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("content TestContent {");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("class TestClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("attr SampleAttr : String");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("uniqueIdentifier SampleAttr");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("class SomeClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("attr SampleAttr2 : String");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("uniqueIdentifier SampleAttr2");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      final WebModel model = this.parser.parse(_builder);
+      this.validator.assertNoErrors(model);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void shouldOutputWarningAboutCapitalLetterWebModel() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("webapp testApp {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("hypertext TestHyper {");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("detail TestDetail uses SomeClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("path /test/:test");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("links {");
+      _builder.newLine();
+      _builder.append("\t\t\t\t");
+      _builder.append("link {");
+      _builder.newLine();
+      _builder.append("\t\t\t\t\t");
+      _builder.append("page TestIndex");
+      _builder.newLine();
+      _builder.append("\t\t\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("index TestIndex uses TestClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("path /test");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("content TestContent {");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("class TestClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("attr SampleAttr : String");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("uniqueIdentifier SampleAttr");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("class SomeClass {");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("attr SampleAttr2 : String");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append("uniqueIdentifier SampleAttr2");
+      _builder.newLine();
+      _builder.append("\t\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      final WebModel model = this.parser.parse(_builder);
+      this.validator.assertWarning(model, WappmPackage.Literals.WEB_MODEL, null, "Name should start with a capital letter");
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

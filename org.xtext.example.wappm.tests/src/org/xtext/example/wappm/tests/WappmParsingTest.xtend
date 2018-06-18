@@ -11,20 +11,83 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.xtext.example.wappm.wappm.WebModel
+import org.eclipse.xtext.testing.validation.ValidationTestHelper
+import org.xtext.example.wappm.wappm.WappmPackage
 
 @RunWith(XtextRunner)
 @InjectWith(WappmInjectorProvider)
 class WappmParsingTest {
 	@Inject
-	ParseHelper<WebModel> parseHelper
+	ParseHelper<WebModel> parser
+	
+	@Inject
+	ValidationTestHelper validator
 	
 	@Test
-	def void loadModel() {
-		val result = parseHelper.parse('''
-			Hello Xtext!
+	def void shouldValidateModel() {
+		val model = parser.parse('''
+			webapp TestApp {
+				hypertext TestHyper {
+					detail TestDetail uses SomeClass {
+						path /test/:test
+						links {
+							link {
+								page TestIndex
+							}
+						}
+					}
+					index TestIndex uses TestClass {
+						path /test
+					}
+				}
+				
+				content TestContent {
+					class TestClass {
+						attr SampleAttr : String
+						uniqueIdentifier SampleAttr
+					}
+					class SomeClass {
+						attr SampleAttr2 : String
+						uniqueIdentifier SampleAttr2
+					}
+				}
+			}
 		''')
-		Assert.assertNotNull(result)
-		val errors = result.eResource.errors
-		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+		
+		validator.assertNoErrors(model)
+	}
+	
+		@Test
+	def void shouldOutputWarningAboutCapitalLetterWebModel() {
+		val model = parser.parse('''
+			webapp testApp {
+				hypertext TestHyper {
+					detail TestDetail uses SomeClass {
+						path /test/:test
+						links {
+							link {
+								page TestIndex
+							}
+						}
+					}
+					index TestIndex uses TestClass {
+						path /test
+					}
+				}
+				
+				content TestContent {
+					class TestClass {
+						attr SampleAttr : String
+						uniqueIdentifier SampleAttr
+					}
+					class SomeClass {
+						attr SampleAttr2 : String
+						uniqueIdentifier SampleAttr2
+					}
+				}
+			}
+		''')
+		
+		validator.assertWarning(model, WappmPackage.Literals.WEB_MODEL, null, "Name should start with a capital letter")
 	}
 }

@@ -1,6 +1,7 @@
 *.class
 *.jar
 *.log
+*.g
 
 org.xtext.example.wappm/src-gen
 org.xtext.example.wappm/xtend-gen

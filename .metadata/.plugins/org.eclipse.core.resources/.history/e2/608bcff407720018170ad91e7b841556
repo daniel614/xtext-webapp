@@ -1,9 +1,0 @@
-grammar org.xtext.example.wappm.Wappm with org.eclipse.xtext.common.Terminals
-
-generate wappm "http://www.xtext.org/example/wappm/Wappm"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

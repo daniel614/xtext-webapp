@@ -1,0 +1,9 @@
+*.class
+*.jar
+*.log
+
+src-gen
+xtext-gen
+xtend-gen
+generated
+.metadata

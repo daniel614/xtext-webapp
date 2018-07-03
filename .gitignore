@@ -3,15 +3,15 @@
 *.log
 *.g
 
-org.xtext.example.wappm/src-gen
-org.xtext.example.wappm/xtend-gen
-org.xtext.example.wappm/model/generated
-org.xtext.example.wappm.tests/src-gen
-org.xtext.example.wappm.tests/xtend-gen
-org.xtext.example.wappm.ui.tests/src-gen
-org.xtext.example.wappm.ui/src-gen
-org.xtext.example.wappm.ui/xtend-gen
-org.xtext.example.wappm.ide/src-gen
-org.xtext.example.wappm.ide/xtend-gen
+org.xtext.example.wappm/src-gen/*
+org.xtext.example.wappm/xtend-gen/*
+org.xtext.example.wappm/model/generated/*
+org.xtext.example.wappm.tests/src-gen/*
+org.xtext.example.wappm.tests/xtend-gen/*
+org.xtext.example.wappm.ui.tests/src-gen/*
+org.xtext.example.wappm.ui/src-gen/*
+org.xtext.example.wappm.ui/xtend-gen/*
+org.xtext.example.wappm.ide/src-gen/*
+org.xtext.example.wappm.ide/xtend-gen/*
 
 .metadata

@@ -18,6 +18,7 @@ import org.xtext.example.wappm.wappm.StaticPage
 import org.xtext.example.wappm.wappm.DetailPage
 import org.xtext.example.wappm.wappm.DynamicPage
 import org.xtext.example.wappm.wappm.AppTypes
+import org.xtext.example.wappm.wappm.Link
 
 /**
  * Generates code from your model files on save.
@@ -71,6 +72,10 @@ class WappmGenerator extends AbstractGenerator {
 			private String path = "«ip.path»";
 			
 			«ip.displayedClass.name» usedClass = new «ip.displayedClass.name»();
+			
+			«FOR l : ip.links»
+				«l.compile»
+			«ENDFOR»
 		}
 	'''
 	
@@ -79,12 +84,25 @@ class WappmGenerator extends AbstractGenerator {
 			private String path = "«dp.path»";
 			
 			«dp.displayedClass.name» usedClass = new «dp.displayedClass.name»();
+			
+			«FOR l : dp.links»
+				«l.compile»
+			«ENDFOR» 
 		}
 	'''
 	
 	def compile(StaticPage sp) '''
 		class «sp.name» {
 			private String path = "«sp.path»";
+			
+			«FOR l : sp.links»
+				«l.compile»
+			«ENDFOR» 
+		}
+	'''
+	
+	def compile(Link l) '''
+		public void linkTo«l.page.name.toFirstUpper»() {
 		}
 	'''
 	

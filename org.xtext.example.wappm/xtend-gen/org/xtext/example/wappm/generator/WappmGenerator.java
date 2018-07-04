@@ -21,6 +21,7 @@ import org.xtext.example.wappm.wappm.DetailPage;
 import org.xtext.example.wappm.wappm.DynamicPage;
 import org.xtext.example.wappm.wappm.HypertextLayer;
 import org.xtext.example.wappm.wappm.IndexPage;
+import org.xtext.example.wappm.wappm.Link;
 import org.xtext.example.wappm.wappm.Page;
 import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.WebClass;
@@ -138,6 +139,17 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.append(_name_2, "\t");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<Link> _links = ip.getLinks();
+      for(final Link l : _links) {
+        _builder.append("\t");
+        CharSequence _compile = this.compile(l);
+        _builder.append(_compile, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("}");
     _builder.newLine();
     return _builder;
@@ -166,6 +178,17 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.append(_name_2, "\t");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<Link> _links = dp.getLinks();
+      for(final Link l : _links) {
+        _builder.append("\t");
+        CharSequence _compile = this.compile(l);
+        _builder.append(_compile, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("}");
     _builder.newLine();
     return _builder;
@@ -183,6 +206,29 @@ public class WappmGenerator extends AbstractGenerator {
     String _path = sp.getPath();
     _builder.append(_path, "\t");
     _builder.append("\";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<Link> _links = sp.getLinks();
+      for(final Link l : _links) {
+        _builder.append("\t");
+        CharSequence _compile = this.compile(l);
+        _builder.append(_compile, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final Link l) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("public void linkTo");
+    String _firstUpper = StringExtensions.toFirstUpper(l.getPage().getName());
+    _builder.append(_firstUpper);
+    _builder.append("() {");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();

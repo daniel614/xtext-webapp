@@ -290,7 +290,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPage_Url()
+  public EReference getPage_Path()
   {
     return (EReference)pageEClass.getEStructuralFeatures().get(1);
   }
@@ -566,7 +566,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
 
     pageEClass = createEClass(PAGE);
     createEAttribute(pageEClass, PAGE__NAME);
-    createEReference(pageEClass, PAGE__URL);
+    createEReference(pageEClass, PAGE__PATH);
     createEReference(pageEClass, PAGE__LINKS);
 
     staticPageEClass = createEClass(STATIC_PAGE);
@@ -650,7 +650,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
 
     initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPage_Url(), this.getURL(), null, "url", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPage_Path(), this.getURL(), null, "path", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPage_Links(), this.getLink(), null, "links", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(staticPageEClass, StaticPage.class, "StaticPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

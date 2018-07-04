@@ -3005,31 +3005,31 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticPage__Group__4__Impl"
-    // InternalWappm.g:961:1: rule__StaticPage__Group__4__Impl : ( ( rule__StaticPage__UrlAssignment_4 ) ) ;
+    // InternalWappm.g:961:1: rule__StaticPage__Group__4__Impl : ( ( rule__StaticPage__PathAssignment_4 ) ) ;
     public final void rule__StaticPage__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:965:1: ( ( ( rule__StaticPage__UrlAssignment_4 ) ) )
-            // InternalWappm.g:966:1: ( ( rule__StaticPage__UrlAssignment_4 ) )
+            // InternalWappm.g:965:1: ( ( ( rule__StaticPage__PathAssignment_4 ) ) )
+            // InternalWappm.g:966:1: ( ( rule__StaticPage__PathAssignment_4 ) )
             {
-            // InternalWappm.g:966:1: ( ( rule__StaticPage__UrlAssignment_4 ) )
-            // InternalWappm.g:967:2: ( rule__StaticPage__UrlAssignment_4 )
+            // InternalWappm.g:966:1: ( ( rule__StaticPage__PathAssignment_4 ) )
+            // InternalWappm.g:967:2: ( rule__StaticPage__PathAssignment_4 )
             {
-             before(grammarAccess.getStaticPageAccess().getUrlAssignment_4()); 
-            // InternalWappm.g:968:2: ( rule__StaticPage__UrlAssignment_4 )
-            // InternalWappm.g:968:3: rule__StaticPage__UrlAssignment_4
+             before(grammarAccess.getStaticPageAccess().getPathAssignment_4()); 
+            // InternalWappm.g:968:2: ( rule__StaticPage__PathAssignment_4 )
+            // InternalWappm.g:968:3: rule__StaticPage__PathAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__StaticPage__UrlAssignment_4();
+            rule__StaticPage__PathAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getStaticPageAccess().getUrlAssignment_4()); 
+             after(grammarAccess.getStaticPageAccess().getPathAssignment_4()); 
 
             }
 
@@ -4289,31 +4289,31 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DetailPage__Group__6__Impl"
-    // InternalWappm.g:1393:1: rule__DetailPage__Group__6__Impl : ( ( rule__DetailPage__UrlAssignment_6 ) ) ;
+    // InternalWappm.g:1393:1: rule__DetailPage__Group__6__Impl : ( ( rule__DetailPage__PathAssignment_6 ) ) ;
     public final void rule__DetailPage__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:1397:1: ( ( ( rule__DetailPage__UrlAssignment_6 ) ) )
-            // InternalWappm.g:1398:1: ( ( rule__DetailPage__UrlAssignment_6 ) )
+            // InternalWappm.g:1397:1: ( ( ( rule__DetailPage__PathAssignment_6 ) ) )
+            // InternalWappm.g:1398:1: ( ( rule__DetailPage__PathAssignment_6 ) )
             {
-            // InternalWappm.g:1398:1: ( ( rule__DetailPage__UrlAssignment_6 ) )
-            // InternalWappm.g:1399:2: ( rule__DetailPage__UrlAssignment_6 )
+            // InternalWappm.g:1398:1: ( ( rule__DetailPage__PathAssignment_6 ) )
+            // InternalWappm.g:1399:2: ( rule__DetailPage__PathAssignment_6 )
             {
-             before(grammarAccess.getDetailPageAccess().getUrlAssignment_6()); 
-            // InternalWappm.g:1400:2: ( rule__DetailPage__UrlAssignment_6 )
-            // InternalWappm.g:1400:3: rule__DetailPage__UrlAssignment_6
+             before(grammarAccess.getDetailPageAccess().getPathAssignment_6()); 
+            // InternalWappm.g:1400:2: ( rule__DetailPage__PathAssignment_6 )
+            // InternalWappm.g:1400:3: rule__DetailPage__PathAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__DetailPage__UrlAssignment_6();
+            rule__DetailPage__PathAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDetailPageAccess().getUrlAssignment_6()); 
+             after(grammarAccess.getDetailPageAccess().getPathAssignment_6()); 
 
             }
 
@@ -5573,31 +5573,31 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IndexPage__Group__6__Impl"
-    // InternalWappm.g:1825:1: rule__IndexPage__Group__6__Impl : ( ( rule__IndexPage__UrlAssignment_6 ) ) ;
+    // InternalWappm.g:1825:1: rule__IndexPage__Group__6__Impl : ( ( rule__IndexPage__PathAssignment_6 ) ) ;
     public final void rule__IndexPage__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:1829:1: ( ( ( rule__IndexPage__UrlAssignment_6 ) ) )
-            // InternalWappm.g:1830:1: ( ( rule__IndexPage__UrlAssignment_6 ) )
+            // InternalWappm.g:1829:1: ( ( ( rule__IndexPage__PathAssignment_6 ) ) )
+            // InternalWappm.g:1830:1: ( ( rule__IndexPage__PathAssignment_6 ) )
             {
-            // InternalWappm.g:1830:1: ( ( rule__IndexPage__UrlAssignment_6 ) )
-            // InternalWappm.g:1831:2: ( rule__IndexPage__UrlAssignment_6 )
+            // InternalWappm.g:1830:1: ( ( rule__IndexPage__PathAssignment_6 ) )
+            // InternalWappm.g:1831:2: ( rule__IndexPage__PathAssignment_6 )
             {
-             before(grammarAccess.getIndexPageAccess().getUrlAssignment_6()); 
-            // InternalWappm.g:1832:2: ( rule__IndexPage__UrlAssignment_6 )
-            // InternalWappm.g:1832:3: rule__IndexPage__UrlAssignment_6
+             before(grammarAccess.getIndexPageAccess().getPathAssignment_6()); 
+            // InternalWappm.g:1832:2: ( rule__IndexPage__PathAssignment_6 )
+            // InternalWappm.g:1832:3: rule__IndexPage__PathAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__IndexPage__UrlAssignment_6();
+            rule__IndexPage__PathAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIndexPageAccess().getUrlAssignment_6()); 
+             after(grammarAccess.getIndexPageAccess().getPathAssignment_6()); 
 
             }
 
@@ -8923,9 +8923,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__StaticPage__NameAssignment_1"
 
 
-    // $ANTLR start "rule__StaticPage__UrlAssignment_4"
-    // InternalWappm.g:2970:1: rule__StaticPage__UrlAssignment_4 : ( ruleURL ) ;
-    public final void rule__StaticPage__UrlAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__StaticPage__PathAssignment_4"
+    // InternalWappm.g:2970:1: rule__StaticPage__PathAssignment_4 : ( ruleURL ) ;
+    public final void rule__StaticPage__PathAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8936,13 +8936,13 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:2975:2: ( ruleURL )
             // InternalWappm.g:2976:3: ruleURL
             {
-             before(grammarAccess.getStaticPageAccess().getUrlURLParserRuleCall_4_0()); 
+             before(grammarAccess.getStaticPageAccess().getPathURLParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleURL();
 
             state._fsp--;
 
-             after(grammarAccess.getStaticPageAccess().getUrlURLParserRuleCall_4_0()); 
+             after(grammarAccess.getStaticPageAccess().getPathURLParserRuleCall_4_0()); 
 
             }
 
@@ -8961,7 +8961,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__StaticPage__UrlAssignment_4"
+    // $ANTLR end "rule__StaticPage__PathAssignment_4"
 
 
     // $ANTLR start "rule__StaticPage__LinksAssignment_5_2"
@@ -9128,9 +9128,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DetailPage__DisplayedClassAssignment_3"
 
 
-    // $ANTLR start "rule__DetailPage__UrlAssignment_6"
-    // InternalWappm.g:3049:1: rule__DetailPage__UrlAssignment_6 : ( ruleURL ) ;
-    public final void rule__DetailPage__UrlAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__DetailPage__PathAssignment_6"
+    // InternalWappm.g:3049:1: rule__DetailPage__PathAssignment_6 : ( ruleURL ) ;
+    public final void rule__DetailPage__PathAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9141,13 +9141,13 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3054:2: ( ruleURL )
             // InternalWappm.g:3055:3: ruleURL
             {
-             before(grammarAccess.getDetailPageAccess().getUrlURLParserRuleCall_6_0()); 
+             before(grammarAccess.getDetailPageAccess().getPathURLParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleURL();
 
             state._fsp--;
 
-             after(grammarAccess.getDetailPageAccess().getUrlURLParserRuleCall_6_0()); 
+             after(grammarAccess.getDetailPageAccess().getPathURLParserRuleCall_6_0()); 
 
             }
 
@@ -9166,7 +9166,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DetailPage__UrlAssignment_6"
+    // $ANTLR end "rule__DetailPage__PathAssignment_6"
 
 
     // $ANTLR start "rule__DetailPage__LinksAssignment_7_2"
@@ -9333,9 +9333,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__IndexPage__DisplayedClassAssignment_3"
 
 
-    // $ANTLR start "rule__IndexPage__UrlAssignment_6"
-    // InternalWappm.g:3128:1: rule__IndexPage__UrlAssignment_6 : ( ruleURL ) ;
-    public final void rule__IndexPage__UrlAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__IndexPage__PathAssignment_6"
+    // InternalWappm.g:3128:1: rule__IndexPage__PathAssignment_6 : ( ruleURL ) ;
+    public final void rule__IndexPage__PathAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9346,13 +9346,13 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3133:2: ( ruleURL )
             // InternalWappm.g:3134:3: ruleURL
             {
-             before(grammarAccess.getIndexPageAccess().getUrlURLParserRuleCall_6_0()); 
+             before(grammarAccess.getIndexPageAccess().getPathURLParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleURL();
 
             state._fsp--;
 
-             after(grammarAccess.getIndexPageAccess().getUrlURLParserRuleCall_6_0()); 
+             after(grammarAccess.getIndexPageAccess().getPathURLParserRuleCall_6_0()); 
 
             }
 
@@ -9371,7 +9371,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__IndexPage__UrlAssignment_6"
+    // $ANTLR end "rule__IndexPage__PathAssignment_6"
 
 
     // $ANTLR start "rule__IndexPage__LinksAssignment_7_2"

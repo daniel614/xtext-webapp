@@ -616,7 +616,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStaticPage"
-    // InternalWappm.g:263:1: ruleStaticPage returns [EObject current=null] : (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_url_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' ) ;
+    // InternalWappm.g:263:1: ruleStaticPage returns [EObject current=null] : (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_path_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' ) ;
     public final EObject ruleStaticPage() throws RecognitionException {
         EObject current = null;
 
@@ -629,7 +629,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_8=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
-        EObject lv_url_4_0 = null;
+        EObject lv_path_4_0 = null;
 
         EObject lv_links_7_0 = null;
 
@@ -640,11 +640,11 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalWappm.g:269:2: ( (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_url_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' ) )
-            // InternalWappm.g:270:2: (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_url_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' )
+            // InternalWappm.g:269:2: ( (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_path_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' ) )
+            // InternalWappm.g:270:2: (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_path_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' )
             {
-            // InternalWappm.g:270:2: (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_url_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' )
-            // InternalWappm.g:271:3: otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_url_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}'
+            // InternalWappm.g:270:2: (otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_path_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}' )
+            // InternalWappm.g:271:3: otherlv_0= 'static' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'path' ( (lv_path_4_0= ruleURL ) ) (otherlv_5= 'links' otherlv_6= '{' ( (lv_links_7_0= ruleLink ) ) (otherlv_8= ',' ( (lv_links_9_0= ruleLink ) ) )* otherlv_10= '}' )? otherlv_11= '}'
             {
             otherlv_0=(Token)match(input,15,FOLLOW_3); 
 
@@ -684,17 +684,17 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getStaticPageAccess().getPathKeyword_3());
             		
-            // InternalWappm.g:301:3: ( (lv_url_4_0= ruleURL ) )
-            // InternalWappm.g:302:4: (lv_url_4_0= ruleURL )
+            // InternalWappm.g:301:3: ( (lv_path_4_0= ruleURL ) )
+            // InternalWappm.g:302:4: (lv_path_4_0= ruleURL )
             {
-            // InternalWappm.g:302:4: (lv_url_4_0= ruleURL )
-            // InternalWappm.g:303:5: lv_url_4_0= ruleURL
+            // InternalWappm.g:302:4: (lv_path_4_0= ruleURL )
+            // InternalWappm.g:303:5: lv_path_4_0= ruleURL
             {
 
-            					newCompositeNode(grammarAccess.getStaticPageAccess().getUrlURLParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getStaticPageAccess().getPathURLParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_12);
-            lv_url_4_0=ruleURL();
+            lv_path_4_0=ruleURL();
 
             state._fsp--;
 
@@ -704,8 +704,8 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"url",
-            						lv_url_4_0,
+            						"path",
+            						lv_path_4_0,
             						"org.xtext.example.wappm.Wappm.URL");
             					afterParserOrEnumRuleCall();
             				
@@ -1025,7 +1025,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDetailPage"
-    // InternalWappm.g:429:1: ruleDetailPage returns [EObject current=null] : (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) ;
+    // InternalWappm.g:429:1: ruleDetailPage returns [EObject current=null] : (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) ;
     public final EObject ruleDetailPage() throws RecognitionException {
         EObject current = null;
 
@@ -1040,7 +1040,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        EObject lv_url_6_0 = null;
+        EObject lv_path_6_0 = null;
 
         EObject lv_links_9_0 = null;
 
@@ -1051,11 +1051,11 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalWappm.g:435:2: ( (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) )
-            // InternalWappm.g:436:2: (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
+            // InternalWappm.g:435:2: ( (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) )
+            // InternalWappm.g:436:2: (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
             {
-            // InternalWappm.g:436:2: (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
-            // InternalWappm.g:437:3: otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}'
+            // InternalWappm.g:436:2: (otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
+            // InternalWappm.g:437:3: otherlv_0= 'detail' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_3); 
 
@@ -1120,17 +1120,17 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getDetailPageAccess().getPathKeyword_5());
             		
-            // InternalWappm.g:484:3: ( (lv_url_6_0= ruleURL ) )
-            // InternalWappm.g:485:4: (lv_url_6_0= ruleURL )
+            // InternalWappm.g:484:3: ( (lv_path_6_0= ruleURL ) )
+            // InternalWappm.g:485:4: (lv_path_6_0= ruleURL )
             {
-            // InternalWappm.g:485:4: (lv_url_6_0= ruleURL )
-            // InternalWappm.g:486:5: lv_url_6_0= ruleURL
+            // InternalWappm.g:485:4: (lv_path_6_0= ruleURL )
+            // InternalWappm.g:486:5: lv_path_6_0= ruleURL
             {
 
-            					newCompositeNode(grammarAccess.getDetailPageAccess().getUrlURLParserRuleCall_6_0());
+            					newCompositeNode(grammarAccess.getDetailPageAccess().getPathURLParserRuleCall_6_0());
             				
             pushFollow(FOLLOW_12);
-            lv_url_6_0=ruleURL();
+            lv_path_6_0=ruleURL();
 
             state._fsp--;
 
@@ -1140,8 +1140,8 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"url",
-            						lv_url_6_0,
+            						"path",
+            						lv_path_6_0,
             						"org.xtext.example.wappm.Wappm.URL");
             					afterParserOrEnumRuleCall();
             				
@@ -1333,7 +1333,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexPage"
-    // InternalWappm.g:576:1: ruleIndexPage returns [EObject current=null] : (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) ;
+    // InternalWappm.g:576:1: ruleIndexPage returns [EObject current=null] : (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) ;
     public final EObject ruleIndexPage() throws RecognitionException {
         EObject current = null;
 
@@ -1348,7 +1348,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        EObject lv_url_6_0 = null;
+        EObject lv_path_6_0 = null;
 
         EObject lv_links_9_0 = null;
 
@@ -1359,11 +1359,11 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalWappm.g:582:2: ( (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) )
-            // InternalWappm.g:583:2: (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
+            // InternalWappm.g:582:2: ( (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' ) )
+            // InternalWappm.g:583:2: (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
             {
-            // InternalWappm.g:583:2: (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
-            // InternalWappm.g:584:3: otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_url_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}'
+            // InternalWappm.g:583:2: (otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}' )
+            // InternalWappm.g:584:3: otherlv_0= 'index' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'uses' ( (otherlv_3= RULE_ID ) ) otherlv_4= '{' otherlv_5= 'path' ( (lv_path_6_0= ruleURL ) ) (otherlv_7= 'links' otherlv_8= '{' ( (lv_links_9_0= ruleLink ) ) (otherlv_10= ',' ( (lv_links_11_0= ruleLink ) ) )* otherlv_12= '}' )? otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,21,FOLLOW_3); 
 
@@ -1428,17 +1428,17 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getIndexPageAccess().getPathKeyword_5());
             		
-            // InternalWappm.g:631:3: ( (lv_url_6_0= ruleURL ) )
-            // InternalWappm.g:632:4: (lv_url_6_0= ruleURL )
+            // InternalWappm.g:631:3: ( (lv_path_6_0= ruleURL ) )
+            // InternalWappm.g:632:4: (lv_path_6_0= ruleURL )
             {
-            // InternalWappm.g:632:4: (lv_url_6_0= ruleURL )
-            // InternalWappm.g:633:5: lv_url_6_0= ruleURL
+            // InternalWappm.g:632:4: (lv_path_6_0= ruleURL )
+            // InternalWappm.g:633:5: lv_path_6_0= ruleURL
             {
 
-            					newCompositeNode(grammarAccess.getIndexPageAccess().getUrlURLParserRuleCall_6_0());
+            					newCompositeNode(grammarAccess.getIndexPageAccess().getPathURLParserRuleCall_6_0());
             				
             pushFollow(FOLLOW_12);
-            lv_url_6_0=ruleURL();
+            lv_path_6_0=ruleURL();
 
             state._fsp--;
 
@@ -1448,8 +1448,8 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"url",
-            						lv_url_6_0,
+            						"path",
+            						lv_path_6_0,
             						"org.xtext.example.wappm.Wappm.URL");
             					afterParserOrEnumRuleCall();
             				

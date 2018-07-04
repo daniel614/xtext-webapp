@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.wappm.wappm.Page#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.Page#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}</li>
  *   <li>{@link org.xtext.example.wappm.wappm.Page#getLinks <em>Links</em>}</li>
  * </ul>
  *
@@ -54,30 +54,30 @@ public interface Page extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Url</b></em>' containment reference.
+   * Returns the value of the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Url</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Path</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Url</em>' containment reference.
-   * @see #setUrl(URL)
-   * @see org.xtext.example.wappm.wappm.WappmPackage#getPage_Url()
+   * @return the value of the '<em>Path</em>' containment reference.
+   * @see #setPath(URL)
+   * @see org.xtext.example.wappm.wappm.WappmPackage#getPage_Path()
    * @model containment="true"
    * @generated
    */
-  URL getUrl();
+  URL getPath();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Page#getUrl <em>Url</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Url</em>' containment reference.
-   * @see #getUrl()
+   * @param value the new value of the '<em>Path</em>' containment reference.
+   * @see #getPath()
    * @generated
    */
-  void setUrl(URL value);
+  void setPath(URL value);
 
   /**
    * Returns the value of the '<em><b>Links</b></em>' containment reference list.

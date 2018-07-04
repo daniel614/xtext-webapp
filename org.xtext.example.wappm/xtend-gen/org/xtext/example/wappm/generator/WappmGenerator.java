@@ -3,6 +3,7 @@
  */
 package org.xtext.example.wappm.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -119,19 +120,19 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("String path = ");
-    URL _url = ip.getUrl();
-    _builder.append(_url, "\t");
+    URL _path = ip.getPath();
+    _builder.append(_path, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    WebClass _displayedClass = ip.getDisplayedClass();
-    _builder.append(_displayedClass, "\t");
+    String _name_1 = ip.getDisplayedClass().getName();
+    _builder.append(_name_1, "\t");
     _builder.append(" usedClass = new ");
-    WebClass _displayedClass_1 = ip.getDisplayedClass();
-    _builder.append(_displayedClass_1, "\t");
-    _builder.append(";");
+    String _name_2 = ip.getDisplayedClass().getName();
+    _builder.append(_name_2, "\t");
+    _builder.append("();");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
@@ -147,19 +148,19 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("String path = ");
-    URL _url = dp.getUrl();
-    _builder.append(_url, "\t");
+    URL _path = dp.getPath();
+    _builder.append(_path, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    WebClass _displayedClass = dp.getDisplayedClass();
-    _builder.append(_displayedClass, "\t");
+    String _name_1 = dp.getDisplayedClass().getName();
+    _builder.append(_name_1, "\t");
     _builder.append(" usedClass = new ");
-    WebClass _displayedClass_1 = dp.getDisplayedClass();
-    _builder.append(_displayedClass_1, "\t");
-    _builder.append(";");
+    String _name_2 = dp.getDisplayedClass().getName();
+    _builder.append(_name_2, "\t");
+    _builder.append("();");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
@@ -175,8 +176,8 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("String path = ");
-    URL _url = sp.getUrl();
-    _builder.append(_url, "\t");
+    URL _path = sp.getPath();
+    _builder.append(_path, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
@@ -220,14 +221,57 @@ public class WappmGenerator extends AbstractGenerator {
   
   public CharSequence compile(final Attribute a) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("private ");
-    AppTypes _type = a.getType();
-    _builder.append(_type);
-    _builder.append(" ");
-    String _name = a.getName();
-    _builder.append(_name);
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
+    {
+      AppTypes _type = a.getType();
+      boolean _equals = Objects.equal(_type, AppTypes.BOOLEAN);
+      if (_equals) {
+        _builder.append("private boolean ");
+        String _name = a.getName();
+        _builder.append(_name);
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
+      } else {
+        AppTypes _type_1 = a.getType();
+        boolean _equals_1 = Objects.equal(_type_1, AppTypes.INTEGER);
+        if (_equals_1) {
+          _builder.append("private int ");
+          String _name_1 = a.getName();
+          _builder.append(_name_1);
+          _builder.append(";");
+          _builder.newLineIfNotEmpty();
+        } else {
+          AppTypes _type_2 = a.getType();
+          boolean _equals_2 = Objects.equal(_type_2, AppTypes.FLOAT);
+          if (_equals_2) {
+            _builder.append("private float ");
+            String _name_2 = a.getName();
+            _builder.append(_name_2);
+            _builder.append(";");
+            _builder.newLineIfNotEmpty();
+          } else {
+            AppTypes _type_3 = a.getType();
+            boolean _equals_3 = Objects.equal(_type_3, AppTypes.DOUBLE);
+            if (_equals_3) {
+              _builder.append("private double ");
+              String _name_3 = a.getName();
+              _builder.append(_name_3);
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+            } else {
+              AppTypes _type_4 = a.getType();
+              boolean _equals_4 = Objects.equal(_type_4, AppTypes.STRING);
+              if (_equals_4) {
+                _builder.append("private String ");
+                String _name_4 = a.getName();
+                _builder.append(_name_4);
+                _builder.append(";");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+        }
+      }
+    }
     return _builder;
   }
 }

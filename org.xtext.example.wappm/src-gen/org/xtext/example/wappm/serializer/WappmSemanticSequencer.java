@@ -120,7 +120,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     DetailPage returns DetailPage
 	 *
 	 * Constraint:
-	 *     (name=ID displayedClass=[WebClass|ID] url=URL (links+=Link links+=Link*)?)
+	 *     (name=ID displayedClass=[WebClass|ID] path=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_DetailPage(ISerializationContext context, DetailPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -146,7 +146,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     IndexPage returns IndexPage
 	 *
 	 * Constraint:
-	 *     (name=ID displayedClass=[WebClass|ID] url=URL (links+=Link links+=Link*)?)
+	 *     (name=ID displayedClass=[WebClass|ID] path=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_IndexPage(ISerializationContext context, IndexPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -177,7 +177,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StaticPage returns StaticPage
 	 *
 	 * Constraint:
-	 *     (name=ID url=URL (links+=Link links+=Link*)?)
+	 *     (name=ID path=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_StaticPage(ISerializationContext context, StaticPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

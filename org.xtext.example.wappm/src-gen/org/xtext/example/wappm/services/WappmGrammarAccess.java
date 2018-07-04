@@ -145,8 +145,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cPathKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cUrlAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cUrlURLParserRuleCall_4_0 = (RuleCall)cUrlAssignment_4.eContents().get(0);
+		private final Assignment cPathAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPathURLParserRuleCall_4_0 = (RuleCall)cPathAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cLinksKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
@@ -162,11 +162,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//StaticPage:
 		//	'static' name=ID
 		//	'{'
-		//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'static' name=ID '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')? '}'
+		//'static' name=ID '{' 'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'static'
@@ -184,11 +184,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'path'
 		public Keyword getPathKeyword_3() { return cPathKeyword_3; }
 		
-		//url=URL
-		public Assignment getUrlAssignment_4() { return cUrlAssignment_4; }
+		//path=URL
+		public Assignment getPathAssignment_4() { return cPathAssignment_4; }
 		
 		//URL
-		public RuleCall getUrlURLParserRuleCall_4_0() { return cUrlURLParserRuleCall_4_0; }
+		public RuleCall getPathURLParserRuleCall_4_0() { return cPathURLParserRuleCall_4_0; }
 		
 		//('links' '{' links+=Link ("," links+=Link)* '}')?
 		public Group getGroup_5() { return cGroup_5; }
@@ -254,8 +254,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDisplayedClassWebClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassWebClassCrossReference_3_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cPathKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cUrlAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cUrlURLParserRuleCall_6_0 = (RuleCall)cUrlAssignment_6.eContents().get(0);
+		private final Assignment cPathAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPathURLParserRuleCall_6_0 = (RuleCall)cPathAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cLinksKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
@@ -271,11 +271,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//DetailPage:
 		//	'detail' name=ID 'uses' displayedClass=[WebClass]
 		//	'{'
-		//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'detail' name=ID 'uses' displayedClass=[WebClass] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//'detail' name=ID 'uses' displayedClass=[WebClass] '{' 'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -306,11 +306,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'path'
 		public Keyword getPathKeyword_5() { return cPathKeyword_5; }
 		
-		//url=URL
-		public Assignment getUrlAssignment_6() { return cUrlAssignment_6; }
+		//path=URL
+		public Assignment getPathAssignment_6() { return cPathAssignment_6; }
 		
 		//URL
-		public RuleCall getUrlURLParserRuleCall_6_0() { return cUrlURLParserRuleCall_6_0; }
+		public RuleCall getPathURLParserRuleCall_6_0() { return cPathURLParserRuleCall_6_0; }
 		
 		//('links' '{' links+=Link ("," links+=Link)* '}')?
 		public Group getGroup_7() { return cGroup_7; }
@@ -357,8 +357,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDisplayedClassWebClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassWebClassCrossReference_3_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cPathKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cUrlAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cUrlURLParserRuleCall_6_0 = (RuleCall)cUrlAssignment_6.eContents().get(0);
+		private final Assignment cPathAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPathURLParserRuleCall_6_0 = (RuleCall)cPathAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cLinksKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
@@ -374,11 +374,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//IndexPage:
 		//	'index' name=ID 'uses' displayedClass=[WebClass]
 		//	'{'
-		//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'index' name=ID 'uses' displayedClass=[WebClass] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//'index' name=ID 'uses' displayedClass=[WebClass] '{' 'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -409,11 +409,11 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'path'
 		public Keyword getPathKeyword_5() { return cPathKeyword_5; }
 		
-		//url=URL
-		public Assignment getUrlAssignment_6() { return cUrlAssignment_6; }
+		//path=URL
+		public Assignment getPathAssignment_6() { return cPathAssignment_6; }
 		
 		//URL
-		public RuleCall getUrlURLParserRuleCall_6_0() { return cUrlURLParserRuleCall_6_0; }
+		public RuleCall getPathURLParserRuleCall_6_0() { return cPathURLParserRuleCall_6_0; }
 		
 		//('links' '{' links+=Link ("," links+=Link)* '}')?
 		public Group getGroup_7() { return cGroup_7; }
@@ -872,7 +872,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	//StaticPage:
 	//	'static' name=ID
 	//	'{'
-	//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+	//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
 	public StaticPageElements getStaticPageAccess() {
 		return pStaticPage;
@@ -895,7 +895,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	//DetailPage:
 	//	'detail' name=ID 'uses' displayedClass=[WebClass]
 	//	'{'
-	//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+	//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
 	public DetailPageElements getDetailPageAccess() {
 		return pDetailPage;
@@ -908,7 +908,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	//IndexPage:
 	//	'index' name=ID 'uses' displayedClass=[WebClass]
 	//	'{'
-	//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+	//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
 	public IndexPageElements getIndexPageAccess() {
 		return pIndexPage;

@@ -33,7 +33,7 @@ import org.xtext.example.wappm.wappm.WappmPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.wappm.wappm.impl.PageImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.PageImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.PageImpl#getPath <em>Path</em>}</li>
  *   <li>{@link org.xtext.example.wappm.wappm.impl.PageImpl#getLinks <em>Links</em>}</li>
  * </ul>
  *
@@ -62,14 +62,14 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getUrl() <em>Url</em>}' containment reference.
+   * The cached value of the '{@link #getPath() <em>Path</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getUrl()
+   * @see #getPath()
    * @generated
    * @ordered
    */
-  protected URL url;
+  protected URL path;
 
   /**
    * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
@@ -130,9 +130,9 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
    * <!-- end-user-doc -->
    * @generated
    */
-  public URL getUrl()
+  public URL getPath()
   {
-    return url;
+    return path;
   }
 
   /**
@@ -140,13 +140,13 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetUrl(URL newUrl, NotificationChain msgs)
+  public NotificationChain basicSetPath(URL newPath, NotificationChain msgs)
   {
-    URL oldUrl = url;
-    url = newUrl;
+    URL oldPath = path;
+    path = newPath;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__URL, oldUrl, newUrl);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__PATH, oldPath, newPath);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -157,20 +157,20 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setUrl(URL newUrl)
+  public void setPath(URL newPath)
   {
-    if (newUrl != url)
+    if (newPath != path)
     {
       NotificationChain msgs = null;
-      if (url != null)
-        msgs = ((InternalEObject)url).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__URL, null, msgs);
-      if (newUrl != null)
-        msgs = ((InternalEObject)newUrl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__URL, null, msgs);
-      msgs = basicSetUrl(newUrl, msgs);
+      if (path != null)
+        msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__PATH, null, msgs);
+      if (newPath != null)
+        msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__PATH, null, msgs);
+      msgs = basicSetPath(newPath, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__URL, newUrl, newUrl));
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__PATH, newPath, newPath));
   }
 
   /**
@@ -197,8 +197,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
   {
     switch (featureID)
     {
-      case WappmPackage.PAGE__URL:
-        return basicSetUrl(null, msgs);
+      case WappmPackage.PAGE__PATH:
+        return basicSetPath(null, msgs);
       case WappmPackage.PAGE__LINKS:
         return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
     }
@@ -217,8 +217,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
     {
       case WappmPackage.PAGE__NAME:
         return getName();
-      case WappmPackage.PAGE__URL:
-        return getUrl();
+      case WappmPackage.PAGE__PATH:
+        return getPath();
       case WappmPackage.PAGE__LINKS:
         return getLinks();
     }
@@ -239,8 +239,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
       case WappmPackage.PAGE__NAME:
         setName((String)newValue);
         return;
-      case WappmPackage.PAGE__URL:
-        setUrl((URL)newValue);
+      case WappmPackage.PAGE__PATH:
+        setPath((URL)newValue);
         return;
       case WappmPackage.PAGE__LINKS:
         getLinks().clear();
@@ -263,8 +263,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
       case WappmPackage.PAGE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case WappmPackage.PAGE__URL:
-        setUrl((URL)null);
+      case WappmPackage.PAGE__PATH:
+        setPath((URL)null);
         return;
       case WappmPackage.PAGE__LINKS:
         getLinks().clear();
@@ -285,8 +285,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
     {
       case WappmPackage.PAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case WappmPackage.PAGE__URL:
-        return url != null;
+      case WappmPackage.PAGE__PATH:
+        return path != null;
       case WappmPackage.PAGE__LINKS:
         return links != null && !links.isEmpty();
     }

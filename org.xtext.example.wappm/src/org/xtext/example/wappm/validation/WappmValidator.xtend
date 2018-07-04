@@ -6,6 +6,7 @@ package org.xtext.example.wappm.validation
 import org.eclipse.xtext.validation.Check
 import org.xtext.example.wappm.wappm.WebModel
 import org.xtext.example.wappm.wappm.WappmPackage
+import org.xtext.example.wappm.wappm.WebClass
 
 /**	
  * This class contains custom validation rules. 
@@ -29,6 +30,14 @@ class WappmValidator extends AbstractWappmValidator {
 		if (!Character.isUpperCase(webmodel.name.charAt(0))) {
         	warning("Name should start with a capital letter", 
             	WappmPackage.Literals.WEB_MODEL__NAME)
+    	}
+	}
+	
+	@Check
+	def void checkClassNameNameStartsWithCapital(WebClass webclass) {
+		if (!Character.isUpperCase(webclass.name.charAt(0))) {
+        	warning("Name should start with a capital letter", 
+            	WappmPackage.Literals.WEB_CLASS__NAME)
     	}
 	}
 	

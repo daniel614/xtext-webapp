@@ -17,6 +17,7 @@ import org.xtext.example.wappm.wappm.IndexPage
 import org.xtext.example.wappm.wappm.StaticPage
 import org.xtext.example.wappm.wappm.DetailPage
 import org.xtext.example.wappm.wappm.DynamicPage
+import org.xtext.example.wappm.wappm.AppTypes
 
 /**
  * Generates code from your model files on save.
@@ -65,23 +66,23 @@ class WappmGenerator extends AbstractGenerator {
 	
 	def compile(IndexPage ip) '''
 		class «ip.name» {
-			String path = «ip.url»;
+			String path = «ip.path»;
 			
-			«ip.displayedClass» usedClass = new «ip.displayedClass»;
+			«ip.displayedClass.name» usedClass = new «ip.displayedClass.name»();
 		}
 	'''
 	
 	def compile(DetailPage dp) '''
 		class «dp.name» {
-			String path = «dp.url»;
+			String path = «dp.path»;
 			
-			«dp.displayedClass» usedClass = new «dp.displayedClass»;
+			«dp.displayedClass.name» usedClass = new «dp.displayedClass.name»();
 		}
 	'''
 	
 	def compile(StaticPage sp) '''
 		class «sp.name» {
-			String path = «sp.url»;
+			String path = «sp.path»;
 		}
 	'''
 	
@@ -100,6 +101,16 @@ class WappmGenerator extends AbstractGenerator {
 	'''
 	
 	def compile(Attribute a) '''
-		private «a.type» «a.name»;
+	«IF a.type == AppTypes.BOOLEAN»
+		private boolean «a.name»;
+	«ELSEIF a.type == AppTypes.INTEGER»
+		private int «a.name»;
+	«ELSEIF a.type == AppTypes.FLOAT»
+		private float «a.name»;
+	«ELSEIF a.type == AppTypes.DOUBLE»
+		private double «a.name»;
+	«ELSEIF a.type == AppTypes.STRING»
+		private String «a.name»;
+	«ENDIF»
 	'''
 }

@@ -161,13 +161,13 @@ public interface WappmPackage extends EPackage
   int PAGE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Url</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PAGE__URL = 1;
+  int PAGE__PATH = 1;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -207,13 +207,13 @@ public interface WappmPackage extends EPackage
   int STATIC_PAGE__NAME = PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Url</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATIC_PAGE__URL = PAGE__URL;
+  int STATIC_PAGE__PATH = PAGE__PATH;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -253,13 +253,13 @@ public interface WappmPackage extends EPackage
   int DYNAMIC_PAGE__NAME = PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Url</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DYNAMIC_PAGE__URL = PAGE__URL;
+  int DYNAMIC_PAGE__PATH = PAGE__PATH;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -308,13 +308,13 @@ public interface WappmPackage extends EPackage
   int DETAIL_PAGE__NAME = DYNAMIC_PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Url</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DETAIL_PAGE__URL = DYNAMIC_PAGE__URL;
+  int DETAIL_PAGE__PATH = DYNAMIC_PAGE__PATH;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -363,13 +363,13 @@ public interface WappmPackage extends EPackage
   int INDEX_PAGE__NAME = DYNAMIC_PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Url</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDEX_PAGE__URL = DYNAMIC_PAGE__URL;
+  int INDEX_PAGE__PATH = DYNAMIC_PAGE__PATH;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -710,15 +710,15 @@ public interface WappmPackage extends EPackage
   EAttribute getPage_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.wappm.wappm.Page#getUrl <em>Url</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Url</em>'.
-   * @see org.xtext.example.wappm.wappm.Page#getUrl()
+   * @return the meta object for the containment reference '<em>Path</em>'.
+   * @see org.xtext.example.wappm.wappm.Page#getPath()
    * @see #getPage()
    * @generated
    */
-  EReference getPage_Url();
+  EReference getPage_Path();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.Page#getLinks <em>Links</em>}'.
@@ -1064,12 +1064,12 @@ public interface WappmPackage extends EPackage
     EAttribute PAGE__NAME = eINSTANCE.getPage_Name();
 
     /**
-     * The meta object literal for the '<em><b>Url</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PAGE__URL = eINSTANCE.getPage_Url();
+    EReference PAGE__PATH = eINSTANCE.getPage_Path();
 
     /**
      * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.

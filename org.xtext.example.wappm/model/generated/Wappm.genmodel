@@ -24,7 +24,7 @@
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//Page">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Page/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Page/url"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Page/path"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Page/links"/>
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//StaticPage"/>

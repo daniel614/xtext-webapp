@@ -54,30 +54,30 @@ public interface Page extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Path</b></em>' containment reference.
+   * Returns the value of the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Path</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Path</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Path</em>' containment reference.
-   * @see #setPath(URL)
+   * @return the value of the '<em>Path</em>' attribute.
+   * @see #setPath(String)
    * @see org.xtext.example.wappm.wappm.WappmPackage#getPage_Path()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  URL getPath();
+  String getPath();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Path</em>' containment reference.
+   * @param value the new value of the '<em>Path</em>' attribute.
    * @see #getPath()
    * @generated
    */
-  void setPath(URL value);
+  void setPath(String value);
 
   /**
    * Returns the value of the '<em><b>Links</b></em>' containment reference list.

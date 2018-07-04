@@ -156,20 +156,6 @@ public class WappmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WappmPackage.URL:
-      {
-        URL url = (URL)theEObject;
-        T result = caseURL(url);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case WappmPackage.URL_ADDITION:
-      {
-        URL_ADDITION urL_ADDITION = (URL_ADDITION)theEObject;
-        T result = caseURL_ADDITION(urL_ADDITION);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       default: return defaultCase(theEObject);
     }
   }
@@ -346,38 +332,6 @@ public class WappmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAttribute(Attribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>URL</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>URL</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseURL(URL object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>URL ADDITION</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>URL ADDITION</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseURL_ADDITION(URL_ADDITION object)
   {
     return null;
   }

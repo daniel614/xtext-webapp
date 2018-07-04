@@ -116,20 +116,6 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass urlEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass urL_ADDITIONEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EEnum appTypesEEnum = null;
 
   /**
@@ -290,9 +276,9 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPage_Path()
+  public EAttribute getPage_Path()
   {
-    return (EReference)pageEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)pageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -480,46 +466,6 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getURL()
-  {
-    return urlEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getURL_Addition()
-  {
-    return (EReference)urlEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getURL_ADDITION()
-  {
-    return urL_ADDITIONEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getURL_ADDITION_Name()
-  {
-    return (EAttribute)urL_ADDITIONEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EEnum getAppTypes()
   {
     return appTypesEEnum;
@@ -566,7 +512,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
 
     pageEClass = createEClass(PAGE);
     createEAttribute(pageEClass, PAGE__NAME);
-    createEReference(pageEClass, PAGE__PATH);
+    createEAttribute(pageEClass, PAGE__PATH);
     createEReference(pageEClass, PAGE__LINKS);
 
     staticPageEClass = createEClass(STATIC_PAGE);
@@ -593,12 +539,6 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__NAME);
     createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
-
-    urlEClass = createEClass(URL);
-    createEReference(urlEClass, URL__ADDITION);
-
-    urL_ADDITIONEClass = createEClass(URL_ADDITION);
-    createEAttribute(urL_ADDITIONEClass, URL_ADDITION__NAME);
 
     // Create enums
     appTypesEEnum = createEEnum(APP_TYPES);
@@ -650,7 +590,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
 
     initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPage_Path(), this.getURL(), null, "path", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPage_Path(), ecorePackage.getEString(), "path", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPage_Links(), this.getLink(), null, "links", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(staticPageEClass, StaticPage.class, "StaticPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -677,12 +617,6 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAttribute_Type(), this.getAppTypes(), "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(urlEClass, org.xtext.example.wappm.wappm.URL.class, "URL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getURL_Addition(), this.getURL_ADDITION(), null, "addition", null, 0, -1, org.xtext.example.wappm.wappm.URL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(urL_ADDITIONEClass, org.xtext.example.wappm.wappm.URL_ADDITION.class, "URL_ADDITION", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getURL_ADDITION_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.xtext.example.wappm.wappm.URL_ADDITION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(appTypesEEnum, AppTypes.class, "AppTypes");

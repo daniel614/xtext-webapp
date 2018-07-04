@@ -29,7 +29,7 @@ class WappmParsingTest {
 			webapp TestApp {
 				hypertext TestHyper {
 					detail TestDetail uses SomeClass {
-						path /test/:test
+						path /test1/
 						links {
 							link {
 								page TestIndex
@@ -37,7 +37,7 @@ class WappmParsingTest {
 						}
 					}
 					index TestIndex uses TestClass {
-						path /test
+						path /test2/
 					}
 				}
 				
@@ -63,7 +63,7 @@ class WappmParsingTest {
 			webapp testApp {
 				hypertext TestHyper {
 					detail TestDetail uses SomeClass {
-						path /test/:test
+						path /test1/
 						links {
 							link {
 								page TestIndex
@@ -71,7 +71,7 @@ class WappmParsingTest {
 						}
 					}
 					index TestIndex uses TestClass {
-						path /test
+						path /test2/
 					}
 				}
 				

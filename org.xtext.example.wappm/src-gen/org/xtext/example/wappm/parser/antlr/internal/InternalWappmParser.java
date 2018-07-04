@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalWappmParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'webapp'", "'{'", "'}'", "'hypertext'", "'static'", "'path'", "'links'", "','", "'detail'", "'uses'", "'index'", "'link'", "'page'", "'content'", "'class'", "'uniqueIdentifier'", "'attr'", "':'", "'/'", "'?'", "'String'", "'Integer'", "'Float'", "'Double'", "'Boolean'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'webapp'", "'{'", "'}'", "'hypertext'", "'static'", "'path'", "'links'", "','", "'detail'", "'uses'", "'index'", "'link'", "'page'", "'content'", "'class'", "'uniqueIdentifier'", "'attr'", "':'", "'/'", "'String'", "'Integer'", "'Float'", "'Double'", "'Boolean'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -36,7 +36,6 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
     public static final int T__12=12;
     public static final int T__34=34;
     public static final int T__13=13;
-    public static final int T__35=35;
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
@@ -629,7 +628,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_8=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
-        EObject lv_path_4_0 = null;
+        AntlrDatatypeRuleToken lv_path_4_0 = null;
 
         EObject lv_links_7_0 = null;
 
@@ -1040,7 +1039,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        EObject lv_path_6_0 = null;
+        AntlrDatatypeRuleToken lv_path_6_0 = null;
 
         EObject lv_links_9_0 = null;
 
@@ -1348,7 +1347,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        EObject lv_path_6_0 = null;
+        AntlrDatatypeRuleToken lv_path_6_0 = null;
 
         EObject lv_links_9_0 = null;
 
@@ -2236,15 +2235,15 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleURL"
-    // InternalWappm.g:981:1: entryRuleURL returns [EObject current=null] : iv_ruleURL= ruleURL EOF ;
-    public final EObject entryRuleURL() throws RecognitionException {
-        EObject current = null;
+    // InternalWappm.g:981:1: entryRuleURL returns [String current=null] : iv_ruleURL= ruleURL EOF ;
+    public final String entryRuleURL() throws RecognitionException {
+        String current = null;
 
-        EObject iv_ruleURL = null;
+        AntlrDatatypeRuleToken iv_ruleURL = null;
 
 
         try {
-            // InternalWappm.g:981:44: (iv_ruleURL= ruleURL EOF )
+            // InternalWappm.g:981:43: (iv_ruleURL= ruleURL EOF )
             // InternalWappm.g:982:2: iv_ruleURL= ruleURL EOF
             {
              newCompositeNode(grammarAccess.getURLRule()); 
@@ -2253,7 +2252,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             state._fsp--;
 
-             current =iv_ruleURL; 
+             current =iv_ruleURL.getText(); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2272,180 +2271,63 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleURL"
-    // InternalWappm.g:988:1: ruleURL returns [EObject current=null] : ( () (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* ) ) ;
-    public final EObject ruleURL() throws RecognitionException {
-        EObject current = null;
+    // InternalWappm.g:988:1: ruleURL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '/' (this_ID_1= RULE_ID kw= '/' )* ) ;
+    public final AntlrDatatypeRuleToken ruleURL() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token this_ID_3=null;
-        EObject lv_addition_4_0 = null;
-
+        Token kw=null;
+        Token this_ID_1=null;
 
 
         	enterRule();
 
         try {
-            // InternalWappm.g:994:2: ( ( () (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* ) ) )
-            // InternalWappm.g:995:2: ( () (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* ) )
+            // InternalWappm.g:994:2: ( (kw= '/' (this_ID_1= RULE_ID kw= '/' )* ) )
+            // InternalWappm.g:995:2: (kw= '/' (this_ID_1= RULE_ID kw= '/' )* )
             {
-            // InternalWappm.g:995:2: ( () (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* ) )
-            // InternalWappm.g:996:3: () (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* )
+            // InternalWappm.g:995:2: (kw= '/' (this_ID_1= RULE_ID kw= '/' )* )
+            // InternalWappm.g:996:3: kw= '/' (this_ID_1= RULE_ID kw= '/' )*
             {
-            // InternalWappm.g:996:3: ()
-            // InternalWappm.g:997:4: 
-            {
+            kw=(Token)match(input,29,FOLLOW_23); 
 
-            				current = forceCreateModelElement(
-            					grammarAccess.getURLAccess().getURLAction_0(),
-            					current);
-            			
+            			current.merge(kw);
+            			newLeafNode(kw, grammarAccess.getURLAccess().getSolidusKeyword_0());
+            		
+            // InternalWappm.g:1001:3: (this_ID_1= RULE_ID kw= '/' )*
+            loop12:
+            do {
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-            }
-
-            // InternalWappm.g:1003:3: (otherlv_1= '/' | (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )* )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
-
-            if ( (LA14_0==29) ) {
-                int LA14_1 = input.LA(2);
-
-                if ( (LA14_1==EOF||LA14_1==13||LA14_1==17) ) {
-                    alt14=1;
+                if ( (LA12_0==RULE_ID) ) {
+                    alt12=1;
                 }
-                else if ( (LA14_1==RULE_ID||LA14_1==28||LA14_1==30) ) {
-                    alt14=2;
+
+
+                switch (alt12) {
+            	case 1 :
+            	    // InternalWappm.g:1002:4: this_ID_1= RULE_ID kw= '/'
+            	    {
+            	    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_11); 
+
+            	    				current.merge(this_ID_1);
+            	    			
+
+            	    				newLeafNode(this_ID_1, grammarAccess.getURLAccess().getIDTerminalRuleCall_1_0());
+            	    			
+            	    kw=(Token)match(input,29,FOLLOW_23); 
+
+            	    				current.merge(kw);
+            	    				newLeafNode(kw, grammarAccess.getURLAccess().getSolidusKeyword_1_1());
+            	    			
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop12;
                 }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 14, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else if ( (LA14_0==EOF||LA14_0==13||LA14_0==17) ) {
-                alt14=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
-
-                throw nvae;
-            }
-            switch (alt14) {
-                case 1 :
-                    // InternalWappm.g:1004:4: otherlv_1= '/'
-                    {
-                    otherlv_1=(Token)match(input,29,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_1, grammarAccess.getURLAccess().getSolidusKeyword_1_0());
-                    			
-
-                    }
-                    break;
-                case 2 :
-                    // InternalWappm.g:1009:4: (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )*
-                    {
-                    // InternalWappm.g:1009:4: (otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) ) )*
-                    loop13:
-                    do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
-
-                        if ( (LA13_0==29) ) {
-                            alt13=1;
-                        }
-
-
-                        switch (alt13) {
-                    	case 1 :
-                    	    // InternalWappm.g:1010:5: otherlv_2= '/' (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) )
-                    	    {
-                    	    otherlv_2=(Token)match(input,29,FOLLOW_23); 
-
-                    	    					newLeafNode(otherlv_2, grammarAccess.getURLAccess().getSolidusKeyword_1_1_0());
-                    	    				
-                    	    // InternalWappm.g:1014:5: (this_ID_3= RULE_ID | ( (lv_addition_4_0= ruleURL_ADDITION ) ) )
-                    	    int alt12=2;
-                    	    int LA12_0 = input.LA(1);
-
-                    	    if ( (LA12_0==RULE_ID) ) {
-                    	        alt12=1;
-                    	    }
-                    	    else if ( (LA12_0==28||LA12_0==30) ) {
-                    	        alt12=2;
-                    	    }
-                    	    else {
-                    	        NoViableAltException nvae =
-                    	            new NoViableAltException("", 12, 0, input);
-
-                    	        throw nvae;
-                    	    }
-                    	    switch (alt12) {
-                    	        case 1 :
-                    	            // InternalWappm.g:1015:6: this_ID_3= RULE_ID
-                    	            {
-                    	            this_ID_3=(Token)match(input,RULE_ID,FOLLOW_24); 
-
-                    	            						newLeafNode(this_ID_3, grammarAccess.getURLAccess().getIDTerminalRuleCall_1_1_1_0());
-                    	            					
-
-                    	            }
-                    	            break;
-                    	        case 2 :
-                    	            // InternalWappm.g:1020:6: ( (lv_addition_4_0= ruleURL_ADDITION ) )
-                    	            {
-                    	            // InternalWappm.g:1020:6: ( (lv_addition_4_0= ruleURL_ADDITION ) )
-                    	            // InternalWappm.g:1021:7: (lv_addition_4_0= ruleURL_ADDITION )
-                    	            {
-                    	            // InternalWappm.g:1021:7: (lv_addition_4_0= ruleURL_ADDITION )
-                    	            // InternalWappm.g:1022:8: lv_addition_4_0= ruleURL_ADDITION
-                    	            {
-
-                    	            								newCompositeNode(grammarAccess.getURLAccess().getAdditionURL_ADDITIONParserRuleCall_1_1_1_1_0());
-                    	            							
-                    	            pushFollow(FOLLOW_24);
-                    	            lv_addition_4_0=ruleURL_ADDITION();
-
-                    	            state._fsp--;
-
-
-                    	            								if (current==null) {
-                    	            									current = createModelElementForParent(grammarAccess.getURLRule());
-                    	            								}
-                    	            								add(
-                    	            									current,
-                    	            									"addition",
-                    	            									lv_addition_4_0,
-                    	            									"org.xtext.example.wappm.Wappm.URL_ADDITION");
-                    	            								afterParserOrEnumRuleCall();
-                    	            							
-
-                    	            }
-
-
-                    	            }
-
-
-                    	            }
-                    	            break;
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop13;
-                        }
-                    } while (true);
-
-
-                    }
-                    break;
-
-            }
+            } while (true);
 
 
             }
@@ -2469,184 +2351,8 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleURL"
 
 
-    // $ANTLR start "entryRuleURL_ADDITION"
-    // InternalWappm.g:1046:1: entryRuleURL_ADDITION returns [EObject current=null] : iv_ruleURL_ADDITION= ruleURL_ADDITION EOF ;
-    public final EObject entryRuleURL_ADDITION() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleURL_ADDITION = null;
-
-
-        try {
-            // InternalWappm.g:1046:53: (iv_ruleURL_ADDITION= ruleURL_ADDITION EOF )
-            // InternalWappm.g:1047:2: iv_ruleURL_ADDITION= ruleURL_ADDITION EOF
-            {
-             newCompositeNode(grammarAccess.getURL_ADDITIONRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleURL_ADDITION=ruleURL_ADDITION();
-
-            state._fsp--;
-
-             current =iv_ruleURL_ADDITION; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleURL_ADDITION"
-
-
-    // $ANTLR start "ruleURL_ADDITION"
-    // InternalWappm.g:1053:1: ruleURL_ADDITION returns [EObject current=null] : ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) ) ) ;
-    public final EObject ruleURL_ADDITION() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token otherlv_2=null;
-        Token lv_name_3_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalWappm.g:1059:2: ( ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) ) ) )
-            // InternalWappm.g:1060:2: ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) ) )
-            {
-            // InternalWappm.g:1060:2: ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) ) )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
-
-            if ( (LA15_0==28) ) {
-                alt15=1;
-            }
-            else if ( (LA15_0==30) ) {
-                alt15=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
-
-                throw nvae;
-            }
-            switch (alt15) {
-                case 1 :
-                    // InternalWappm.g:1061:3: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
-                    {
-                    // InternalWappm.g:1061:3: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
-                    // InternalWappm.g:1062:4: otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) )
-                    {
-                    otherlv_0=(Token)match(input,28,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_0, grammarAccess.getURL_ADDITIONAccess().getColonKeyword_0_0());
-                    			
-                    // InternalWappm.g:1066:4: ( (lv_name_1_0= RULE_ID ) )
-                    // InternalWappm.g:1067:5: (lv_name_1_0= RULE_ID )
-                    {
-                    // InternalWappm.g:1067:5: (lv_name_1_0= RULE_ID )
-                    // InternalWappm.g:1068:6: lv_name_1_0= RULE_ID
-                    {
-                    lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-                    						newLeafNode(lv_name_1_0, grammarAccess.getURL_ADDITIONAccess().getNameIDTerminalRuleCall_0_1_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getURL_ADDITIONRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"name",
-                    							lv_name_1_0,
-                    							"org.eclipse.xtext.common.Terminals.ID");
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalWappm.g:1086:3: (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) )
-                    {
-                    // InternalWappm.g:1086:3: (otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) ) )
-                    // InternalWappm.g:1087:4: otherlv_2= '?' ( (lv_name_3_0= RULE_ID ) )
-                    {
-                    otherlv_2=(Token)match(input,30,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_2, grammarAccess.getURL_ADDITIONAccess().getQuestionMarkKeyword_1_0());
-                    			
-                    // InternalWappm.g:1091:4: ( (lv_name_3_0= RULE_ID ) )
-                    // InternalWappm.g:1092:5: (lv_name_3_0= RULE_ID )
-                    {
-                    // InternalWappm.g:1092:5: (lv_name_3_0= RULE_ID )
-                    // InternalWappm.g:1093:6: lv_name_3_0= RULE_ID
-                    {
-                    lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-                    						newLeafNode(lv_name_3_0, grammarAccess.getURL_ADDITIONAccess().getNameIDTerminalRuleCall_1_1_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getURL_ADDITIONRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"name",
-                    							lv_name_3_0,
-                    							"org.eclipse.xtext.common.Terminals.ID");
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleURL_ADDITION"
-
-
     // $ANTLR start "ruleAppTypes"
-    // InternalWappm.g:1114:1: ruleAppTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) ) ;
+    // InternalWappm.g:1019:1: ruleAppTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) ) ;
     public final Enumerator ruleAppTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -2660,52 +2366,52 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalWappm.g:1120:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) ) )
-            // InternalWappm.g:1121:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) )
+            // InternalWappm.g:1025:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) ) )
+            // InternalWappm.g:1026:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) )
             {
-            // InternalWappm.g:1121:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) )
-            int alt16=5;
+            // InternalWappm.g:1026:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Double' ) | (enumLiteral_4= 'Boolean' ) )
+            int alt13=5;
             switch ( input.LA(1) ) {
+            case 30:
+                {
+                alt13=1;
+                }
+                break;
             case 31:
                 {
-                alt16=1;
+                alt13=2;
                 }
                 break;
             case 32:
                 {
-                alt16=2;
+                alt13=3;
                 }
                 break;
             case 33:
                 {
-                alt16=3;
+                alt13=4;
                 }
                 break;
             case 34:
                 {
-                alt16=4;
-                }
-                break;
-            case 35:
-                {
-                alt16=5;
+                alt13=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt16) {
+            switch (alt13) {
                 case 1 :
-                    // InternalWappm.g:1122:3: (enumLiteral_0= 'String' )
+                    // InternalWappm.g:1027:3: (enumLiteral_0= 'String' )
                     {
-                    // InternalWappm.g:1122:3: (enumLiteral_0= 'String' )
-                    // InternalWappm.g:1123:4: enumLiteral_0= 'String'
+                    // InternalWappm.g:1027:3: (enumLiteral_0= 'String' )
+                    // InternalWappm.g:1028:4: enumLiteral_0= 'String'
                     {
-                    enumLiteral_0=(Token)match(input,31,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getAppTypesAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getAppTypesAccess().getStringEnumLiteralDeclaration_0());
@@ -2717,12 +2423,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalWappm.g:1130:3: (enumLiteral_1= 'Integer' )
+                    // InternalWappm.g:1035:3: (enumLiteral_1= 'Integer' )
                     {
-                    // InternalWappm.g:1130:3: (enumLiteral_1= 'Integer' )
-                    // InternalWappm.g:1131:4: enumLiteral_1= 'Integer'
+                    // InternalWappm.g:1035:3: (enumLiteral_1= 'Integer' )
+                    // InternalWappm.g:1036:4: enumLiteral_1= 'Integer'
                     {
-                    enumLiteral_1=(Token)match(input,32,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,31,FOLLOW_2); 
 
                     				current = grammarAccess.getAppTypesAccess().getIntegerEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getAppTypesAccess().getIntegerEnumLiteralDeclaration_1());
@@ -2734,12 +2440,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalWappm.g:1138:3: (enumLiteral_2= 'Float' )
+                    // InternalWappm.g:1043:3: (enumLiteral_2= 'Float' )
                     {
-                    // InternalWappm.g:1138:3: (enumLiteral_2= 'Float' )
-                    // InternalWappm.g:1139:4: enumLiteral_2= 'Float'
+                    // InternalWappm.g:1043:3: (enumLiteral_2= 'Float' )
+                    // InternalWappm.g:1044:4: enumLiteral_2= 'Float'
                     {
-                    enumLiteral_2=(Token)match(input,33,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,32,FOLLOW_2); 
 
                     				current = grammarAccess.getAppTypesAccess().getFloatEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getAppTypesAccess().getFloatEnumLiteralDeclaration_2());
@@ -2751,12 +2457,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalWappm.g:1146:3: (enumLiteral_3= 'Double' )
+                    // InternalWappm.g:1051:3: (enumLiteral_3= 'Double' )
                     {
-                    // InternalWappm.g:1146:3: (enumLiteral_3= 'Double' )
-                    // InternalWappm.g:1147:4: enumLiteral_3= 'Double'
+                    // InternalWappm.g:1051:3: (enumLiteral_3= 'Double' )
+                    // InternalWappm.g:1052:4: enumLiteral_3= 'Double'
                     {
-                    enumLiteral_3=(Token)match(input,34,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,33,FOLLOW_2); 
 
                     				current = grammarAccess.getAppTypesAccess().getDoubleEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getAppTypesAccess().getDoubleEnumLiteralDeclaration_3());
@@ -2768,12 +2474,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalWappm.g:1154:3: (enumLiteral_4= 'Boolean' )
+                    // InternalWappm.g:1059:3: (enumLiteral_4= 'Boolean' )
                     {
-                    // InternalWappm.g:1154:3: (enumLiteral_4= 'Boolean' )
-                    // InternalWappm.g:1155:4: enumLiteral_4= 'Boolean'
+                    // InternalWappm.g:1059:3: (enumLiteral_4= 'Boolean' )
+                    // InternalWappm.g:1060:4: enumLiteral_4= 'Boolean'
                     {
-                    enumLiteral_4=(Token)match(input,35,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,34,FOLLOW_2); 
 
                     				current = grammarAccess.getAppTypesAccess().getBooleanEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getAppTypesAccess().getBooleanEnumLiteralDeclaration_4());
@@ -2820,7 +2526,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000288000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x000000000028A000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000020022000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000022000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000042000L});
@@ -2831,8 +2537,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000000000C000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000F80000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000050000010L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x00000007C0000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000012L});
 
 }

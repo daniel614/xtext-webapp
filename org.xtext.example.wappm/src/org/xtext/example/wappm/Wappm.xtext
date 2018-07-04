@@ -73,11 +73,6 @@ enum AppTypes :
 ;
 
 URL :
-	{URL} // object instantiation
-	( '/' | ('/' (ID | addition+=URL_ADDITION))*)
-;
- 
-URL_ADDITION :
-	(':' name=ID | '?' name=ID)
+	'/'(ID'/')*
 ;
 

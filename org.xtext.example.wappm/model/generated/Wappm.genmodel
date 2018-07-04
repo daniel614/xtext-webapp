@@ -24,7 +24,7 @@
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//Page">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Page/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Page/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Page/path"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Page/links"/>
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//StaticPage"/>
@@ -48,12 +48,6 @@
     <genClasses ecoreClass="Wappm.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Attribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Attribute/type"/>
-    </genClasses>
-    <genClasses ecoreClass="Wappm.ecore#//URL">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//URL/addition"/>
-    </genClasses>
-    <genClasses ecoreClass="Wappm.ecore#//URL_ADDITION">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//URL_ADDITION/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

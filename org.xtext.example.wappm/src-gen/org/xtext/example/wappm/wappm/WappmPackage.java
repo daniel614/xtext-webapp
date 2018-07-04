@@ -161,7 +161,7 @@ public interface WappmPackage extends EPackage
   int PAGE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -207,7 +207,7 @@ public interface WappmPackage extends EPackage
   int STATIC_PAGE__NAME = PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -253,7 +253,7 @@ public interface WappmPackage extends EPackage
   int DYNAMIC_PAGE__NAME = PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -308,7 +308,7 @@ public interface WappmPackage extends EPackage
   int DETAIL_PAGE__NAME = DYNAMIC_PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -363,7 +363,7 @@ public interface WappmPackage extends EPackage
   int INDEX_PAGE__NAME = DYNAMIC_PAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' containment reference.
+   * The feature id for the '<em><b>Path</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -547,62 +547,6 @@ public interface WappmPackage extends EPackage
   int ATTRIBUTE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.URLImpl <em>URL</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.wappm.wappm.impl.URLImpl
-   * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getURL()
-   * @generated
-   */
-  int URL = 11;
-
-  /**
-   * The feature id for the '<em><b>Addition</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL__ADDITION = 0;
-
-  /**
-   * The number of structural features of the '<em>URL</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.URL_ADDITIONImpl <em>URL ADDITION</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.wappm.wappm.impl.URL_ADDITIONImpl
-   * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getURL_ADDITION()
-   * @generated
-   */
-  int URL_ADDITION = 12;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL_ADDITION__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>URL ADDITION</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL_ADDITION_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -610,7 +554,7 @@ public interface WappmPackage extends EPackage
    * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getAppTypes()
    * @generated
    */
-  int APP_TYPES = 13;
+  int APP_TYPES = 11;
 
 
   /**
@@ -710,15 +654,15 @@ public interface WappmPackage extends EPackage
   EAttribute getPage_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.Page#getPath <em>Path</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Path</em>'.
+   * @return the meta object for the attribute '<em>Path</em>'.
    * @see org.xtext.example.wappm.wappm.Page#getPath()
    * @see #getPage()
    * @generated
    */
-  EReference getPage_Path();
+  EAttribute getPage_Path();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.Page#getLinks <em>Links</em>}'.
@@ -911,48 +855,6 @@ public interface WappmPackage extends EPackage
   EAttribute getAttribute_Type();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.URL <em>URL</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>URL</em>'.
-   * @see org.xtext.example.wappm.wappm.URL
-   * @generated
-   */
-  EClass getURL();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.URL#getAddition <em>Addition</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Addition</em>'.
-   * @see org.xtext.example.wappm.wappm.URL#getAddition()
-   * @see #getURL()
-   * @generated
-   */
-  EReference getURL_Addition();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.URL_ADDITION <em>URL ADDITION</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>URL ADDITION</em>'.
-   * @see org.xtext.example.wappm.wappm.URL_ADDITION
-   * @generated
-   */
-  EClass getURL_ADDITION();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.URL_ADDITION#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.wappm.wappm.URL_ADDITION#getName()
-   * @see #getURL_ADDITION()
-   * @generated
-   */
-  EAttribute getURL_ADDITION_Name();
-
-  /**
    * Returns the meta object for enum '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1064,12 +966,12 @@ public interface WappmPackage extends EPackage
     EAttribute PAGE__NAME = eINSTANCE.getPage_Name();
 
     /**
-     * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PAGE__PATH = eINSTANCE.getPage_Path();
+    EAttribute PAGE__PATH = eINSTANCE.getPage_Path();
 
     /**
      * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
@@ -1230,42 +1132,6 @@ public interface WappmPackage extends EPackage
      * @generated
      */
     EAttribute ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.URLImpl <em>URL</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.wappm.wappm.impl.URLImpl
-     * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getURL()
-     * @generated
-     */
-    EClass URL = eINSTANCE.getURL();
-
-    /**
-     * The meta object literal for the '<em><b>Addition</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference URL__ADDITION = eINSTANCE.getURL_Addition();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.URL_ADDITIONImpl <em>URL ADDITION</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.wappm.wappm.impl.URL_ADDITIONImpl
-     * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getURL_ADDITION()
-     * @generated
-     */
-    EClass URL_ADDITION = eINSTANCE.getURL_ADDITION();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute URL_ADDITION__NAME = eINSTANCE.getURL_ADDITION_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}' enum.

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.wappm.wappm.Link;
 import org.xtext.example.wappm.wappm.Page;
-import org.xtext.example.wappm.wappm.URL;
 import org.xtext.example.wappm.wappm.WappmPackage;
 
 /**
@@ -62,14 +61,24 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPath() <em>Path</em>}' containment reference.
+   * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPath()
    * @generated
    * @ordered
    */
-  protected URL path;
+  protected static final String PATH_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPath()
+   * @generated
+   * @ordered
+   */
+  protected String path = PATH_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
@@ -130,7 +139,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
    * <!-- end-user-doc -->
    * @generated
    */
-  public URL getPath()
+  public String getPath()
   {
     return path;
   }
@@ -140,37 +149,12 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPath(URL newPath, NotificationChain msgs)
+  public void setPath(String newPath)
   {
-    URL oldPath = path;
+    String oldPath = path;
     path = newPath;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__PATH, oldPath, newPath);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPath(URL newPath)
-  {
-    if (newPath != path)
-    {
-      NotificationChain msgs = null;
-      if (path != null)
-        msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__PATH, null, msgs);
-      if (newPath != null)
-        msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WappmPackage.PAGE__PATH, null, msgs);
-      msgs = basicSetPath(newPath, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__PATH, newPath, newPath));
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.PAGE__PATH, oldPath, path));
   }
 
   /**
@@ -197,8 +181,6 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
   {
     switch (featureID)
     {
-      case WappmPackage.PAGE__PATH:
-        return basicSetPath(null, msgs);
       case WappmPackage.PAGE__LINKS:
         return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
     }
@@ -240,7 +222,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
         setName((String)newValue);
         return;
       case WappmPackage.PAGE__PATH:
-        setPath((URL)newValue);
+        setPath((String)newValue);
         return;
       case WappmPackage.PAGE__LINKS:
         getLinks().clear();
@@ -264,7 +246,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
         setName(NAME_EDEFAULT);
         return;
       case WappmPackage.PAGE__PATH:
-        setPath((URL)null);
+        setPath(PATH_EDEFAULT);
         return;
       case WappmPackage.PAGE__LINKS:
         getLinks().clear();
@@ -286,7 +268,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
       case WappmPackage.PAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case WappmPackage.PAGE__PATH:
-        return path != null;
+        return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
       case WappmPackage.PAGE__LINKS:
         return links != null && !links.isEmpty();
     }
@@ -306,6 +288,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", path: ");
+    result.append(path);
     result.append(')');
     return result.toString();
   }

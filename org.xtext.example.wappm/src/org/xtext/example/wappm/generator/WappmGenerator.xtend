@@ -37,8 +37,10 @@ class WappmGenerator extends AbstractGenerator {
 	def compile(WebModel w) '''
 		package «w.name»;
 
+		// Generated HyperText
 		«w.hypertext.compile»
 		
+		// Generated Content
 		«w.content.compile»
 	'''	
 	
@@ -66,7 +68,7 @@ class WappmGenerator extends AbstractGenerator {
 	
 	def compile(IndexPage ip) '''
 		class «ip.name» {
-			String path = «ip.path»;
+			private String path = "«ip.path»";
 			
 			«ip.displayedClass.name» usedClass = new «ip.displayedClass.name»();
 		}
@@ -74,7 +76,7 @@ class WappmGenerator extends AbstractGenerator {
 	
 	def compile(DetailPage dp) '''
 		class «dp.name» {
-			String path = «dp.path»;
+			private String path = "«dp.path»";
 			
 			«dp.displayedClass.name» usedClass = new «dp.displayedClass.name»();
 		}
@@ -82,7 +84,7 @@ class WappmGenerator extends AbstractGenerator {
 	
 	def compile(StaticPage sp) '''
 		class «sp.name» {
-			String path = «sp.path»;
+			private String path = "«sp.path»";
 		}
 	'''
 	
@@ -103,14 +105,54 @@ class WappmGenerator extends AbstractGenerator {
 	def compile(Attribute a) '''
 	«IF a.type == AppTypes.BOOLEAN»
 		private boolean «a.name»;
+		
+		public boolean get«a.name.toFirstUpper»() {
+			return «a.name»;
+		}
+		        
+		public void set«a.name.toFirstUpper»(boolean «a.name») {
+			this.«a.name» = «a.name»;
+		}
 	«ELSEIF a.type == AppTypes.INTEGER»
 		private int «a.name»;
+		
+		public boolean get«a.name.toFirstUpper»() {
+			return «a.name»;
+		}
+		        
+		public void set«a.name.toFirstUpper»(int «a.name») {
+			this.«a.name» = «a.name»;
+		}
 	«ELSEIF a.type == AppTypes.FLOAT»
 		private float «a.name»;
+		
+		public boolean get«a.name.toFirstUpper»() {
+			return «a.name»;
+		}
+		        
+		public void set«a.name.toFirstUpper»(float «a.name») {
+			this.«a.name» = «a.name»;
+		}
 	«ELSEIF a.type == AppTypes.DOUBLE»
 		private double «a.name»;
+		
+		public boolean get«a.name.toFirstUpper»() {
+			return «a.name»;
+		}
+		        
+		public void set«a.name.toFirstUpper»(double «a.name») {
+			this.«a.name» = «a.name»;
+		}
 	«ELSEIF a.type == AppTypes.STRING»
 		private String «a.name»;
+		
+		public boolean get«a.name.toFirstUpper»() {
+			return «a.name»;
+		}
+		        
+		public void set«a.name.toFirstUpper»(String «a.name») {
+			this.«a.name» = «a.name»;
+		}
 	«ENDIF»
 	'''
 }

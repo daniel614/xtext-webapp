@@ -123,24 +123,6 @@ public interface WappmFactory extends EFactory
   Attribute createAttribute();
 
   /**
-   * Returns a new object of class '<em>URL</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>URL</em>'.
-   * @generated
-   */
-  URL createURL();
-
-  /**
-   * Returns a new object of class '<em>URL ADDITION</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>URL ADDITION</em>'.
-   * @generated
-   */
-  URL_ADDITION createURL_ADDITION();
-
-  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

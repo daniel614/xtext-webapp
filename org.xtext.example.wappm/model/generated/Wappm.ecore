@@ -15,7 +15,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="path" eType="#//URL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
         eType="#//Link" containment="true"/>
   </eClassifiers>
@@ -49,12 +49,5 @@
     <eLiterals name="Float" value="2" literal="Float"/>
     <eLiterals name="Double" value="3" literal="Double"/>
     <eLiterals name="Boolean" value="4" literal="Boolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="URL">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addition" upperBound="-1"
-        eType="#//URL_ADDITION" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="URL_ADDITION">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

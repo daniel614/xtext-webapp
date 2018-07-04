@@ -33,9 +33,6 @@ public class WappmParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, WappmGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getPageAccess().getAlternatives(), "rule__Page__Alternatives");
 			builder.put(grammarAccess.getDynamicPageAccess().getAlternatives(), "rule__DynamicPage__Alternatives");
-			builder.put(grammarAccess.getURLAccess().getAlternatives_1(), "rule__URL__Alternatives_1");
-			builder.put(grammarAccess.getURLAccess().getAlternatives_1_1_1(), "rule__URL__Alternatives_1_1_1");
-			builder.put(grammarAccess.getURL_ADDITIONAccess().getAlternatives(), "rule__URL_ADDITION__Alternatives");
 			builder.put(grammarAccess.getAppTypesAccess().getAlternatives(), "rule__AppTypes__Alternatives");
 			builder.put(grammarAccess.getWebModelAccess().getGroup(), "rule__WebModel__Group__0");
 			builder.put(grammarAccess.getHypertextLayerAccess().getGroup(), "rule__HypertextLayer__Group__0");
@@ -53,9 +50,7 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getWebClassAccess().getGroup(), "rule__WebClass__Group__0");
 			builder.put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 			builder.put(grammarAccess.getURLAccess().getGroup(), "rule__URL__Group__0");
-			builder.put(grammarAccess.getURLAccess().getGroup_1_1(), "rule__URL__Group_1_1__0");
-			builder.put(grammarAccess.getURL_ADDITIONAccess().getGroup_0(), "rule__URL_ADDITION__Group_0__0");
-			builder.put(grammarAccess.getURL_ADDITIONAccess().getGroup_1(), "rule__URL_ADDITION__Group_1__0");
+			builder.put(grammarAccess.getURLAccess().getGroup_1(), "rule__URL__Group_1__0");
 			builder.put(grammarAccess.getWebModelAccess().getNameAssignment_1(), "rule__WebModel__NameAssignment_1");
 			builder.put(grammarAccess.getWebModelAccess().getHypertextAssignment_3(), "rule__WebModel__HypertextAssignment_3");
 			builder.put(grammarAccess.getWebModelAccess().getContentAssignment_4(), "rule__WebModel__ContentAssignment_4");
@@ -83,9 +78,6 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getWebClassAccess().getUniqueIdentifierAssignment_5(), "rule__WebClass__UniqueIdentifierAssignment_5");
 			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 			builder.put(grammarAccess.getAttributeAccess().getTypeAssignment_3(), "rule__Attribute__TypeAssignment_3");
-			builder.put(grammarAccess.getURLAccess().getAdditionAssignment_1_1_1_1(), "rule__URL__AdditionAssignment_1_1_1_1");
-			builder.put(grammarAccess.getURL_ADDITIONAccess().getNameAssignment_0_1(), "rule__URL_ADDITION__NameAssignment_0_1");
-			builder.put(grammarAccess.getURL_ADDITIONAccess().getNameAssignment_1_1(), "rule__URL_ADDITION__NameAssignment_1_1");
 		}
 	}
 	

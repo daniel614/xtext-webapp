@@ -131,16 +131,6 @@ public class WappmAdapterFactory extends AdapterFactoryImpl
         return createAttributeAdapter();
       }
       @Override
-      public Adapter caseURL(URL object)
-      {
-        return createURLAdapter();
-      }
-      @Override
-      public Adapter caseURL_ADDITION(URL_ADDITION object)
-      {
-        return createURL_ADDITIONAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -323,36 +313,6 @@ public class WappmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.wappm.wappm.URL <em>URL</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.wappm.wappm.URL
-   * @generated
-   */
-  public Adapter createURLAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.wappm.wappm.URL_ADDITION <em>URL ADDITION</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.wappm.wappm.URL_ADDITION
-   * @generated
-   */
-  public Adapter createURL_ADDITIONAdapter()
   {
     return null;
   }

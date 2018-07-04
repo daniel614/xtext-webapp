@@ -39,7 +39,7 @@ public class WappmParsingTest {
       _builder.append("detail TestDetail uses SomeClass {");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("path /test/:test");
+      _builder.append("path /test1/");
       _builder.newLine();
       _builder.append("\t\t\t");
       _builder.append("links {");
@@ -63,7 +63,7 @@ public class WappmParsingTest {
       _builder.append("index TestIndex uses TestClass {");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("path /test");
+      _builder.append("path /test2/");
       _builder.newLine();
       _builder.append("\t\t");
       _builder.append("}");
@@ -125,7 +125,7 @@ public class WappmParsingTest {
       _builder.append("detail TestDetail uses SomeClass {");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("path /test/:test");
+      _builder.append("path /test1/");
       _builder.newLine();
       _builder.append("\t\t\t");
       _builder.append("links {");
@@ -149,7 +149,7 @@ public class WappmParsingTest {
       _builder.append("index TestIndex uses TestClass {");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("path /test");
+      _builder.append("path /test2/");
       _builder.newLine();
       _builder.append("\t\t");
       _builder.append("}");

@@ -6,7 +6,6 @@ package org.xtext.example.wappm.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
-import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
@@ -626,93 +625,29 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	public class URLElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.URL");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cURLAction_0 = (Action)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Keyword cSolidusKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
-		private final Keyword cSolidusKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Alternatives cAlternatives_1_1_1 = (Alternatives)cGroup_1_1.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1_1_1_0 = (RuleCall)cAlternatives_1_1_1.eContents().get(0);
-		private final Assignment cAdditionAssignment_1_1_1_1 = (Assignment)cAlternatives_1_1_1.eContents().get(1);
-		private final RuleCall cAdditionURL_ADDITIONParserRuleCall_1_1_1_1_0 = (RuleCall)cAdditionAssignment_1_1_1_1.eContents().get(0);
+		private final Keyword cSolidusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Keyword cSolidusKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		
 		//URL:
-		//	{URL} ('/' | ('/' (ID | addition+=URL_ADDITION))*);
+		//	'/' (ID '/')*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{URL} ('/' | ('/' (ID | addition+=URL_ADDITION))*)
+		//'/' (ID '/')*
 		public Group getGroup() { return cGroup; }
 		
-		//{URL}
-		public Action getURLAction_0() { return cURLAction_0; }
-		
-		//// object instantiation
-		//'/' | ('/' (ID | addition+=URL_ADDITION))*
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-		
 		//'/'
-		public Keyword getSolidusKeyword_1_0() { return cSolidusKeyword_1_0; }
+		public Keyword getSolidusKeyword_0() { return cSolidusKeyword_0; }
 		
-		//('/' (ID | addition+=URL_ADDITION))*
-		public Group getGroup_1_1() { return cGroup_1_1; }
-		
-		//'/'
-		public Keyword getSolidusKeyword_1_1_0() { return cSolidusKeyword_1_1_0; }
-		
-		//ID | addition+=URL_ADDITION
-		public Alternatives getAlternatives_1_1_1() { return cAlternatives_1_1_1; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1_1_0() { return cIDTerminalRuleCall_1_1_1_0; }
-		
-		//addition+=URL_ADDITION
-		public Assignment getAdditionAssignment_1_1_1_1() { return cAdditionAssignment_1_1_1_1; }
-		
-		//URL_ADDITION
-		public RuleCall getAdditionURL_ADDITIONParserRuleCall_1_1_1_1_0() { return cAdditionURL_ADDITIONParserRuleCall_1_1_1_1_0; }
-	}
-	public class URL_ADDITIONElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.URL_ADDITION");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cColonKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cQuestionMarkKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
-		
-		//URL_ADDITION:
-		//	':' name=ID | '?' name=ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//':' name=ID | '?' name=ID
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//':' name=ID
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//':'
-		public Keyword getColonKeyword_0_0() { return cColonKeyword_0_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
-		
-		//'?' name=ID
+		//(ID '/')*
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//'?'
-		public Keyword getQuestionMarkKeyword_1_0() { return cQuestionMarkKeyword_1_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
-		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
+		public RuleCall getIDTerminalRuleCall_1_0() { return cIDTerminalRuleCall_1_0; }
+		
+		//'/'
+		public Keyword getSolidusKeyword_1_1() { return cSolidusKeyword_1_1; }
 	}
 	
 	public class AppTypesElements extends AbstractEnumRuleElementFinder {
@@ -780,7 +715,6 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	private final AttributeElements pAttribute;
 	private final AppTypesElements eAppTypes;
 	private final URLElements pURL;
-	private final URL_ADDITIONElements pURL_ADDITION;
 	
 	private final Grammar grammar;
 	
@@ -804,7 +738,6 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pAttribute = new AttributeElements();
 		this.eAppTypes = new AppTypesElements();
 		this.pURL = new URLElements();
-		this.pURL_ADDITION = new URL_ADDITIONElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -976,23 +909,13 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//URL:
-	//	{URL} ('/' | ('/' (ID | addition+=URL_ADDITION))*);
+	//	'/' (ID '/')*;
 	public URLElements getURLAccess() {
 		return pURL;
 	}
 	
 	public ParserRule getURLRule() {
 		return getURLAccess().getRule();
-	}
-	
-	//URL_ADDITION:
-	//	':' name=ID | '?' name=ID;
-	public URL_ADDITIONElements getURL_ADDITIONAccess() {
-		return pURL_ADDITION;
-	}
-	
-	public ParserRule getURL_ADDITIONRule() {
-		return getURL_ADDITIONAccess().getRule();
 	}
 	
 	//terminal ID:

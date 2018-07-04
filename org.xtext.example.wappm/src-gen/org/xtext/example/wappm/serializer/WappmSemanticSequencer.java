@@ -22,8 +22,6 @@ import org.xtext.example.wappm.wappm.HypertextLayer;
 import org.xtext.example.wappm.wappm.IndexPage;
 import org.xtext.example.wappm.wappm.Link;
 import org.xtext.example.wappm.wappm.StaticPage;
-import org.xtext.example.wappm.wappm.URL;
-import org.xtext.example.wappm.wappm.URL_ADDITION;
 import org.xtext.example.wappm.wappm.WappmPackage;
 import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
@@ -62,12 +60,6 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case WappmPackage.STATIC_PAGE:
 				sequence_StaticPage(context, (StaticPage) semanticObject); 
-				return; 
-			case WappmPackage.URL:
-				sequence_URL(context, (URL) semanticObject); 
-				return; 
-			case WappmPackage.URL_ADDITION:
-				sequence_URL_ADDITION(context, (URL_ADDITION) semanticObject); 
 				return; 
 			case WappmPackage.WEB_CLASS:
 				sequence_WebClass(context, (WebClass) semanticObject); 
@@ -180,30 +172,6 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (name=ID path=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_StaticPage(ISerializationContext context, StaticPage semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     URL_ADDITION returns URL_ADDITION
-	 *
-	 * Constraint:
-	 *     (name=ID | name=ID)
-	 */
-	protected void sequence_URL_ADDITION(ISerializationContext context, URL_ADDITION semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     URL returns URL
-	 *
-	 * Constraint:
-	 *     addition+=URL_ADDITION*
-	 */
-	protected void sequence_URL(ISerializationContext context, URL semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

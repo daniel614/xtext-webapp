@@ -8,19 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.xtext.example.wappm.wappm.Attribute;
-import org.xtext.example.wappm.wappm.ContentLayer;
-import org.xtext.example.wappm.wappm.DetailPage;
-import org.xtext.example.wappm.wappm.DynamicPage;
-import org.xtext.example.wappm.wappm.HypertextLayer;
-import org.xtext.example.wappm.wappm.IndexPage;
-import org.xtext.example.wappm.wappm.Link;
-import org.xtext.example.wappm.wappm.Page;
-import org.xtext.example.wappm.wappm.StaticPage;
-import org.xtext.example.wappm.wappm.URL;
-import org.xtext.example.wappm.wappm.URL_ADDITION;
-import org.xtext.example.wappm.wappm.WappmPackage;
-import org.xtext.example.wappm.wappm.WebModel;
+import org.xtext.example.wappm.wappm.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -154,10 +142,10 @@ public class WappmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WappmPackage.CLASS:
+      case WappmPackage.WEB_CLASS:
       {
-        org.xtext.example.wappm.wappm.Class class_ = (org.xtext.example.wappm.wappm.Class)theEObject;
-        T result = caseClass(class_);
+        WebClass webClass = (WebClass)theEObject;
+        T result = caseWebClass(webClass);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -331,17 +319,17 @@ public class WappmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Class</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Web Class</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Class</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Web Class</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseClass(org.xtext.example.wappm.wappm.Class object)
+  public T caseWebClass(WebClass object)
   {
     return null;
   }

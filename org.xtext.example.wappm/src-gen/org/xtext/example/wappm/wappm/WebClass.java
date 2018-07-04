@@ -9,23 +9,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Class</b></em>'.
+ * A representation of the model object '<em><b>Web Class</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.wappm.wappm.Class#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.Class#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.Class#getUniqueIdentifier <em>Unique Identifier</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.WebClass#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.WebClass#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier <em>Unique Identifier</em>}</li>
  * </ul>
  *
- * @see org.xtext.example.wappm.wappm.WappmPackage#getClass_()
+ * @see org.xtext.example.wappm.wappm.WappmPackage#getWebClass()
  * @model
  * @generated
  */
-public interface Class extends EObject
+public interface WebClass extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -37,14 +37,14 @@ public interface Class extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.example.wappm.wappm.WappmPackage#getClass_Name()
+   * @see org.xtext.example.wappm.wappm.WappmPackage#getWebClass_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Class#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.wappm.wappm.WebClass#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -63,7 +63,7 @@ public interface Class extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attributes</em>' containment reference list.
-   * @see org.xtext.example.wappm.wappm.WappmPackage#getClass_Attributes()
+   * @see org.xtext.example.wappm.wappm.WappmPackage#getWebClass_Attributes()
    * @model containment="true"
    * @generated
    */
@@ -79,14 +79,14 @@ public interface Class extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Unique Identifier</em>' reference.
    * @see #setUniqueIdentifier(Attribute)
-   * @see org.xtext.example.wappm.wappm.WappmPackage#getClass_UniqueIdentifier()
+   * @see org.xtext.example.wappm.wappm.WappmPackage#getWebClass_UniqueIdentifier()
    * @model
    * @generated
    */
   Attribute getUniqueIdentifier();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.wappm.wappm.Class#getUniqueIdentifier <em>Unique Identifier</em>}' reference.
+   * Sets the value of the '{@link org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier <em>Unique Identifier</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Unique Identifier</em>' reference.
@@ -95,4 +95,4 @@ public interface Class extends EObject
    */
   void setUniqueIdentifier(Attribute value);
 
-} // Class
+} // WebClass

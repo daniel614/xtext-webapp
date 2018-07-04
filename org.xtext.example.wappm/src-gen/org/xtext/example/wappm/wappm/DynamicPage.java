@@ -31,12 +31,12 @@ public interface DynamicPage extends Page
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Displayed Class</em>' reference.
-   * @see #setDisplayedClass(org.xtext.example.wappm.wappm.Class)
+   * @see #setDisplayedClass(WebClass)
    * @see org.xtext.example.wappm.wappm.WappmPackage#getDynamicPage_DisplayedClass()
    * @model
    * @generated
    */
-  org.xtext.example.wappm.wappm.Class getDisplayedClass();
+  WebClass getDisplayedClass();
 
   /**
    * Sets the value of the '{@link org.xtext.example.wappm.wappm.DynamicPage#getDisplayedClass <em>Displayed Class</em>}' reference.
@@ -46,6 +46,6 @@ public interface DynamicPage extends Page
    * @see #getDisplayedClass()
    * @generated
    */
-  void setDisplayedClass(org.xtext.example.wappm.wappm.Class value);
+  void setDisplayedClass(WebClass value);
 
 } // DynamicPage

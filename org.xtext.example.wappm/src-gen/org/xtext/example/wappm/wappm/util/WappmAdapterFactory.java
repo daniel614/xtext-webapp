@@ -10,19 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.xtext.example.wappm.wappm.Attribute;
-import org.xtext.example.wappm.wappm.ContentLayer;
-import org.xtext.example.wappm.wappm.DetailPage;
-import org.xtext.example.wappm.wappm.DynamicPage;
-import org.xtext.example.wappm.wappm.HypertextLayer;
-import org.xtext.example.wappm.wappm.IndexPage;
-import org.xtext.example.wappm.wappm.Link;
-import org.xtext.example.wappm.wappm.Page;
-import org.xtext.example.wappm.wappm.StaticPage;
-import org.xtext.example.wappm.wappm.URL;
-import org.xtext.example.wappm.wappm.URL_ADDITION;
-import org.xtext.example.wappm.wappm.WappmPackage;
-import org.xtext.example.wappm.wappm.WebModel;
+import org.xtext.example.wappm.wappm.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -133,9 +121,9 @@ public class WappmAdapterFactory extends AdapterFactoryImpl
         return createContentLayerAdapter();
       }
       @Override
-      public Adapter caseClass(org.xtext.example.wappm.wappm.Class object)
+      public Adapter caseWebClass(WebClass object)
       {
-        return createClassAdapter();
+        return createWebClassAdapter();
       }
       @Override
       public Adapter caseAttribute(Attribute object)
@@ -310,16 +298,16 @@ public class WappmAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.wappm.wappm.Class <em>Class</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.wappm.wappm.WebClass <em>Web Class</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.wappm.wappm.Class
+   * @see org.xtext.example.wappm.wappm.WebClass
    * @generated
    */
-  public Adapter createClassAdapter()
+  public Adapter createWebClassAdapter()
   {
     return null;
   }

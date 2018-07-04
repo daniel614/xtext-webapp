@@ -40,10 +40,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//ContentLayer/contentName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//ContentLayer/classes"/>
     </genClasses>
-    <genClasses ecoreClass="Wappm.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Class/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//Class/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Wappm.ecore#//Class/uniqueIdentifier"/>
+    <genClasses ecoreClass="Wappm.ecore#//WebClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//WebClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//WebClass/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Wappm.ecore#//WebClass/uniqueIdentifier"/>
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Attribute/name"/>

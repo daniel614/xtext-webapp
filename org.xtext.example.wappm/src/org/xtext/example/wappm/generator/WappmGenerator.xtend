@@ -7,6 +7,11 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.example.wappm.wappm.WebModel
+import org.xtext.example.wappm.wappm.HypertextLayer
+import org.xtext.example.wappm.wappm.ContentLayer
+import org.xtext.example.wappm.wappm.WebClass
+import org.xtext.example.wappm.wappm.Attribute
 
 /**
  * Generates code from your model files on save.
@@ -16,10 +21,39 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class WappmGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+		for (w : resource.allContents.toIterable.filter(WebModel)) {
+            fsa.generateFile(
+                w.name + ".java",
+                w.compile)
+        }
 	}
+	
+	def compile(WebModel w) '''
+		package «w.name»;
+
+		«w.hypertext.compile»
+		
+		«w.content.compile»
+	'''	
+	
+	def compile(HypertextLayer h) '''
+	'''	
+	
+	def compile(ContentLayer c) '''
+	«FOR cl : c.classes»
+		«cl.compile»
+	«ENDFOR»	
+	'''
+	
+	def compile(WebClass cl) '''
+		class «cl.name» {
+			«FOR a : cl.attributes»
+				«a.compile»
+			«ENDFOR»
+		}
+	'''
+	
+	def compile(Attribute a) '''
+		private «a.type» «a.name»;
+	'''
 }

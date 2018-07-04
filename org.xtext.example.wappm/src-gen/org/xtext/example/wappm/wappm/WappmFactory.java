@@ -105,13 +105,13 @@ public interface WappmFactory extends EFactory
   ContentLayer createContentLayer();
 
   /**
-   * Returns a new object of class '<em>Class</em>'.
+   * Returns a new object of class '<em>Web Class</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Class</em>'.
+   * @return a new object of class '<em>Web Class</em>'.
    * @generated
    */
-  Class createClass();
+  WebClass createWebClass();
 
   /**
    * Returns a new object of class '<em>Attribute</em>'.

@@ -50,7 +50,7 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getIndexPageAccess().getGroup_7_3(), "rule__IndexPage__Group_7_3__0");
 			builder.put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 			builder.put(grammarAccess.getContentLayerAccess().getGroup(), "rule__ContentLayer__Group__0");
-			builder.put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
+			builder.put(grammarAccess.getWebClassAccess().getGroup(), "rule__WebClass__Group__0");
 			builder.put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
 			builder.put(grammarAccess.getURLAccess().getGroup(), "rule__URL__Group__0");
 			builder.put(grammarAccess.getURLAccess().getGroup_1_1(), "rule__URL__Group_1_1__0");
@@ -78,9 +78,9 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getLinkAccess().getPageAssignment_3(), "rule__Link__PageAssignment_3");
 			builder.put(grammarAccess.getContentLayerAccess().getContentNameAssignment_1(), "rule__ContentLayer__ContentNameAssignment_1");
 			builder.put(grammarAccess.getContentLayerAccess().getClassesAssignment_3(), "rule__ContentLayer__ClassesAssignment_3");
-			builder.put(grammarAccess.getClassAccess().getNameAssignment_1(), "rule__Class__NameAssignment_1");
-			builder.put(grammarAccess.getClassAccess().getAttributesAssignment_3(), "rule__Class__AttributesAssignment_3");
-			builder.put(grammarAccess.getClassAccess().getUniqueIdentifierAssignment_5(), "rule__Class__UniqueIdentifierAssignment_5");
+			builder.put(grammarAccess.getWebClassAccess().getNameAssignment_1(), "rule__WebClass__NameAssignment_1");
+			builder.put(grammarAccess.getWebClassAccess().getAttributesAssignment_3(), "rule__WebClass__AttributesAssignment_3");
+			builder.put(grammarAccess.getWebClassAccess().getUniqueIdentifierAssignment_5(), "rule__WebClass__UniqueIdentifierAssignment_5");
 			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 			builder.put(grammarAccess.getAttributeAccess().getTypeAssignment_3(), "rule__Attribute__TypeAssignment_3");
 			builder.put(grammarAccess.getURLAccess().getAdditionAssignment_1_1_1_1(), "rule__URL__AdditionAssignment_1_1_1_1");

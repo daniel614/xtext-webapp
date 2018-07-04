@@ -23,6 +23,7 @@ import org.xtext.example.wappm.wappm.Page;
 import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.WappmFactory;
 import org.xtext.example.wappm.wappm.WappmPackage;
+import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
 
 /**
@@ -101,7 +102,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass classEClass = null;
+  private EClass webClassEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -409,9 +410,9 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getClass_()
+  public EClass getWebClass()
   {
-    return classEClass;
+    return webClassEClass;
   }
 
   /**
@@ -419,9 +420,9 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getClass_Name()
+  public EAttribute getWebClass_Name()
   {
-    return (EAttribute)classEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)webClassEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -429,9 +430,9 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_Attributes()
+  public EReference getWebClass_Attributes()
   {
-    return (EReference)classEClass.getEStructuralFeatures().get(1);
+    return (EReference)webClassEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -439,9 +440,9 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_UniqueIdentifier()
+  public EReference getWebClass_UniqueIdentifier()
   {
-    return (EReference)classEClass.getEStructuralFeatures().get(2);
+    return (EReference)webClassEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -584,10 +585,10 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     createEAttribute(contentLayerEClass, CONTENT_LAYER__CONTENT_NAME);
     createEReference(contentLayerEClass, CONTENT_LAYER__CLASSES);
 
-    classEClass = createEClass(CLASS);
-    createEAttribute(classEClass, CLASS__NAME);
-    createEReference(classEClass, CLASS__ATTRIBUTES);
-    createEReference(classEClass, CLASS__UNIQUE_IDENTIFIER);
+    webClassEClass = createEClass(WEB_CLASS);
+    createEAttribute(webClassEClass, WEB_CLASS__NAME);
+    createEReference(webClassEClass, WEB_CLASS__ATTRIBUTES);
+    createEReference(webClassEClass, WEB_CLASS__UNIQUE_IDENTIFIER);
 
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__NAME);
@@ -655,7 +656,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     initEClass(staticPageEClass, StaticPage.class, "StaticPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(dynamicPageEClass, DynamicPage.class, "DynamicPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDynamicPage_DisplayedClass(), this.getClass_(), null, "displayedClass", null, 0, 1, DynamicPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDynamicPage_DisplayedClass(), this.getWebClass(), null, "displayedClass", null, 0, 1, DynamicPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(detailPageEClass, DetailPage.class, "DetailPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -666,12 +667,12 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
 
     initEClass(contentLayerEClass, ContentLayer.class, "ContentLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContentLayer_ContentName(), ecorePackage.getEString(), "contentName", null, 0, 1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContentLayer_Classes(), this.getClass_(), null, "classes", null, 0, -1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContentLayer_Classes(), this.getWebClass(), null, "classes", null, 0, -1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(classEClass, org.xtext.example.wappm.wappm.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.xtext.example.wappm.wappm.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, org.xtext.example.wappm.wappm.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_UniqueIdentifier(), this.getAttribute(), null, "uniqueIdentifier", null, 0, 1, org.xtext.example.wappm.wappm.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(webClassEClass, WebClass.class, "WebClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWebClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWebClass_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWebClass_UniqueIdentifier(), this.getAttribute(), null, "uniqueIdentifier", null, 0, 1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.wappm.wappm.ContentLayer;
 import org.xtext.example.wappm.wappm.WappmPackage;
+import org.xtext.example.wappm.wappm.WebClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +67,7 @@ public class ContentLayerImpl extends MinimalEObjectImpl.Container implements Co
    * @generated
    * @ordered
    */
-  protected EList<org.xtext.example.wappm.wappm.Class> classes;
+  protected EList<WebClass> classes;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,11 +118,11 @@ public class ContentLayerImpl extends MinimalEObjectImpl.Container implements Co
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<org.xtext.example.wappm.wappm.Class> getClasses()
+  public EList<WebClass> getClasses()
   {
     if (classes == null)
     {
-      classes = new EObjectContainmentEList<org.xtext.example.wappm.wappm.Class>(org.xtext.example.wappm.wappm.Class.class, this, WappmPackage.CONTENT_LAYER__CLASSES);
+      classes = new EObjectContainmentEList<WebClass>(WebClass.class, this, WappmPackage.CONTENT_LAYER__CLASSES);
     }
     return classes;
   }
@@ -176,7 +177,7 @@ public class ContentLayerImpl extends MinimalEObjectImpl.Container implements Co
         return;
       case WappmPackage.CONTENT_LAYER__CLASSES:
         getClasses().clear();
-        getClasses().addAll((Collection<? extends org.xtext.example.wappm.wappm.Class>)newValue);
+        getClasses().addAll((Collection<? extends WebClass>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

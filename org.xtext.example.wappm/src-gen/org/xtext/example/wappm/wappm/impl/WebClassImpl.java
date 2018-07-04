@@ -21,23 +21,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.wappm.wappm.Attribute;
 import org.xtext.example.wappm.wappm.WappmPackage;
+import org.xtext.example.wappm.wappm.WebClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Class</b></em>'.
+ * An implementation of the model object '<em><b>Web Class</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.ClassImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.ClassImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.ClassImpl#getUniqueIdentifier <em>Unique Identifier</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getUniqueIdentifier <em>Unique Identifier</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext.example.wappm.wappm.Class
+public class WebClassImpl extends MinimalEObjectImpl.Container implements WebClass
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -84,7 +85,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ClassImpl()
+  protected WebClassImpl()
   {
     super();
   }
@@ -97,7 +98,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   @Override
   protected EClass eStaticClass()
   {
-    return WappmPackage.Literals.CLASS;
+    return WappmPackage.Literals.WEB_CLASS;
   }
 
   /**
@@ -120,7 +121,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.CLASS__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.WEB_CLASS__NAME, oldName, name));
   }
 
   /**
@@ -132,7 +133,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     if (attributes == null)
     {
-      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, WappmPackage.CLASS__ATTRIBUTES);
+      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, WappmPackage.WEB_CLASS__ATTRIBUTES);
     }
     return attributes;
   }
@@ -151,7 +152,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
       if (uniqueIdentifier != oldUniqueIdentifier)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, WappmPackage.CLASS__UNIQUE_IDENTIFIER, oldUniqueIdentifier, uniqueIdentifier));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER, oldUniqueIdentifier, uniqueIdentifier));
       }
     }
     return uniqueIdentifier;
@@ -177,7 +178,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
     Attribute oldUniqueIdentifier = uniqueIdentifier;
     uniqueIdentifier = newUniqueIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.CLASS__UNIQUE_IDENTIFIER, oldUniqueIdentifier, uniqueIdentifier));
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER, oldUniqueIdentifier, uniqueIdentifier));
   }
 
   /**
@@ -190,7 +191,7 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     switch (featureID)
     {
-      case WappmPackage.CLASS__ATTRIBUTES:
+      case WappmPackage.WEB_CLASS__ATTRIBUTES:
         return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -206,11 +207,11 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     switch (featureID)
     {
-      case WappmPackage.CLASS__NAME:
+      case WappmPackage.WEB_CLASS__NAME:
         return getName();
-      case WappmPackage.CLASS__ATTRIBUTES:
+      case WappmPackage.WEB_CLASS__ATTRIBUTES:
         return getAttributes();
-      case WappmPackage.CLASS__UNIQUE_IDENTIFIER:
+      case WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER:
         if (resolve) return getUniqueIdentifier();
         return basicGetUniqueIdentifier();
     }
@@ -228,14 +229,14 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     switch (featureID)
     {
-      case WappmPackage.CLASS__NAME:
+      case WappmPackage.WEB_CLASS__NAME:
         setName((String)newValue);
         return;
-      case WappmPackage.CLASS__ATTRIBUTES:
+      case WappmPackage.WEB_CLASS__ATTRIBUTES:
         getAttributes().clear();
         getAttributes().addAll((Collection<? extends Attribute>)newValue);
         return;
-      case WappmPackage.CLASS__UNIQUE_IDENTIFIER:
+      case WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER:
         setUniqueIdentifier((Attribute)newValue);
         return;
     }
@@ -252,13 +253,13 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     switch (featureID)
     {
-      case WappmPackage.CLASS__NAME:
+      case WappmPackage.WEB_CLASS__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case WappmPackage.CLASS__ATTRIBUTES:
+      case WappmPackage.WEB_CLASS__ATTRIBUTES:
         getAttributes().clear();
         return;
-      case WappmPackage.CLASS__UNIQUE_IDENTIFIER:
+      case WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER:
         setUniqueIdentifier((Attribute)null);
         return;
     }
@@ -275,11 +276,11 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
   {
     switch (featureID)
     {
-      case WappmPackage.CLASS__NAME:
+      case WappmPackage.WEB_CLASS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case WappmPackage.CLASS__ATTRIBUTES:
+      case WappmPackage.WEB_CLASS__ATTRIBUTES:
         return attributes != null && !attributes.isEmpty();
-      case WappmPackage.CLASS__UNIQUE_IDENTIFIER:
+      case WappmPackage.WEB_CLASS__UNIQUE_IDENTIFIER:
         return uniqueIdentifier != null;
     }
     return super.eIsSet(featureID);
@@ -302,4 +303,4 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements org.xtext
     return result.toString();
   }
 
-} //ClassImpl
+} //WebClassImpl

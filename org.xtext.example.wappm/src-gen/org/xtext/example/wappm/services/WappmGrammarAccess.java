@@ -250,8 +250,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cUsesKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cDisplayedClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cDisplayedClassClassCrossReference_3_0 = (CrossReference)cDisplayedClassAssignment_3.eContents().get(0);
-		private final RuleCall cDisplayedClassClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassClassCrossReference_3_0.eContents().get(1);
+		private final CrossReference cDisplayedClassWebClassCrossReference_3_0 = (CrossReference)cDisplayedClassAssignment_3.eContents().get(0);
+		private final RuleCall cDisplayedClassWebClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassWebClassCrossReference_3_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cPathKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cUrlAssignment_6 = (Assignment)cGroup.eContents().get(6);
@@ -269,13 +269,14 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DetailPage:
-		//	'detail' name=ID 'uses' displayedClass=[Class]
+		//	'detail' name=ID 'uses' displayedClass=[WebClass]
 		//	'{'
 		//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'detail' name=ID 'uses' displayedClass=[Class] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')? '}'
+		//'detail' name=ID 'uses' displayedClass=[WebClass] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//'detail'
@@ -290,14 +291,14 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'uses'
 		public Keyword getUsesKeyword_2() { return cUsesKeyword_2; }
 		
-		//displayedClass=[Class]
+		//displayedClass=[WebClass]
 		public Assignment getDisplayedClassAssignment_3() { return cDisplayedClassAssignment_3; }
 		
-		//[Class]
-		public CrossReference getDisplayedClassClassCrossReference_3_0() { return cDisplayedClassClassCrossReference_3_0; }
+		//[WebClass]
+		public CrossReference getDisplayedClassWebClassCrossReference_3_0() { return cDisplayedClassWebClassCrossReference_3_0; }
 		
 		//ID
-		public RuleCall getDisplayedClassClassIDTerminalRuleCall_3_0_1() { return cDisplayedClassClassIDTerminalRuleCall_3_0_1; }
+		public RuleCall getDisplayedClassWebClassIDTerminalRuleCall_3_0_1() { return cDisplayedClassWebClassIDTerminalRuleCall_3_0_1; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -352,8 +353,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cUsesKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cDisplayedClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cDisplayedClassClassCrossReference_3_0 = (CrossReference)cDisplayedClassAssignment_3.eContents().get(0);
-		private final RuleCall cDisplayedClassClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassClassCrossReference_3_0.eContents().get(1);
+		private final CrossReference cDisplayedClassWebClassCrossReference_3_0 = (CrossReference)cDisplayedClassAssignment_3.eContents().get(0);
+		private final RuleCall cDisplayedClassWebClassIDTerminalRuleCall_3_0_1 = (RuleCall)cDisplayedClassWebClassCrossReference_3_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cPathKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cUrlAssignment_6 = (Assignment)cGroup.eContents().get(6);
@@ -371,13 +372,14 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//IndexPage:
-		//	'index' name=ID 'uses' displayedClass=[Class]
+		//	'index' name=ID 'uses' displayedClass=[WebClass]
 		//	'{'
 		//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'index' name=ID 'uses' displayedClass=[Class] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')? '}'
+		//'index' name=ID 'uses' displayedClass=[WebClass] '{' 'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//'index'
@@ -392,14 +394,14 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'uses'
 		public Keyword getUsesKeyword_2() { return cUsesKeyword_2; }
 		
-		//displayedClass=[Class]
+		//displayedClass=[WebClass]
 		public Assignment getDisplayedClassAssignment_3() { return cDisplayedClassAssignment_3; }
 		
-		//[Class]
-		public CrossReference getDisplayedClassClassCrossReference_3_0() { return cDisplayedClassClassCrossReference_3_0; }
+		//[WebClass]
+		public CrossReference getDisplayedClassWebClassCrossReference_3_0() { return cDisplayedClassWebClassCrossReference_3_0; }
 		
 		//ID
-		public RuleCall getDisplayedClassClassIDTerminalRuleCall_3_0_1() { return cDisplayedClassClassIDTerminalRuleCall_3_0_1; }
+		public RuleCall getDisplayedClassWebClassIDTerminalRuleCall_3_0_1() { return cDisplayedClassWebClassIDTerminalRuleCall_3_0_1; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -495,16 +497,16 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cContentNameIDTerminalRuleCall_1_0 = (RuleCall)cContentNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cClassesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cClassesClassParserRuleCall_3_0 = (RuleCall)cClassesAssignment_3.eContents().get(0);
+		private final RuleCall cClassesWebClassParserRuleCall_3_0 = (RuleCall)cClassesAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//ContentLayer:
 		//	'content' contentName=ID '{'
-		//	classes+=Class+
+		//	classes+=WebClass+
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'content' contentName=ID '{' classes+=Class+ '}'
+		//'content' contentName=ID '{' classes+=WebClass+ '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'content'
@@ -519,17 +521,17 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//classes+=Class+
+		//classes+=WebClass+
 		public Assignment getClassesAssignment_3() { return cClassesAssignment_3; }
 		
-		//Class
-		public RuleCall getClassesClassParserRuleCall_3_0() { return cClassesClassParserRuleCall_3_0; }
+		//WebClass
+		public RuleCall getClassesWebClassParserRuleCall_3_0() { return cClassesWebClassParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
-	public class ClassElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.Class");
+	public class WebClassElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.WebClass");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cClassKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -543,7 +545,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1 = (RuleCall)cUniqueIdentifierAttributeCrossReference_5_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//Class:
+		//WebClass:
 		//	'class' name=ID '{'
 		//	attributes+=Attribute+
 		//	'uniqueIdentifier' uniqueIdentifier=[Attribute]
@@ -774,7 +776,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	private final IndexPageElements pIndexPage;
 	private final LinkElements pLink;
 	private final ContentLayerElements pContentLayer;
-	private final ClassElements pClass;
+	private final WebClassElements pWebClass;
 	private final AttributeElements pAttribute;
 	private final AppTypesElements eAppTypes;
 	private final URLElements pURL;
@@ -798,7 +800,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pIndexPage = new IndexPageElements();
 		this.pLink = new LinkElements();
 		this.pContentLayer = new ContentLayerElements();
-		this.pClass = new ClassElements();
+		this.pWebClass = new WebClassElements();
 		this.pAttribute = new AttributeElements();
 		this.eAppTypes = new AppTypesElements();
 		this.pURL = new URLElements();
@@ -891,7 +893,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DetailPage:
-	//	'detail' name=ID 'uses' displayedClass=[Class]
+	//	'detail' name=ID 'uses' displayedClass=[WebClass]
 	//	'{'
 	//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
@@ -904,7 +906,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//IndexPage:
-	//	'index' name=ID 'uses' displayedClass=[Class]
+	//	'index' name=ID 'uses' displayedClass=[WebClass]
 	//	'{'
 	//	'path' url=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
@@ -930,7 +932,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//ContentLayer:
 	//	'content' contentName=ID '{'
-	//	classes+=Class+
+	//	classes+=WebClass+
 	//	'}';
 	public ContentLayerElements getContentLayerAccess() {
 		return pContentLayer;
@@ -940,17 +942,17 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		return getContentLayerAccess().getRule();
 	}
 	
-	//Class:
+	//WebClass:
 	//	'class' name=ID '{'
 	//	attributes+=Attribute+
 	//	'uniqueIdentifier' uniqueIdentifier=[Attribute]
 	//	'}';
-	public ClassElements getClassAccess() {
-		return pClass;
+	public WebClassElements getWebClassAccess() {
+		return pWebClass;
 	}
 	
-	public ParserRule getClassRule() {
-		return getClassAccess().getRule();
+	public ParserRule getWebClassRule() {
+		return getWebClassAccess().getRule();
 	}
 	
 	//Attribute:

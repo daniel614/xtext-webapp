@@ -21,7 +21,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaticPage" eSuperTypes="#//Page"/>
   <eClassifiers xsi:type="ecore:EClass" name="DynamicPage" eSuperTypes="#//Page">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="displayedClass" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displayedClass" eType="#//WebClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DetailPage" eSuperTypes="#//DynamicPage"/>
   <eClassifiers xsi:type="ecore:EClass" name="IndexPage" eSuperTypes="#//DynamicPage"/>
@@ -31,9 +31,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ContentLayer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
-        eType="#//Class" containment="true"/>
+        eType="#//WebClass" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Class">
+  <eClassifiers xsi:type="ecore:EClass" name="WebClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true"/>

@@ -786,20 +786,20 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleContentLayer"
 
 
-    // $ANTLR start "entryRuleClass"
-    // InternalWappm.g:278:1: entryRuleClass : ruleClass EOF ;
-    public final void entryRuleClass() throws RecognitionException {
+    // $ANTLR start "entryRuleWebClass"
+    // InternalWappm.g:278:1: entryRuleWebClass : ruleWebClass EOF ;
+    public final void entryRuleWebClass() throws RecognitionException {
         try {
-            // InternalWappm.g:279:1: ( ruleClass EOF )
-            // InternalWappm.g:280:1: ruleClass EOF
+            // InternalWappm.g:279:1: ( ruleWebClass EOF )
+            // InternalWappm.g:280:1: ruleWebClass EOF
             {
-             before(grammarAccess.getClassRule()); 
+             before(grammarAccess.getWebClassRule()); 
             pushFollow(FOLLOW_1);
-            ruleClass();
+            ruleWebClass();
 
             state._fsp--;
 
-             after(grammarAccess.getClassRule()); 
+             after(grammarAccess.getWebClassRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -813,35 +813,35 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleClass"
+    // $ANTLR end "entryRuleWebClass"
 
 
-    // $ANTLR start "ruleClass"
-    // InternalWappm.g:287:1: ruleClass : ( ( rule__Class__Group__0 ) ) ;
-    public final void ruleClass() throws RecognitionException {
+    // $ANTLR start "ruleWebClass"
+    // InternalWappm.g:287:1: ruleWebClass : ( ( rule__WebClass__Group__0 ) ) ;
+    public final void ruleWebClass() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:291:2: ( ( ( rule__Class__Group__0 ) ) )
-            // InternalWappm.g:292:2: ( ( rule__Class__Group__0 ) )
+            // InternalWappm.g:291:2: ( ( ( rule__WebClass__Group__0 ) ) )
+            // InternalWappm.g:292:2: ( ( rule__WebClass__Group__0 ) )
             {
-            // InternalWappm.g:292:2: ( ( rule__Class__Group__0 ) )
-            // InternalWappm.g:293:3: ( rule__Class__Group__0 )
+            // InternalWappm.g:292:2: ( ( rule__WebClass__Group__0 ) )
+            // InternalWappm.g:293:3: ( rule__WebClass__Group__0 )
             {
-             before(grammarAccess.getClassAccess().getGroup()); 
-            // InternalWappm.g:294:3: ( rule__Class__Group__0 )
-            // InternalWappm.g:294:4: rule__Class__Group__0
+             before(grammarAccess.getWebClassAccess().getGroup()); 
+            // InternalWappm.g:294:3: ( rule__WebClass__Group__0 )
+            // InternalWappm.g:294:4: rule__WebClass__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Class__Group__0();
+            rule__WebClass__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getClassAccess().getGroup()); 
+             after(grammarAccess.getWebClassAccess().getGroup()); 
 
             }
 
@@ -860,7 +860,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleClass"
+    // $ANTLR end "ruleWebClass"
 
 
     // $ANTLR start "entryRuleAttribute"
@@ -7161,23 +7161,23 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ContentLayer__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__0"
-    // InternalWappm.g:2360:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
-    public final void rule__Class__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__0"
+    // InternalWappm.g:2360:1: rule__WebClass__Group__0 : rule__WebClass__Group__0__Impl rule__WebClass__Group__1 ;
+    public final void rule__WebClass__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2364:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
-            // InternalWappm.g:2365:2: rule__Class__Group__0__Impl rule__Class__Group__1
+            // InternalWappm.g:2364:1: ( rule__WebClass__Group__0__Impl rule__WebClass__Group__1 )
+            // InternalWappm.g:2365:2: rule__WebClass__Group__0__Impl rule__WebClass__Group__1
             {
             pushFollow(FOLLOW_4);
-            rule__Class__Group__0__Impl();
+            rule__WebClass__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__1();
+            rule__WebClass__Group__1();
 
             state._fsp--;
 
@@ -7196,12 +7196,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__0"
+    // $ANTLR end "rule__WebClass__Group__0"
 
 
-    // $ANTLR start "rule__Class__Group__0__Impl"
-    // InternalWappm.g:2372:1: rule__Class__Group__0__Impl : ( 'class' ) ;
-    public final void rule__Class__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__0__Impl"
+    // InternalWappm.g:2372:1: rule__WebClass__Group__0__Impl : ( 'class' ) ;
+    public final void rule__WebClass__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7212,9 +7212,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:2377:1: ( 'class' )
             // InternalWappm.g:2378:2: 'class'
             {
-             before(grammarAccess.getClassAccess().getClassKeyword_0()); 
+             before(grammarAccess.getWebClassAccess().getClassKeyword_0()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getClassKeyword_0()); 
+             after(grammarAccess.getWebClassAccess().getClassKeyword_0()); 
 
             }
 
@@ -7233,26 +7233,26 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__0__Impl"
+    // $ANTLR end "rule__WebClass__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__1"
-    // InternalWappm.g:2387:1: rule__Class__Group__1 : rule__Class__Group__1__Impl rule__Class__Group__2 ;
-    public final void rule__Class__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__1"
+    // InternalWappm.g:2387:1: rule__WebClass__Group__1 : rule__WebClass__Group__1__Impl rule__WebClass__Group__2 ;
+    public final void rule__WebClass__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2391:1: ( rule__Class__Group__1__Impl rule__Class__Group__2 )
-            // InternalWappm.g:2392:2: rule__Class__Group__1__Impl rule__Class__Group__2
+            // InternalWappm.g:2391:1: ( rule__WebClass__Group__1__Impl rule__WebClass__Group__2 )
+            // InternalWappm.g:2392:2: rule__WebClass__Group__1__Impl rule__WebClass__Group__2
             {
             pushFollow(FOLLOW_5);
-            rule__Class__Group__1__Impl();
+            rule__WebClass__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__2();
+            rule__WebClass__Group__2();
 
             state._fsp--;
 
@@ -7271,35 +7271,35 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__1"
+    // $ANTLR end "rule__WebClass__Group__1"
 
 
-    // $ANTLR start "rule__Class__Group__1__Impl"
-    // InternalWappm.g:2399:1: rule__Class__Group__1__Impl : ( ( rule__Class__NameAssignment_1 ) ) ;
-    public final void rule__Class__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__1__Impl"
+    // InternalWappm.g:2399:1: rule__WebClass__Group__1__Impl : ( ( rule__WebClass__NameAssignment_1 ) ) ;
+    public final void rule__WebClass__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2403:1: ( ( ( rule__Class__NameAssignment_1 ) ) )
-            // InternalWappm.g:2404:1: ( ( rule__Class__NameAssignment_1 ) )
+            // InternalWappm.g:2403:1: ( ( ( rule__WebClass__NameAssignment_1 ) ) )
+            // InternalWappm.g:2404:1: ( ( rule__WebClass__NameAssignment_1 ) )
             {
-            // InternalWappm.g:2404:1: ( ( rule__Class__NameAssignment_1 ) )
-            // InternalWappm.g:2405:2: ( rule__Class__NameAssignment_1 )
+            // InternalWappm.g:2404:1: ( ( rule__WebClass__NameAssignment_1 ) )
+            // InternalWappm.g:2405:2: ( rule__WebClass__NameAssignment_1 )
             {
-             before(grammarAccess.getClassAccess().getNameAssignment_1()); 
-            // InternalWappm.g:2406:2: ( rule__Class__NameAssignment_1 )
-            // InternalWappm.g:2406:3: rule__Class__NameAssignment_1
+             before(grammarAccess.getWebClassAccess().getNameAssignment_1()); 
+            // InternalWappm.g:2406:2: ( rule__WebClass__NameAssignment_1 )
+            // InternalWappm.g:2406:3: rule__WebClass__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Class__NameAssignment_1();
+            rule__WebClass__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getClassAccess().getNameAssignment_1()); 
+             after(grammarAccess.getWebClassAccess().getNameAssignment_1()); 
 
             }
 
@@ -7318,26 +7318,26 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__1__Impl"
+    // $ANTLR end "rule__WebClass__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__2"
-    // InternalWappm.g:2414:1: rule__Class__Group__2 : rule__Class__Group__2__Impl rule__Class__Group__3 ;
-    public final void rule__Class__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__2"
+    // InternalWappm.g:2414:1: rule__WebClass__Group__2 : rule__WebClass__Group__2__Impl rule__WebClass__Group__3 ;
+    public final void rule__WebClass__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2418:1: ( rule__Class__Group__2__Impl rule__Class__Group__3 )
-            // InternalWappm.g:2419:2: rule__Class__Group__2__Impl rule__Class__Group__3
+            // InternalWappm.g:2418:1: ( rule__WebClass__Group__2__Impl rule__WebClass__Group__3 )
+            // InternalWappm.g:2419:2: rule__WebClass__Group__2__Impl rule__WebClass__Group__3
             {
             pushFollow(FOLLOW_21);
-            rule__Class__Group__2__Impl();
+            rule__WebClass__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__3();
+            rule__WebClass__Group__3();
 
             state._fsp--;
 
@@ -7356,12 +7356,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__2"
+    // $ANTLR end "rule__WebClass__Group__2"
 
 
-    // $ANTLR start "rule__Class__Group__2__Impl"
-    // InternalWappm.g:2426:1: rule__Class__Group__2__Impl : ( '{' ) ;
-    public final void rule__Class__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__2__Impl"
+    // InternalWappm.g:2426:1: rule__WebClass__Group__2__Impl : ( '{' ) ;
+    public final void rule__WebClass__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7372,9 +7372,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:2431:1: ( '{' )
             // InternalWappm.g:2432:2: '{'
             {
-             before(grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getWebClassAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_2()); 
+             after(grammarAccess.getWebClassAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -7393,26 +7393,26 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__2__Impl"
+    // $ANTLR end "rule__WebClass__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__3"
-    // InternalWappm.g:2441:1: rule__Class__Group__3 : rule__Class__Group__3__Impl rule__Class__Group__4 ;
-    public final void rule__Class__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__3"
+    // InternalWappm.g:2441:1: rule__WebClass__Group__3 : rule__WebClass__Group__3__Impl rule__WebClass__Group__4 ;
+    public final void rule__WebClass__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2445:1: ( rule__Class__Group__3__Impl rule__Class__Group__4 )
-            // InternalWappm.g:2446:2: rule__Class__Group__3__Impl rule__Class__Group__4
+            // InternalWappm.g:2445:1: ( rule__WebClass__Group__3__Impl rule__WebClass__Group__4 )
+            // InternalWappm.g:2446:2: rule__WebClass__Group__3__Impl rule__WebClass__Group__4
             {
             pushFollow(FOLLOW_22);
-            rule__Class__Group__3__Impl();
+            rule__WebClass__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__4();
+            rule__WebClass__Group__4();
 
             state._fsp--;
 
@@ -7431,46 +7431,46 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__3"
+    // $ANTLR end "rule__WebClass__Group__3"
 
 
-    // $ANTLR start "rule__Class__Group__3__Impl"
-    // InternalWappm.g:2453:1: rule__Class__Group__3__Impl : ( ( ( rule__Class__AttributesAssignment_3 ) ) ( ( rule__Class__AttributesAssignment_3 )* ) ) ;
-    public final void rule__Class__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__3__Impl"
+    // InternalWappm.g:2453:1: rule__WebClass__Group__3__Impl : ( ( ( rule__WebClass__AttributesAssignment_3 ) ) ( ( rule__WebClass__AttributesAssignment_3 )* ) ) ;
+    public final void rule__WebClass__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2457:1: ( ( ( ( rule__Class__AttributesAssignment_3 ) ) ( ( rule__Class__AttributesAssignment_3 )* ) ) )
-            // InternalWappm.g:2458:1: ( ( ( rule__Class__AttributesAssignment_3 ) ) ( ( rule__Class__AttributesAssignment_3 )* ) )
+            // InternalWappm.g:2457:1: ( ( ( ( rule__WebClass__AttributesAssignment_3 ) ) ( ( rule__WebClass__AttributesAssignment_3 )* ) ) )
+            // InternalWappm.g:2458:1: ( ( ( rule__WebClass__AttributesAssignment_3 ) ) ( ( rule__WebClass__AttributesAssignment_3 )* ) )
             {
-            // InternalWappm.g:2458:1: ( ( ( rule__Class__AttributesAssignment_3 ) ) ( ( rule__Class__AttributesAssignment_3 )* ) )
-            // InternalWappm.g:2459:2: ( ( rule__Class__AttributesAssignment_3 ) ) ( ( rule__Class__AttributesAssignment_3 )* )
+            // InternalWappm.g:2458:1: ( ( ( rule__WebClass__AttributesAssignment_3 ) ) ( ( rule__WebClass__AttributesAssignment_3 )* ) )
+            // InternalWappm.g:2459:2: ( ( rule__WebClass__AttributesAssignment_3 ) ) ( ( rule__WebClass__AttributesAssignment_3 )* )
             {
-            // InternalWappm.g:2459:2: ( ( rule__Class__AttributesAssignment_3 ) )
-            // InternalWappm.g:2460:3: ( rule__Class__AttributesAssignment_3 )
+            // InternalWappm.g:2459:2: ( ( rule__WebClass__AttributesAssignment_3 ) )
+            // InternalWappm.g:2460:3: ( rule__WebClass__AttributesAssignment_3 )
             {
-             before(grammarAccess.getClassAccess().getAttributesAssignment_3()); 
-            // InternalWappm.g:2461:3: ( rule__Class__AttributesAssignment_3 )
-            // InternalWappm.g:2461:4: rule__Class__AttributesAssignment_3
+             before(grammarAccess.getWebClassAccess().getAttributesAssignment_3()); 
+            // InternalWappm.g:2461:3: ( rule__WebClass__AttributesAssignment_3 )
+            // InternalWappm.g:2461:4: rule__WebClass__AttributesAssignment_3
             {
             pushFollow(FOLLOW_23);
-            rule__Class__AttributesAssignment_3();
+            rule__WebClass__AttributesAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getClassAccess().getAttributesAssignment_3()); 
+             after(grammarAccess.getWebClassAccess().getAttributesAssignment_3()); 
 
             }
 
-            // InternalWappm.g:2464:2: ( ( rule__Class__AttributesAssignment_3 )* )
-            // InternalWappm.g:2465:3: ( rule__Class__AttributesAssignment_3 )*
+            // InternalWappm.g:2464:2: ( ( rule__WebClass__AttributesAssignment_3 )* )
+            // InternalWappm.g:2465:3: ( rule__WebClass__AttributesAssignment_3 )*
             {
-             before(grammarAccess.getClassAccess().getAttributesAssignment_3()); 
-            // InternalWappm.g:2466:3: ( rule__Class__AttributesAssignment_3 )*
+             before(grammarAccess.getWebClassAccess().getAttributesAssignment_3()); 
+            // InternalWappm.g:2466:3: ( rule__WebClass__AttributesAssignment_3 )*
             loop16:
             do {
                 int alt16=2;
@@ -7483,10 +7483,10 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalWappm.g:2466:4: rule__Class__AttributesAssignment_3
+            	    // InternalWappm.g:2466:4: rule__WebClass__AttributesAssignment_3
             	    {
             	    pushFollow(FOLLOW_23);
-            	    rule__Class__AttributesAssignment_3();
+            	    rule__WebClass__AttributesAssignment_3();
 
             	    state._fsp--;
 
@@ -7499,7 +7499,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getClassAccess().getAttributesAssignment_3()); 
+             after(grammarAccess.getWebClassAccess().getAttributesAssignment_3()); 
 
             }
 
@@ -7521,26 +7521,26 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__3__Impl"
+    // $ANTLR end "rule__WebClass__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__4"
-    // InternalWappm.g:2475:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
-    public final void rule__Class__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__4"
+    // InternalWappm.g:2475:1: rule__WebClass__Group__4 : rule__WebClass__Group__4__Impl rule__WebClass__Group__5 ;
+    public final void rule__WebClass__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2479:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
-            // InternalWappm.g:2480:2: rule__Class__Group__4__Impl rule__Class__Group__5
+            // InternalWappm.g:2479:1: ( rule__WebClass__Group__4__Impl rule__WebClass__Group__5 )
+            // InternalWappm.g:2480:2: rule__WebClass__Group__4__Impl rule__WebClass__Group__5
             {
             pushFollow(FOLLOW_4);
-            rule__Class__Group__4__Impl();
+            rule__WebClass__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__5();
+            rule__WebClass__Group__5();
 
             state._fsp--;
 
@@ -7559,12 +7559,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__4"
+    // $ANTLR end "rule__WebClass__Group__4"
 
 
-    // $ANTLR start "rule__Class__Group__4__Impl"
-    // InternalWappm.g:2487:1: rule__Class__Group__4__Impl : ( 'uniqueIdentifier' ) ;
-    public final void rule__Class__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__4__Impl"
+    // InternalWappm.g:2487:1: rule__WebClass__Group__4__Impl : ( 'uniqueIdentifier' ) ;
+    public final void rule__WebClass__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7575,9 +7575,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:2492:1: ( 'uniqueIdentifier' )
             // InternalWappm.g:2493:2: 'uniqueIdentifier'
             {
-             before(grammarAccess.getClassAccess().getUniqueIdentifierKeyword_4()); 
+             before(grammarAccess.getWebClassAccess().getUniqueIdentifierKeyword_4()); 
             match(input,32,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getUniqueIdentifierKeyword_4()); 
+             after(grammarAccess.getWebClassAccess().getUniqueIdentifierKeyword_4()); 
 
             }
 
@@ -7596,26 +7596,26 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__4__Impl"
+    // $ANTLR end "rule__WebClass__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__5"
-    // InternalWappm.g:2502:1: rule__Class__Group__5 : rule__Class__Group__5__Impl rule__Class__Group__6 ;
-    public final void rule__Class__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__5"
+    // InternalWappm.g:2502:1: rule__WebClass__Group__5 : rule__WebClass__Group__5__Impl rule__WebClass__Group__6 ;
+    public final void rule__WebClass__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2506:1: ( rule__Class__Group__5__Impl rule__Class__Group__6 )
-            // InternalWappm.g:2507:2: rule__Class__Group__5__Impl rule__Class__Group__6
+            // InternalWappm.g:2506:1: ( rule__WebClass__Group__5__Impl rule__WebClass__Group__6 )
+            // InternalWappm.g:2507:2: rule__WebClass__Group__5__Impl rule__WebClass__Group__6
             {
             pushFollow(FOLLOW_8);
-            rule__Class__Group__5__Impl();
+            rule__WebClass__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Class__Group__6();
+            rule__WebClass__Group__6();
 
             state._fsp--;
 
@@ -7634,35 +7634,35 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__5"
+    // $ANTLR end "rule__WebClass__Group__5"
 
 
-    // $ANTLR start "rule__Class__Group__5__Impl"
-    // InternalWappm.g:2514:1: rule__Class__Group__5__Impl : ( ( rule__Class__UniqueIdentifierAssignment_5 ) ) ;
-    public final void rule__Class__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__5__Impl"
+    // InternalWappm.g:2514:1: rule__WebClass__Group__5__Impl : ( ( rule__WebClass__UniqueIdentifierAssignment_5 ) ) ;
+    public final void rule__WebClass__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2518:1: ( ( ( rule__Class__UniqueIdentifierAssignment_5 ) ) )
-            // InternalWappm.g:2519:1: ( ( rule__Class__UniqueIdentifierAssignment_5 ) )
+            // InternalWappm.g:2518:1: ( ( ( rule__WebClass__UniqueIdentifierAssignment_5 ) ) )
+            // InternalWappm.g:2519:1: ( ( rule__WebClass__UniqueIdentifierAssignment_5 ) )
             {
-            // InternalWappm.g:2519:1: ( ( rule__Class__UniqueIdentifierAssignment_5 ) )
-            // InternalWappm.g:2520:2: ( rule__Class__UniqueIdentifierAssignment_5 )
+            // InternalWappm.g:2519:1: ( ( rule__WebClass__UniqueIdentifierAssignment_5 ) )
+            // InternalWappm.g:2520:2: ( rule__WebClass__UniqueIdentifierAssignment_5 )
             {
-             before(grammarAccess.getClassAccess().getUniqueIdentifierAssignment_5()); 
-            // InternalWappm.g:2521:2: ( rule__Class__UniqueIdentifierAssignment_5 )
-            // InternalWappm.g:2521:3: rule__Class__UniqueIdentifierAssignment_5
+             before(grammarAccess.getWebClassAccess().getUniqueIdentifierAssignment_5()); 
+            // InternalWappm.g:2521:2: ( rule__WebClass__UniqueIdentifierAssignment_5 )
+            // InternalWappm.g:2521:3: rule__WebClass__UniqueIdentifierAssignment_5
             {
             pushFollow(FOLLOW_2);
-            rule__Class__UniqueIdentifierAssignment_5();
+            rule__WebClass__UniqueIdentifierAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getClassAccess().getUniqueIdentifierAssignment_5()); 
+             after(grammarAccess.getWebClassAccess().getUniqueIdentifierAssignment_5()); 
 
             }
 
@@ -7681,21 +7681,21 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__5__Impl"
+    // $ANTLR end "rule__WebClass__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__6"
-    // InternalWappm.g:2529:1: rule__Class__Group__6 : rule__Class__Group__6__Impl ;
-    public final void rule__Class__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__6"
+    // InternalWappm.g:2529:1: rule__WebClass__Group__6 : rule__WebClass__Group__6__Impl ;
+    public final void rule__WebClass__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:2533:1: ( rule__Class__Group__6__Impl )
-            // InternalWappm.g:2534:2: rule__Class__Group__6__Impl
+            // InternalWappm.g:2533:1: ( rule__WebClass__Group__6__Impl )
+            // InternalWappm.g:2534:2: rule__WebClass__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Class__Group__6__Impl();
+            rule__WebClass__Group__6__Impl();
 
             state._fsp--;
 
@@ -7714,12 +7714,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__6"
+    // $ANTLR end "rule__WebClass__Group__6"
 
 
-    // $ANTLR start "rule__Class__Group__6__Impl"
-    // InternalWappm.g:2540:1: rule__Class__Group__6__Impl : ( '}' ) ;
-    public final void rule__Class__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__Group__6__Impl"
+    // InternalWappm.g:2540:1: rule__WebClass__Group__6__Impl : ( '}' ) ;
+    public final void rule__WebClass__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7730,9 +7730,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:2545:1: ( '}' )
             // InternalWappm.g:2546:2: '}'
             {
-             before(grammarAccess.getClassAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getWebClassAccess().getRightCurlyBracketKeyword_6()); 
             match(input,19,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getRightCurlyBracketKeyword_6()); 
+             after(grammarAccess.getWebClassAccess().getRightCurlyBracketKeyword_6()); 
 
             }
 
@@ -7751,7 +7751,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Group__6__Impl"
+    // $ANTLR end "rule__WebClass__Group__6__Impl"
 
 
     // $ANTLR start "rule__Attribute__Group__0"
@@ -9096,17 +9096,17 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3035:2: ( ( RULE_ID ) )
             // InternalWappm.g:3036:3: ( RULE_ID )
             {
-             before(grammarAccess.getDetailPageAccess().getDisplayedClassClassCrossReference_3_0()); 
+             before(grammarAccess.getDetailPageAccess().getDisplayedClassWebClassCrossReference_3_0()); 
             // InternalWappm.g:3037:3: ( RULE_ID )
             // InternalWappm.g:3038:4: RULE_ID
             {
-             before(grammarAccess.getDetailPageAccess().getDisplayedClassClassIDTerminalRuleCall_3_0_1()); 
+             before(grammarAccess.getDetailPageAccess().getDisplayedClassWebClassIDTerminalRuleCall_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDetailPageAccess().getDisplayedClassClassIDTerminalRuleCall_3_0_1()); 
+             after(grammarAccess.getDetailPageAccess().getDisplayedClassWebClassIDTerminalRuleCall_3_0_1()); 
 
             }
 
-             after(grammarAccess.getDetailPageAccess().getDisplayedClassClassCrossReference_3_0()); 
+             after(grammarAccess.getDetailPageAccess().getDisplayedClassWebClassCrossReference_3_0()); 
 
             }
 
@@ -9301,17 +9301,17 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3114:2: ( ( RULE_ID ) )
             // InternalWappm.g:3115:3: ( RULE_ID )
             {
-             before(grammarAccess.getIndexPageAccess().getDisplayedClassClassCrossReference_3_0()); 
+             before(grammarAccess.getIndexPageAccess().getDisplayedClassWebClassCrossReference_3_0()); 
             // InternalWappm.g:3116:3: ( RULE_ID )
             // InternalWappm.g:3117:4: RULE_ID
             {
-             before(grammarAccess.getIndexPageAccess().getDisplayedClassClassIDTerminalRuleCall_3_0_1()); 
+             before(grammarAccess.getIndexPageAccess().getDisplayedClassWebClassIDTerminalRuleCall_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getIndexPageAccess().getDisplayedClassClassIDTerminalRuleCall_3_0_1()); 
+             after(grammarAccess.getIndexPageAccess().getDisplayedClassWebClassIDTerminalRuleCall_3_0_1()); 
 
             }
 
-             after(grammarAccess.getIndexPageAccess().getDisplayedClassClassCrossReference_3_0()); 
+             after(grammarAccess.getIndexPageAccess().getDisplayedClassWebClassCrossReference_3_0()); 
 
             }
 
@@ -9539,25 +9539,25 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ContentLayer__ClassesAssignment_3"
-    // InternalWappm.g:3207:1: rule__ContentLayer__ClassesAssignment_3 : ( ruleClass ) ;
+    // InternalWappm.g:3207:1: rule__ContentLayer__ClassesAssignment_3 : ( ruleWebClass ) ;
     public final void rule__ContentLayer__ClassesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalWappm.g:3211:1: ( ( ruleClass ) )
-            // InternalWappm.g:3212:2: ( ruleClass )
+            // InternalWappm.g:3211:1: ( ( ruleWebClass ) )
+            // InternalWappm.g:3212:2: ( ruleWebClass )
             {
-            // InternalWappm.g:3212:2: ( ruleClass )
-            // InternalWappm.g:3213:3: ruleClass
+            // InternalWappm.g:3212:2: ( ruleWebClass )
+            // InternalWappm.g:3213:3: ruleWebClass
             {
-             before(grammarAccess.getContentLayerAccess().getClassesClassParserRuleCall_3_0()); 
+             before(grammarAccess.getContentLayerAccess().getClassesWebClassParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleClass();
+            ruleWebClass();
 
             state._fsp--;
 
-             after(grammarAccess.getContentLayerAccess().getClassesClassParserRuleCall_3_0()); 
+             after(grammarAccess.getContentLayerAccess().getClassesWebClassParserRuleCall_3_0()); 
 
             }
 
@@ -9579,9 +9579,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ContentLayer__ClassesAssignment_3"
 
 
-    // $ANTLR start "rule__Class__NameAssignment_1"
-    // InternalWappm.g:3222:1: rule__Class__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Class__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__NameAssignment_1"
+    // InternalWappm.g:3222:1: rule__WebClass__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__WebClass__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9592,9 +9592,9 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3227:2: ( RULE_ID )
             // InternalWappm.g:3228:3: RULE_ID
             {
-             before(grammarAccess.getClassAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getWebClassAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getNameIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getWebClassAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -9613,12 +9613,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__NameAssignment_1"
+    // $ANTLR end "rule__WebClass__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Class__AttributesAssignment_3"
-    // InternalWappm.g:3237:1: rule__Class__AttributesAssignment_3 : ( ruleAttribute ) ;
-    public final void rule__Class__AttributesAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__AttributesAssignment_3"
+    // InternalWappm.g:3237:1: rule__WebClass__AttributesAssignment_3 : ( ruleAttribute ) ;
+    public final void rule__WebClass__AttributesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9629,13 +9629,13 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3242:2: ( ruleAttribute )
             // InternalWappm.g:3243:3: ruleAttribute
             {
-             before(grammarAccess.getClassAccess().getAttributesAttributeParserRuleCall_3_0()); 
+             before(grammarAccess.getWebClassAccess().getAttributesAttributeParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getClassAccess().getAttributesAttributeParserRuleCall_3_0()); 
+             after(grammarAccess.getWebClassAccess().getAttributesAttributeParserRuleCall_3_0()); 
 
             }
 
@@ -9654,12 +9654,12 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__AttributesAssignment_3"
+    // $ANTLR end "rule__WebClass__AttributesAssignment_3"
 
 
-    // $ANTLR start "rule__Class__UniqueIdentifierAssignment_5"
-    // InternalWappm.g:3252:1: rule__Class__UniqueIdentifierAssignment_5 : ( ( RULE_ID ) ) ;
-    public final void rule__Class__UniqueIdentifierAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__WebClass__UniqueIdentifierAssignment_5"
+    // InternalWappm.g:3252:1: rule__WebClass__UniqueIdentifierAssignment_5 : ( ( RULE_ID ) ) ;
+    public final void rule__WebClass__UniqueIdentifierAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9670,17 +9670,17 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
             // InternalWappm.g:3257:2: ( ( RULE_ID ) )
             // InternalWappm.g:3258:3: ( RULE_ID )
             {
-             before(grammarAccess.getClassAccess().getUniqueIdentifierAttributeCrossReference_5_0()); 
+             before(grammarAccess.getWebClassAccess().getUniqueIdentifierAttributeCrossReference_5_0()); 
             // InternalWappm.g:3259:3: ( RULE_ID )
             // InternalWappm.g:3260:4: RULE_ID
             {
-             before(grammarAccess.getClassAccess().getUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1()); 
+             before(grammarAccess.getWebClassAccess().getUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1()); 
+             after(grammarAccess.getWebClassAccess().getUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1()); 
 
             }
 
-             after(grammarAccess.getClassAccess().getUniqueIdentifierAttributeCrossReference_5_0()); 
+             after(grammarAccess.getWebClassAccess().getUniqueIdentifierAttributeCrossReference_5_0()); 
 
             }
 
@@ -9699,7 +9699,7 @@ public class InternalWappmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Class__UniqueIdentifierAssignment_5"
+    // $ANTLR end "rule__WebClass__UniqueIdentifierAssignment_5"
 
 
     // $ANTLR start "rule__Attribute__NameAssignment_1"

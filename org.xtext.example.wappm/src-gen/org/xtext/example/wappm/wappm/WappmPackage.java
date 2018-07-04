@@ -464,14 +464,14 @@ public interface WappmPackage extends EPackage
   int CONTENT_LAYER_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.ClassImpl <em>Class</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.WebClassImpl <em>Web Class</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.wappm.wappm.impl.ClassImpl
-   * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getClass_()
+   * @see org.xtext.example.wappm.wappm.impl.WebClassImpl
+   * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getWebClass()
    * @generated
    */
-  int CLASS = 9;
+  int WEB_CLASS = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -480,7 +480,7 @@ public interface WappmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASS__NAME = 0;
+  int WEB_CLASS__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -489,7 +489,7 @@ public interface WappmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASS__ATTRIBUTES = 1;
+  int WEB_CLASS__ATTRIBUTES = 1;
 
   /**
    * The feature id for the '<em><b>Unique Identifier</b></em>' reference.
@@ -498,16 +498,16 @@ public interface WappmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLASS__UNIQUE_IDENTIFIER = 2;
+  int WEB_CLASS__UNIQUE_IDENTIFIER = 2;
 
   /**
-   * The number of structural features of the '<em>Class</em>' class.
+   * The number of structural features of the '<em>Web Class</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS_FEATURE_COUNT = 3;
+  int WEB_CLASS_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -836,47 +836,47 @@ public interface WappmPackage extends EPackage
   EReference getContentLayer_Classes();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.Class <em>Class</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.WebClass <em>Web Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Class</em>'.
-   * @see org.xtext.example.wappm.wappm.Class
+   * @return the meta object for class '<em>Web Class</em>'.
+   * @see org.xtext.example.wappm.wappm.WebClass
    * @generated
    */
-  EClass getClass_();
+  EClass getWebClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.Class#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.WebClass#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.wappm.wappm.Class#getName()
-   * @see #getClass_()
+   * @see org.xtext.example.wappm.wappm.WebClass#getName()
+   * @see #getWebClass()
    * @generated
    */
-  EAttribute getClass_Name();
+  EAttribute getWebClass_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.Class#getAttributes <em>Attributes</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.WebClass#getAttributes <em>Attributes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Attributes</em>'.
-   * @see org.xtext.example.wappm.wappm.Class#getAttributes()
-   * @see #getClass_()
+   * @see org.xtext.example.wappm.wappm.WebClass#getAttributes()
+   * @see #getWebClass()
    * @generated
    */
-  EReference getClass_Attributes();
+  EReference getWebClass_Attributes();
 
   /**
-   * Returns the meta object for the reference '{@link org.xtext.example.wappm.wappm.Class#getUniqueIdentifier <em>Unique Identifier</em>}'.
+   * Returns the meta object for the reference '{@link org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier <em>Unique Identifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Unique Identifier</em>'.
-   * @see org.xtext.example.wappm.wappm.Class#getUniqueIdentifier()
-   * @see #getClass_()
+   * @see org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier()
+   * @see #getWebClass()
    * @generated
    */
-  EReference getClass_UniqueIdentifier();
+  EReference getWebClass_UniqueIdentifier();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.Attribute <em>Attribute</em>}'.
@@ -1172,14 +1172,14 @@ public interface WappmPackage extends EPackage
     EReference CONTENT_LAYER__CLASSES = eINSTANCE.getContentLayer_Classes();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.ClassImpl <em>Class</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.WebClassImpl <em>Web Class</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.wappm.wappm.impl.ClassImpl
-     * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getClass_()
+     * @see org.xtext.example.wappm.wappm.impl.WebClassImpl
+     * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getWebClass()
      * @generated
      */
-    EClass CLASS = eINSTANCE.getClass_();
+    EClass WEB_CLASS = eINSTANCE.getWebClass();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1187,7 +1187,7 @@ public interface WappmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLASS__NAME = eINSTANCE.getClass_Name();
+    EAttribute WEB_CLASS__NAME = eINSTANCE.getWebClass_Name();
 
     /**
      * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
@@ -1195,7 +1195,7 @@ public interface WappmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CLASS__ATTRIBUTES = eINSTANCE.getClass_Attributes();
+    EReference WEB_CLASS__ATTRIBUTES = eINSTANCE.getWebClass_Attributes();
 
     /**
      * The meta object literal for the '<em><b>Unique Identifier</b></em>' reference feature.
@@ -1203,7 +1203,7 @@ public interface WappmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CLASS__UNIQUE_IDENTIFIER = eINSTANCE.getClass_UniqueIdentifier();
+    EReference WEB_CLASS__UNIQUE_IDENTIFIER = eINSTANCE.getWebClass_UniqueIdentifier();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.AttributeImpl <em>Attribute</em>}' class.

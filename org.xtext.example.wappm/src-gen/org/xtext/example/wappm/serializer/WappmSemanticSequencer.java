@@ -25,6 +25,7 @@ import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.URL;
 import org.xtext.example.wappm.wappm.URL_ADDITION;
 import org.xtext.example.wappm.wappm.WappmPackage;
+import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
 
 @SuppressWarnings("all")
@@ -43,9 +44,6 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			switch (semanticObject.eClass().getClassifierID()) {
 			case WappmPackage.ATTRIBUTE:
 				sequence_Attribute(context, (Attribute) semanticObject); 
-				return; 
-			case WappmPackage.CLASS:
-				sequence_Class(context, (org.xtext.example.wappm.wappm.Class) semanticObject); 
 				return; 
 			case WappmPackage.CONTENT_LAYER:
 				sequence_ContentLayer(context, (ContentLayer) semanticObject); 
@@ -70,6 +68,9 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case WappmPackage.URL_ADDITION:
 				sequence_URL_ADDITION(context, (URL_ADDITION) semanticObject); 
+				return; 
+			case WappmPackage.WEB_CLASS:
+				sequence_WebClass(context, (WebClass) semanticObject); 
 				return; 
 			case WappmPackage.WEB_MODEL:
 				sequence_WebModel(context, (WebModel) semanticObject); 
@@ -102,22 +103,10 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     Class returns Class
-	 *
-	 * Constraint:
-	 *     (name=ID attributes+=Attribute+ uniqueIdentifier=[Attribute|ID])
-	 */
-	protected void sequence_Class(ISerializationContext context, org.xtext.example.wappm.wappm.Class semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     ContentLayer returns ContentLayer
 	 *
 	 * Constraint:
-	 *     (contentName=ID classes+=Class+)
+	 *     (contentName=ID classes+=WebClass+)
 	 */
 	protected void sequence_ContentLayer(ISerializationContext context, ContentLayer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -131,7 +120,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     DetailPage returns DetailPage
 	 *
 	 * Constraint:
-	 *     (name=ID displayedClass=[Class|ID] url=URL (links+=Link links+=Link*)?)
+	 *     (name=ID displayedClass=[WebClass|ID] url=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_DetailPage(ISerializationContext context, DetailPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -157,7 +146,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     IndexPage returns IndexPage
 	 *
 	 * Constraint:
-	 *     (name=ID displayedClass=[Class|ID] url=URL (links+=Link links+=Link*)?)
+	 *     (name=ID displayedClass=[WebClass|ID] url=URL (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_IndexPage(ISerializationContext context, IndexPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -215,6 +204,18 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     addition+=URL_ADDITION*
 	 */
 	protected void sequence_URL(ISerializationContext context, URL semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     WebClass returns WebClass
+	 *
+	 * Constraint:
+	 *     (name=ID attributes+=Attribute+ uniqueIdentifier=[Attribute|ID])
+	 */
+	protected void sequence_WebClass(ISerializationContext context, WebClass semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

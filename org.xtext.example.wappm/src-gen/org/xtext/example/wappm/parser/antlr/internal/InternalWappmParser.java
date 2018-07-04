@@ -1104,7 +1104,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             				
             otherlv_3=(Token)match(input,RULE_ID,FOLLOW_4); 
 
-            					newLeafNode(otherlv_3, grammarAccess.getDetailPageAccess().getDisplayedClassClassCrossReference_3_0());
+            					newLeafNode(otherlv_3, grammarAccess.getDetailPageAccess().getDisplayedClassWebClassCrossReference_3_0());
             				
 
             }
@@ -1412,7 +1412,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             				
             otherlv_3=(Token)match(input,RULE_ID,FOLLOW_4); 
 
-            					newLeafNode(otherlv_3, grammarAccess.getIndexPageAccess().getDisplayedClassClassCrossReference_3_0());
+            					newLeafNode(otherlv_3, grammarAccess.getIndexPageAccess().getDisplayedClassWebClassCrossReference_3_0());
             				
 
             }
@@ -1757,7 +1757,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContentLayer"
-    // InternalWappm.g:771:1: ruleContentLayer returns [EObject current=null] : (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleClass ) )+ otherlv_4= '}' ) ;
+    // InternalWappm.g:771:1: ruleContentLayer returns [EObject current=null] : (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleWebClass ) )+ otherlv_4= '}' ) ;
     public final EObject ruleContentLayer() throws RecognitionException {
         EObject current = null;
 
@@ -1772,11 +1772,11 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalWappm.g:777:2: ( (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleClass ) )+ otherlv_4= '}' ) )
-            // InternalWappm.g:778:2: (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleClass ) )+ otherlv_4= '}' )
+            // InternalWappm.g:777:2: ( (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleWebClass ) )+ otherlv_4= '}' ) )
+            // InternalWappm.g:778:2: (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleWebClass ) )+ otherlv_4= '}' )
             {
-            // InternalWappm.g:778:2: (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleClass ) )+ otherlv_4= '}' )
-            // InternalWappm.g:779:3: otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleClass ) )+ otherlv_4= '}'
+            // InternalWappm.g:778:2: (otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleWebClass ) )+ otherlv_4= '}' )
+            // InternalWappm.g:779:3: otherlv_0= 'content' ( (lv_contentName_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_classes_3_0= ruleWebClass ) )+ otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,24,FOLLOW_3); 
 
@@ -1812,7 +1812,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getContentLayerAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalWappm.g:805:3: ( (lv_classes_3_0= ruleClass ) )+
+            // InternalWappm.g:805:3: ( (lv_classes_3_0= ruleWebClass ) )+
             int cnt10=0;
             loop10:
             do {
@@ -1826,16 +1826,16 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalWappm.g:806:4: (lv_classes_3_0= ruleClass )
+            	    // InternalWappm.g:806:4: (lv_classes_3_0= ruleWebClass )
             	    {
-            	    // InternalWappm.g:806:4: (lv_classes_3_0= ruleClass )
-            	    // InternalWappm.g:807:5: lv_classes_3_0= ruleClass
+            	    // InternalWappm.g:806:4: (lv_classes_3_0= ruleWebClass )
+            	    // InternalWappm.g:807:5: lv_classes_3_0= ruleWebClass
             	    {
 
-            	    					newCompositeNode(grammarAccess.getContentLayerAccess().getClassesClassParserRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getContentLayerAccess().getClassesWebClassParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_18);
-            	    lv_classes_3_0=ruleClass();
+            	    lv_classes_3_0=ruleWebClass();
 
             	    state._fsp--;
 
@@ -1847,7 +1847,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             	    						current,
             	    						"classes",
             	    						lv_classes_3_0,
-            	    						"org.xtext.example.wappm.Wappm.Class");
+            	    						"org.xtext.example.wappm.Wappm.WebClass");
             	    					afterParserOrEnumRuleCall();
             	    				
 
@@ -1892,25 +1892,25 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleContentLayer"
 
 
-    // $ANTLR start "entryRuleClass"
-    // InternalWappm.g:832:1: entryRuleClass returns [EObject current=null] : iv_ruleClass= ruleClass EOF ;
-    public final EObject entryRuleClass() throws RecognitionException {
+    // $ANTLR start "entryRuleWebClass"
+    // InternalWappm.g:832:1: entryRuleWebClass returns [EObject current=null] : iv_ruleWebClass= ruleWebClass EOF ;
+    public final EObject entryRuleWebClass() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleClass = null;
+        EObject iv_ruleWebClass = null;
 
 
         try {
-            // InternalWappm.g:832:46: (iv_ruleClass= ruleClass EOF )
-            // InternalWappm.g:833:2: iv_ruleClass= ruleClass EOF
+            // InternalWappm.g:832:49: (iv_ruleWebClass= ruleWebClass EOF )
+            // InternalWappm.g:833:2: iv_ruleWebClass= ruleWebClass EOF
             {
-             newCompositeNode(grammarAccess.getClassRule()); 
+             newCompositeNode(grammarAccess.getWebClassRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleClass=ruleClass();
+            iv_ruleWebClass=ruleWebClass();
 
             state._fsp--;
 
-             current =iv_ruleClass; 
+             current =iv_ruleWebClass; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1925,12 +1925,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleClass"
+    // $ANTLR end "entryRuleWebClass"
 
 
-    // $ANTLR start "ruleClass"
-    // InternalWappm.g:839:1: ruleClass returns [EObject current=null] : (otherlv_0= 'class' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_attributes_3_0= ruleAttribute ) )+ otherlv_4= 'uniqueIdentifier' ( (otherlv_5= RULE_ID ) ) otherlv_6= '}' ) ;
-    public final EObject ruleClass() throws RecognitionException {
+    // $ANTLR start "ruleWebClass"
+    // InternalWappm.g:839:1: ruleWebClass returns [EObject current=null] : (otherlv_0= 'class' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_attributes_3_0= ruleAttribute ) )+ otherlv_4= 'uniqueIdentifier' ( (otherlv_5= RULE_ID ) ) otherlv_6= '}' ) ;
+    public final EObject ruleWebClass() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -1954,7 +1954,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             {
             otherlv_0=(Token)match(input,25,FOLLOW_3); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getClassAccess().getClassKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getWebClassAccess().getClassKeyword_0());
             		
             // InternalWappm.g:851:3: ( (lv_name_1_0= RULE_ID ) )
             // InternalWappm.g:852:4: (lv_name_1_0= RULE_ID )
@@ -1964,11 +1964,11 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
-            					newLeafNode(lv_name_1_0, grammarAccess.getClassAccess().getNameIDTerminalRuleCall_1_0());
+            					newLeafNode(lv_name_1_0, grammarAccess.getWebClassAccess().getNameIDTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getClassRule());
+            						current = createModelElement(grammarAccess.getWebClassRule());
             					}
             					setWithLastConsumed(
             						current,
@@ -1984,7 +1984,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,12,FOLLOW_19); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getWebClassAccess().getLeftCurlyBracketKeyword_2());
             		
             // InternalWappm.g:873:3: ( (lv_attributes_3_0= ruleAttribute ) )+
             int cnt11=0;
@@ -2006,7 +2006,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             	    // InternalWappm.g:875:5: lv_attributes_3_0= ruleAttribute
             	    {
 
-            	    					newCompositeNode(grammarAccess.getClassAccess().getAttributesAttributeParserRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getWebClassAccess().getAttributesAttributeParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_20);
             	    lv_attributes_3_0=ruleAttribute();
@@ -2015,7 +2015,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
 
             	    					if (current==null) {
-            	    						current = createModelElementForParent(grammarAccess.getClassRule());
+            	    						current = createModelElementForParent(grammarAccess.getWebClassRule());
             	    					}
             	    					add(
             	    						current,
@@ -2042,7 +2042,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             otherlv_4=(Token)match(input,26,FOLLOW_3); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getClassAccess().getUniqueIdentifierKeyword_4());
+            			newLeafNode(otherlv_4, grammarAccess.getWebClassAccess().getUniqueIdentifierKeyword_4());
             		
             // InternalWappm.g:896:3: ( (otherlv_5= RULE_ID ) )
             // InternalWappm.g:897:4: (otherlv_5= RULE_ID )
@@ -2052,12 +2052,12 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
             {
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getClassRule());
+            						current = createModelElement(grammarAccess.getWebClassRule());
             					}
             				
             otherlv_5=(Token)match(input,RULE_ID,FOLLOW_7); 
 
-            					newLeafNode(otherlv_5, grammarAccess.getClassAccess().getUniqueIdentifierAttributeCrossReference_5_0());
+            					newLeafNode(otherlv_5, grammarAccess.getWebClassAccess().getUniqueIdentifierAttributeCrossReference_5_0());
             				
 
             }
@@ -2067,7 +2067,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
 
             otherlv_6=(Token)match(input,13,FOLLOW_2); 
 
-            			newLeafNode(otherlv_6, grammarAccess.getClassAccess().getRightCurlyBracketKeyword_6());
+            			newLeafNode(otherlv_6, grammarAccess.getWebClassAccess().getRightCurlyBracketKeyword_6());
             		
 
             }
@@ -2088,7 +2088,7 @@ public class InternalWappmParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleClass"
+    // $ANTLR end "ruleWebClass"
 
 
     // $ANTLR start "entryRuleAttribute"

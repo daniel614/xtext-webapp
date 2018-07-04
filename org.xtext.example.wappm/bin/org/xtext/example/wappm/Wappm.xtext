@@ -32,7 +32,7 @@ DynamicPage :
 ;
 
 DetailPage :
-	'detail' name=ID 'uses' displayedClass=[Class|ID]
+	'detail' name=ID 'uses' displayedClass=[WebClass|ID]
 	'{'
 		'path' url=URL
 		('links' '{' links+=Link ( "," links+=Link)* '}' )?
@@ -40,7 +40,7 @@ DetailPage :
 ;
 
 IndexPage :
-	'index' name=ID 'uses' displayedClass=[Class|ID]
+	'index' name=ID 'uses' displayedClass=[WebClass|ID]
 	'{'
 		'path' url=URL
 		('links' '{' links+=Link ( "," links+=Link)* '}' )?
@@ -55,10 +55,10 @@ Link :
 
 ContentLayer :
   'content' contentName=ID '{'
-    classes+=Class+
+    classes+=WebClass+
   '}' ;
 
-Class :
+WebClass :
   'class' name=ID '{' 
   	attributes+=Attribute+
   	'uniqueIdentifier' uniqueIdentifier=[Attribute|ID]

@@ -12,21 +12,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.example.wappm.wappm.AppTypes;
-import org.xtext.example.wappm.wappm.Attribute;
-import org.xtext.example.wappm.wappm.ContentLayer;
-import org.xtext.example.wappm.wappm.DetailPage;
-import org.xtext.example.wappm.wappm.DynamicPage;
-import org.xtext.example.wappm.wappm.HypertextLayer;
-import org.xtext.example.wappm.wappm.IndexPage;
-import org.xtext.example.wappm.wappm.Link;
-import org.xtext.example.wappm.wappm.Page;
-import org.xtext.example.wappm.wappm.StaticPage;
-import org.xtext.example.wappm.wappm.URL;
-import org.xtext.example.wappm.wappm.URL_ADDITION;
-import org.xtext.example.wappm.wappm.WappmFactory;
-import org.xtext.example.wappm.wappm.WappmPackage;
-import org.xtext.example.wappm.wappm.WebModel;
+import org.xtext.example.wappm.wappm.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +75,7 @@ public class WappmFactoryImpl extends EFactoryImpl implements WappmFactory
       case WappmPackage.INDEX_PAGE: return createIndexPage();
       case WappmPackage.LINK: return createLink();
       case WappmPackage.CONTENT_LAYER: return createContentLayer();
-      case WappmPackage.CLASS: return createClass();
+      case WappmPackage.WEB_CLASS: return createWebClass();
       case WappmPackage.ATTRIBUTE: return createAttribute();
       case WappmPackage.URL: return createURL();
       case WappmPackage.URL_ADDITION: return createURL_ADDITION();
@@ -236,10 +222,10 @@ public class WappmFactoryImpl extends EFactoryImpl implements WappmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public org.xtext.example.wappm.wappm.Class createClass()
+  public WebClass createWebClass()
   {
-    ClassImpl class_ = new ClassImpl();
-    return class_;
+    WebClassImpl webClass = new WebClassImpl();
+    return webClass;
   }
 
   /**

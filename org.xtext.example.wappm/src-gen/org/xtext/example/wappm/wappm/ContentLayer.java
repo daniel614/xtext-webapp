@@ -54,7 +54,7 @@ public interface ContentLayer extends EObject
 
   /**
    * Returns the value of the '<em><b>Classes</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.wappm.wappm.Class}.
+   * The list contents are of type {@link org.xtext.example.wappm.wappm.WebClass}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Classes</em>' containment reference list isn't clear,
@@ -66,6 +66,6 @@ public interface ContentLayer extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<org.xtext.example.wappm.wappm.Class> getClasses();
+  EList<WebClass> getClasses();
 
 } // ContentLayer

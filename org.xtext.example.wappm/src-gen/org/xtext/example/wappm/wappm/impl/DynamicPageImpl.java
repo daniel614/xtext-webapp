@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.wappm.wappm.DynamicPage;
 import org.xtext.example.wappm.wappm.WappmPackage;
+import org.xtext.example.wappm.wappm.WebClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +37,7 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
    * @generated
    * @ordered
    */
-  protected org.xtext.example.wappm.wappm.Class displayedClass;
+  protected WebClass displayedClass;
 
   /**
    * <!-- begin-user-doc -->
@@ -64,12 +65,12 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
    * <!-- end-user-doc -->
    * @generated
    */
-  public org.xtext.example.wappm.wappm.Class getDisplayedClass()
+  public WebClass getDisplayedClass()
   {
     if (displayedClass != null && displayedClass.eIsProxy())
     {
       InternalEObject oldDisplayedClass = (InternalEObject)displayedClass;
-      displayedClass = (org.xtext.example.wappm.wappm.Class)eResolveProxy(oldDisplayedClass);
+      displayedClass = (WebClass)eResolveProxy(oldDisplayedClass);
       if (displayedClass != oldDisplayedClass)
       {
         if (eNotificationRequired())
@@ -84,7 +85,7 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
    * <!-- end-user-doc -->
    * @generated
    */
-  public org.xtext.example.wappm.wappm.Class basicGetDisplayedClass()
+  public WebClass basicGetDisplayedClass()
   {
     return displayedClass;
   }
@@ -94,9 +95,9 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDisplayedClass(org.xtext.example.wappm.wappm.Class newDisplayedClass)
+  public void setDisplayedClass(WebClass newDisplayedClass)
   {
-    org.xtext.example.wappm.wappm.Class oldDisplayedClass = displayedClass;
+    WebClass oldDisplayedClass = displayedClass;
     displayedClass = newDisplayedClass;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.DYNAMIC_PAGE__DISPLAYED_CLASS, oldDisplayedClass, displayedClass));
@@ -130,7 +131,7 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
     switch (featureID)
     {
       case WappmPackage.DYNAMIC_PAGE__DISPLAYED_CLASS:
-        setDisplayedClass((org.xtext.example.wappm.wappm.Class)newValue);
+        setDisplayedClass((WebClass)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,7 +148,7 @@ public class DynamicPageImpl extends PageImpl implements DynamicPage
     switch (featureID)
     {
       case WappmPackage.DYNAMIC_PAGE__DISPLAYED_CLASS:
-        setDisplayedClass((org.xtext.example.wappm.wappm.Class)null);
+        setDisplayedClass((WebClass)null);
         return;
     }
     super.eUnset(featureID);

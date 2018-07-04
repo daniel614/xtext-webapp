@@ -12,6 +12,11 @@ import org.xtext.example.wappm.wappm.HypertextLayer
 import org.xtext.example.wappm.wappm.ContentLayer
 import org.xtext.example.wappm.wappm.WebClass
 import org.xtext.example.wappm.wappm.Attribute
+import org.xtext.example.wappm.wappm.Page
+import org.xtext.example.wappm.wappm.IndexPage
+import org.xtext.example.wappm.wappm.StaticPage
+import org.xtext.example.wappm.wappm.DetailPage
+import org.xtext.example.wappm.wappm.DynamicPage
 
 /**
  * Generates code from your model files on save.
@@ -37,12 +42,53 @@ class WappmGenerator extends AbstractGenerator {
 	'''	
 	
 	def compile(HypertextLayer h) '''
+		«FOR p : h.pages»
+			«p.compile»
+		«ENDFOR»
+	'''
+	
+	def compile(Page p) '''
+		«IF p instanceof DynamicPage»
+			«(p as DynamicPage).compile»
+		«ELSEIF p instanceof StaticPage»
+			«(p as StaticPage).compile»
+		«ENDIF»
 	'''	
 	
+	def compile(DynamicPage dp) '''
+		«IF dp instanceof IndexPage»
+			«(dp as IndexPage).compile»
+		«ELSEIF dp instanceof DetailPage»
+			«(dp as DetailPage).compile»
+		«ENDIF»
+	'''
+	
+	def compile(IndexPage ip) '''
+		class «ip.name» {
+			String path = «ip.url»;
+			
+			«ip.displayedClass» usedClass = new «ip.displayedClass»;
+		}
+	'''
+	
+	def compile(DetailPage dp) '''
+		class «dp.name» {
+			String path = «dp.url»;
+			
+			«dp.displayedClass» usedClass = new «dp.displayedClass»;
+		}
+	'''
+	
+	def compile(StaticPage sp) '''
+		class «sp.name» {
+			String path = «sp.url»;
+		}
+	'''
+	
 	def compile(ContentLayer c) '''
-	«FOR cl : c.classes»
-		«cl.compile»
-	«ENDFOR»	
+		«FOR cl : c.classes»
+			«cl.compile»
+		«ENDFOR»	
 	'''
 	
 	def compile(WebClass cl) '''

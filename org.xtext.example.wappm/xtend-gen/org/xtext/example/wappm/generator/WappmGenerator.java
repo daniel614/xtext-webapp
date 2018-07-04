@@ -15,7 +15,13 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.xtext.example.wappm.wappm.AppTypes;
 import org.xtext.example.wappm.wappm.Attribute;
 import org.xtext.example.wappm.wappm.ContentLayer;
+import org.xtext.example.wappm.wappm.DetailPage;
+import org.xtext.example.wappm.wappm.DynamicPage;
 import org.xtext.example.wappm.wappm.HypertextLayer;
+import org.xtext.example.wappm.wappm.IndexPage;
+import org.xtext.example.wappm.wappm.Page;
+import org.xtext.example.wappm.wappm.StaticPage;
+import org.xtext.example.wappm.wappm.URL;
 import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
 
@@ -57,6 +63,124 @@ public class WappmGenerator extends AbstractGenerator {
   
   public CharSequence compile(final HypertextLayer h) {
     StringConcatenation _builder = new StringConcatenation();
+    {
+      EList<Page> _pages = h.getPages();
+      for(final Page p : _pages) {
+        CharSequence _compile = this.compile(p);
+        _builder.append(_compile);
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence compile(final Page p) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      if ((p instanceof DynamicPage)) {
+        CharSequence _compile = this.compile(((DynamicPage) p));
+        _builder.append(_compile);
+        _builder.newLineIfNotEmpty();
+      } else {
+        if ((p instanceof StaticPage)) {
+          CharSequence _compile_1 = this.compile(((StaticPage) p));
+          _builder.append(_compile_1);
+          _builder.newLineIfNotEmpty();
+        }
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence compile(final DynamicPage dp) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      if ((dp instanceof IndexPage)) {
+        CharSequence _compile = this.compile(((IndexPage) dp));
+        _builder.append(_compile);
+        _builder.newLineIfNotEmpty();
+      } else {
+        if ((dp instanceof DetailPage)) {
+          CharSequence _compile_1 = this.compile(((DetailPage) dp));
+          _builder.append(_compile_1);
+          _builder.newLineIfNotEmpty();
+        }
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence compile(final IndexPage ip) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("class ");
+    String _name = ip.getName();
+    _builder.append(_name);
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("String path = ");
+    URL _url = ip.getUrl();
+    _builder.append(_url, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    WebClass _displayedClass = ip.getDisplayedClass();
+    _builder.append(_displayedClass, "\t");
+    _builder.append(" usedClass = new ");
+    WebClass _displayedClass_1 = ip.getDisplayedClass();
+    _builder.append(_displayedClass_1, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final DetailPage dp) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("class ");
+    String _name = dp.getName();
+    _builder.append(_name);
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("String path = ");
+    URL _url = dp.getUrl();
+    _builder.append(_url, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    WebClass _displayedClass = dp.getDisplayedClass();
+    _builder.append(_displayedClass, "\t");
+    _builder.append(" usedClass = new ");
+    WebClass _displayedClass_1 = dp.getDisplayedClass();
+    _builder.append(_displayedClass_1, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final StaticPage sp) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("class ");
+    String _name = sp.getName();
+    _builder.append(_name);
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("String path = ");
+    URL _url = sp.getUrl();
+    _builder.append(_url, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
     return _builder;
   }
   

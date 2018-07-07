@@ -358,27 +358,31 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPathKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cPathAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cPathURLParserRuleCall_6_0 = (RuleCall)cPathAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cLinksKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cLinksAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cLinksLinkParserRuleCall_7_2_0 = (RuleCall)cLinksAssignment_7_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
-		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cLinksAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final RuleCall cLinksLinkParserRuleCall_7_3_1_0 = (RuleCall)cLinksAssignment_7_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cSizeKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cSizeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cSizeINTTerminalRuleCall_8_0 = (RuleCall)cSizeAssignment_8.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cLinksKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Assignment cLinksAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
+		private final RuleCall cLinksLinkParserRuleCall_9_2_0 = (RuleCall)cLinksAssignment_9_2.eContents().get(0);
+		private final Group cGroup_9_3 = (Group)cGroup_9.eContents().get(3);
+		private final Keyword cCommaKeyword_9_3_0 = (Keyword)cGroup_9_3.eContents().get(0);
+		private final Assignment cLinksAssignment_9_3_1 = (Assignment)cGroup_9_3.eContents().get(1);
+		private final RuleCall cLinksLinkParserRuleCall_9_3_1_0 = (RuleCall)cLinksAssignment_9_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//IndexPage:
 		//	'index' name=ID 'uses' displayedClass=[WebClass]
 		//	'{'
-		//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+		//	'path' path=URL
+		//	'size' size=INT ('links' '{' links+=Link ("," links+=Link)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'index' name=ID 'uses' displayedClass=[WebClass] '{' 'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
-		//'}'
+		//'index' name=ID 'uses' displayedClass=[WebClass] '{' 'path' path=URL 'size' size=INT ('links' '{' links+=Link (","
+		//links+=Link)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'index'
@@ -414,38 +418,47 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//URL
 		public RuleCall getPathURLParserRuleCall_6_0() { return cPathURLParserRuleCall_6_0; }
 		
+		//'size'
+		public Keyword getSizeKeyword_7() { return cSizeKeyword_7; }
+		
+		//size=INT
+		public Assignment getSizeAssignment_8() { return cSizeAssignment_8; }
+		
+		//INT
+		public RuleCall getSizeINTTerminalRuleCall_8_0() { return cSizeINTTerminalRuleCall_8_0; }
+		
 		//('links' '{' links+=Link ("," links+=Link)* '}')?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_9() { return cGroup_9; }
 		
 		//'links'
-		public Keyword getLinksKeyword_7_0() { return cLinksKeyword_7_0; }
+		public Keyword getLinksKeyword_9_0() { return cLinksKeyword_9_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
 		
 		//links+=Link
-		public Assignment getLinksAssignment_7_2() { return cLinksAssignment_7_2; }
+		public Assignment getLinksAssignment_9_2() { return cLinksAssignment_9_2; }
 		
 		//Link
-		public RuleCall getLinksLinkParserRuleCall_7_2_0() { return cLinksLinkParserRuleCall_7_2_0; }
+		public RuleCall getLinksLinkParserRuleCall_9_2_0() { return cLinksLinkParserRuleCall_9_2_0; }
 		
 		//("," links+=Link)*
-		public Group getGroup_7_3() { return cGroup_7_3; }
+		public Group getGroup_9_3() { return cGroup_9_3; }
 		
 		//","
-		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
+		public Keyword getCommaKeyword_9_3_0() { return cCommaKeyword_9_3_0; }
 		
 		//links+=Link
-		public Assignment getLinksAssignment_7_3_1() { return cLinksAssignment_7_3_1; }
+		public Assignment getLinksAssignment_9_3_1() { return cLinksAssignment_9_3_1; }
 		
 		//Link
-		public RuleCall getLinksLinkParserRuleCall_7_3_1_0() { return cLinksLinkParserRuleCall_7_3_1_0; }
+		public RuleCall getLinksLinkParserRuleCall_9_3_1_0() { return cLinksLinkParserRuleCall_9_3_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
+		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class LinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.Link");
@@ -538,20 +551,18 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cAttributesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cAttributesAttributeParserRuleCall_3_0 = (RuleCall)cAttributesAssignment_3.eContents().get(0);
-		private final Keyword cUniqueIdentifierKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cUniqueIdentifierAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cUniqueIdentifierAttributeCrossReference_5_0 = (CrossReference)cUniqueIdentifierAssignment_5.eContents().get(0);
-		private final RuleCall cUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1 = (RuleCall)cUniqueIdentifierAttributeCrossReference_5_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cReferencesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReferencesReferenceParserRuleCall_4_0 = (RuleCall)cReferencesAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//WebClass:
 		//	'class' name=ID '{'
 		//	attributes+=Attribute+
-		//	'uniqueIdentifier' uniqueIdentifier=[Attribute]
+		//	references+=Reference*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'class' name=ID '{' attributes+=Attribute+ 'uniqueIdentifier' uniqueIdentifier=[Attribute] '}'
+		//'class' name=ID '{' attributes+=Attribute+ references+=Reference* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'class'
@@ -572,20 +583,14 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		//Attribute
 		public RuleCall getAttributesAttributeParserRuleCall_3_0() { return cAttributesAttributeParserRuleCall_3_0; }
 		
-		//'uniqueIdentifier'
-		public Keyword getUniqueIdentifierKeyword_4() { return cUniqueIdentifierKeyword_4; }
+		//references+=Reference*
+		public Assignment getReferencesAssignment_4() { return cReferencesAssignment_4; }
 		
-		//uniqueIdentifier=[Attribute]
-		public Assignment getUniqueIdentifierAssignment_5() { return cUniqueIdentifierAssignment_5; }
-		
-		//[Attribute]
-		public CrossReference getUniqueIdentifierAttributeCrossReference_5_0() { return cUniqueIdentifierAttributeCrossReference_5_0; }
-		
-		//ID
-		public RuleCall getUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1() { return cUniqueIdentifierAttributeIDTerminalRuleCall_5_0_1; }
+		//Reference
+		public RuleCall getReferencesReferenceParserRuleCall_4_0() { return cReferencesReferenceParserRuleCall_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class AttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.Attribute");
@@ -621,6 +626,72 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//AppTypes
 		public RuleCall getTypeAppTypesEnumRuleCall_3_0() { return cTypeAppTypesEnumRuleCall_3_0; }
+	}
+	public class ReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.Reference");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRefKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cRoleKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Keyword cBoundKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cLowBoundAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cLowBoundINTTerminalRuleCall_5_0 = (RuleCall)cLowBoundAssignment_5.eContents().get(0);
+		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cUpBoundAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cUpBoundINTTerminalRuleCall_7_0 = (RuleCall)cUpBoundAssignment_7.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//Reference:
+		//	'ref' '{'
+		//	'role' name=ID
+		//	'bound[' lowBound=INT ',' upBound=INT ']'
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ref' '{' 'role' name=ID 'bound[' lowBound=INT ',' upBound=INT ']' '}'
+		public Group getGroup() { return cGroup; }
+		
+		//'ref'
+		public Keyword getRefKeyword_0() { return cRefKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'role'
+		public Keyword getRoleKeyword_2() { return cRoleKeyword_2; }
+		
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+		
+		//'bound['
+		public Keyword getBoundKeyword_4() { return cBoundKeyword_4; }
+		
+		//lowBound=INT
+		public Assignment getLowBoundAssignment_5() { return cLowBoundAssignment_5; }
+		
+		//INT
+		public RuleCall getLowBoundINTTerminalRuleCall_5_0() { return cLowBoundINTTerminalRuleCall_5_0; }
+		
+		//','
+		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
+		
+		//upBound=INT
+		public Assignment getUpBoundAssignment_7() { return cUpBoundAssignment_7; }
+		
+		//INT
+		public RuleCall getUpBoundINTTerminalRuleCall_7_0() { return cUpBoundINTTerminalRuleCall_7_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_8() { return cRightSquareBracketKeyword_8; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class URLElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.wappm.Wappm.URL");
@@ -713,6 +784,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	private final ContentLayerElements pContentLayer;
 	private final WebClassElements pWebClass;
 	private final AttributeElements pAttribute;
+	private final ReferenceElements pReference;
 	private final AppTypesElements eAppTypes;
 	private final URLElements pURL;
 	
@@ -736,6 +808,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 		this.pContentLayer = new ContentLayerElements();
 		this.pWebClass = new WebClassElements();
 		this.pAttribute = new AttributeElements();
+		this.pReference = new ReferenceElements();
 		this.eAppTypes = new AppTypesElements();
 		this.pURL = new URLElements();
 	}
@@ -841,7 +914,8 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	//IndexPage:
 	//	'index' name=ID 'uses' displayedClass=[WebClass]
 	//	'{'
-	//	'path' path=URL ('links' '{' links+=Link ("," links+=Link)* '}')?
+	//	'path' path=URL
+	//	'size' size=INT ('links' '{' links+=Link ("," links+=Link)* '}')?
 	//	'}';
 	public IndexPageElements getIndexPageAccess() {
 		return pIndexPage;
@@ -878,7 +952,7 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	//WebClass:
 	//	'class' name=ID '{'
 	//	attributes+=Attribute+
-	//	'uniqueIdentifier' uniqueIdentifier=[Attribute]
+	//	references+=Reference*
 	//	'}';
 	public WebClassElements getWebClassAccess() {
 		return pWebClass;
@@ -896,6 +970,19 @@ public class WappmGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAttributeRule() {
 		return getAttributeAccess().getRule();
+	}
+	
+	//Reference:
+	//	'ref' '{'
+	//	'role' name=ID
+	//	'bound[' lowBound=INT ',' upBound=INT ']'
+	//	'}';
+	public ReferenceElements getReferenceAccess() {
+		return pReference;
+	}
+	
+	public ParserRule getReferenceRule() {
+		return getReferenceAccess().getRule();
 	}
 	
 	//enum AppTypes:

@@ -19,6 +19,7 @@ import org.xtext.example.wappm.wappm.DetailPage
 import org.xtext.example.wappm.wappm.DynamicPage
 import org.xtext.example.wappm.wappm.AppTypes
 import org.xtext.example.wappm.wappm.Link
+import org.xtext.example.wappm.wappm.Reference
 
 /**
  * Generates code from your model files on save.
@@ -70,8 +71,22 @@ class WappmGenerator extends AbstractGenerator {
 	def compile(IndexPage ip) '''
 		class «ip.name» {
 			private String path = "«ip.path»";
+			private int size = «ip.size»;
 			
 			«ip.displayedClass.name» usedClass = new «ip.displayedClass.name»();
+			
+			public String getPath() {
+				return path;
+			}
+			
+			public boolean getSize() {
+				return «ip.size»;
+			}
+			        
+			public void set«ip.name.toFirstUpper»(int «ip.name») {
+				this.«ip.name» = «ip.name»;
+			}
+			
 			
 			«FOR l : ip.links»
 				«l.compile»
@@ -85,6 +100,10 @@ class WappmGenerator extends AbstractGenerator {
 			
 			«dp.displayedClass.name» usedClass = new «dp.displayedClass.name»();
 			
+			public String getPath() {
+				return path;
+			}
+			
 			«FOR l : dp.links»
 				«l.compile»
 			«ENDFOR» 
@@ -94,6 +113,10 @@ class WappmGenerator extends AbstractGenerator {
 	def compile(StaticPage sp) '''
 		class «sp.name» {
 			private String path = "«sp.path»";
+			
+			public String getPath() {
+				return path;
+			}
 			
 			«FOR l : sp.links»
 				«l.compile»
@@ -116,6 +139,10 @@ class WappmGenerator extends AbstractGenerator {
 		class «cl.name» {
 			«FOR a : cl.attributes»
 				«a.compile»
+			«ENDFOR»
+			
+			«FOR r : cl.references»
+				«r.compile»
 			«ENDFOR»
 		}
 	'''
@@ -172,5 +199,17 @@ class WappmGenerator extends AbstractGenerator {
 			this.«a.name» = «a.name»;
 		}
 	«ENDIF»
+	'''
+	
+	def compile(Reference ref) '''
+		private String «ref.name»;
+		
+		public boolean get«ref.name.toFirstUpper»() {
+			return «ref.name»;
+		}
+		        
+		public void set«ref.name.toFirstUpper»(String «ref.name») {
+			this.«ref.name» = «ref.name»;
+		}
 	'''
 }

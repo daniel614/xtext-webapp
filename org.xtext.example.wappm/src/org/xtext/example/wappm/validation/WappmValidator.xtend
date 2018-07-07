@@ -7,6 +7,8 @@ import org.eclipse.xtext.validation.Check
 import org.xtext.example.wappm.wappm.WebModel
 import org.xtext.example.wappm.wappm.WappmPackage
 import org.xtext.example.wappm.wappm.WebClass
+import org.xtext.example.wappm.wappm.ContentLayer
+import org.xtext.example.wappm.wappm.Reference
 
 /**	
  * This class contains custom validation rules. 
@@ -39,6 +41,25 @@ class WappmValidator extends AbstractWappmValidator {
         	warning("Name should start with a capital letter", 
             	WappmPackage.Literals.WEB_CLASS__NAME)
     	}
+	}
+	
+	@Check
+	def void checkClassNameUnique(WebClass webclass) {
+		var allClasses = (webclass.eContainer as ContentLayer).classes
+		for (c : allClasses) {
+			for (c2 : allClasses) {
+				if (c.name == c2.name && !c.equals(c2)) {
+					error("Class name must be unique", WappmPackage.Literals.WEB_CLASS__NAME)
+				}
+			}
+		}
+	}
+	
+	@Check
+	def void checkUpBoundIsGreaterEqualsThanLowBound(Reference ref) {
+		if(ref.lowBound > ref.upBound) {
+			error("lowbound must be smaller or equal to upBound", WappmPackage.Literals.REFERENCE__UP_BOUND)
+		}
 	}
 	
 }

@@ -32,7 +32,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Wappm.ecore#//DynamicPage/displayedClass"/>
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//DetailPage"/>
-    <genClasses ecoreClass="Wappm.ecore#//IndexPage"/>
+    <genClasses ecoreClass="Wappm.ecore#//IndexPage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//IndexPage/size"/>
+    </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Wappm.ecore#//Link/page"/>
     </genClasses>
@@ -43,11 +45,16 @@
     <genClasses ecoreClass="Wappm.ecore#//WebClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//WebClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//WebClass/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Wappm.ecore#//WebClass/uniqueIdentifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Wappm.ecore#//WebClass/references"/>
     </genClasses>
     <genClasses ecoreClass="Wappm.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Attribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Wappm.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Reference/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Reference/lowBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Wappm.ecore#//Reference/upBound"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

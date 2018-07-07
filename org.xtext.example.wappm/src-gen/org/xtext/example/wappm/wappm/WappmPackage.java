@@ -390,13 +390,22 @@ public interface WappmPackage extends EPackage
   int INDEX_PAGE__DISPLAYED_CLASS = DYNAMIC_PAGE__DISPLAYED_CLASS;
 
   /**
+   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_PAGE__SIZE = DYNAMIC_PAGE_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Index Page</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDEX_PAGE_FEATURE_COUNT = DYNAMIC_PAGE_FEATURE_COUNT + 0;
+  int INDEX_PAGE_FEATURE_COUNT = DYNAMIC_PAGE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.LinkImpl <em>Link</em>}' class.
@@ -492,13 +501,13 @@ public interface WappmPackage extends EPackage
   int WEB_CLASS__ATTRIBUTES = 1;
 
   /**
-   * The feature id for the '<em><b>Unique Identifier</b></em>' reference.
+   * The feature id for the '<em><b>References</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WEB_CLASS__UNIQUE_IDENTIFIER = 2;
+  int WEB_CLASS__REFERENCES = 2;
 
   /**
    * The number of structural features of the '<em>Web Class</em>' class.
@@ -547,6 +556,52 @@ public interface WappmPackage extends EPackage
   int ATTRIBUTE_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.wappm.wappm.impl.ReferenceImpl <em>Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.wappm.wappm.impl.ReferenceImpl
+   * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getReference()
+   * @generated
+   */
+  int REFERENCE = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Low Bound</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCE__LOW_BOUND = 1;
+
+  /**
+   * The feature id for the '<em><b>Up Bound</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCE__UP_BOUND = 2;
+
+  /**
+   * The number of structural features of the '<em>Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCE_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -554,7 +609,7 @@ public interface WappmPackage extends EPackage
    * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getAppTypes()
    * @generated
    */
-  int APP_TYPES = 11;
+  int APP_TYPES = 12;
 
 
   /**
@@ -727,6 +782,17 @@ public interface WappmPackage extends EPackage
   EClass getIndexPage();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.IndexPage#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Size</em>'.
+   * @see org.xtext.example.wappm.wappm.IndexPage#getSize()
+   * @see #getIndexPage()
+   * @generated
+   */
+  EAttribute getIndexPage_Size();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.Link <em>Link</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -812,15 +878,15 @@ public interface WappmPackage extends EPackage
   EReference getWebClass_Attributes();
 
   /**
-   * Returns the meta object for the reference '{@link org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier <em>Unique Identifier</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.wappm.wappm.WebClass#getReferences <em>References</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Unique Identifier</em>'.
-   * @see org.xtext.example.wappm.wappm.WebClass#getUniqueIdentifier()
+   * @return the meta object for the containment reference list '<em>References</em>'.
+   * @see org.xtext.example.wappm.wappm.WebClass#getReferences()
    * @see #getWebClass()
    * @generated
    */
-  EReference getWebClass_UniqueIdentifier();
+  EReference getWebClass_References();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.Attribute <em>Attribute</em>}'.
@@ -853,6 +919,49 @@ public interface WappmPackage extends EPackage
    * @generated
    */
   EAttribute getAttribute_Type();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.wappm.wappm.Reference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Reference</em>'.
+   * @see org.xtext.example.wappm.wappm.Reference
+   * @generated
+   */
+  EClass getReference();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.Reference#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.wappm.wappm.Reference#getName()
+   * @see #getReference()
+   * @generated
+   */
+  EAttribute getReference_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.Reference#getLowBound <em>Low Bound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Low Bound</em>'.
+   * @see org.xtext.example.wappm.wappm.Reference#getLowBound()
+   * @see #getReference()
+   * @generated
+   */
+  EAttribute getReference_LowBound();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.wappm.wappm.Reference#getUpBound <em>Up Bound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Up Bound</em>'.
+   * @see org.xtext.example.wappm.wappm.Reference#getUpBound()
+   * @see #getReference()
+   * @generated
+   */
+  EAttribute getReference_UpBound();
 
   /**
    * Returns the meta object for enum '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}'.
@@ -1030,6 +1139,14 @@ public interface WappmPackage extends EPackage
     EClass INDEX_PAGE = eINSTANCE.getIndexPage();
 
     /**
+     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEX_PAGE__SIZE = eINSTANCE.getIndexPage_Size();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.LinkImpl <em>Link</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1100,12 +1217,12 @@ public interface WappmPackage extends EPackage
     EReference WEB_CLASS__ATTRIBUTES = eINSTANCE.getWebClass_Attributes();
 
     /**
-     * The meta object literal for the '<em><b>Unique Identifier</b></em>' reference feature.
+     * The meta object literal for the '<em><b>References</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference WEB_CLASS__UNIQUE_IDENTIFIER = eINSTANCE.getWebClass_UniqueIdentifier();
+    EReference WEB_CLASS__REFERENCES = eINSTANCE.getWebClass_References();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -1132,6 +1249,40 @@ public interface WappmPackage extends EPackage
      * @generated
      */
     EAttribute ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.wappm.wappm.impl.ReferenceImpl <em>Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.wappm.wappm.impl.ReferenceImpl
+     * @see org.xtext.example.wappm.wappm.impl.WappmPackageImpl#getReference()
+     * @generated
+     */
+    EClass REFERENCE = eINSTANCE.getReference();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REFERENCE__NAME = eINSTANCE.getReference_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Low Bound</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REFERENCE__LOW_BOUND = eINSTANCE.getReference_LowBound();
+
+    /**
+     * The meta object literal for the '<em><b>Up Bound</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REFERENCE__UP_BOUND = eINSTANCE.getReference_UpBound();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.wappm.wappm.AppTypes <em>App Types</em>}' enum.

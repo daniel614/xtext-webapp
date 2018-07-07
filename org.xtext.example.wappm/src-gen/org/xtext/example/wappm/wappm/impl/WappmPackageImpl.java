@@ -20,6 +20,7 @@ import org.xtext.example.wappm.wappm.HypertextLayer;
 import org.xtext.example.wappm.wappm.IndexPage;
 import org.xtext.example.wappm.wappm.Link;
 import org.xtext.example.wappm.wappm.Page;
+import org.xtext.example.wappm.wappm.Reference;
 import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.WappmFactory;
 import org.xtext.example.wappm.wappm.WappmPackage;
@@ -110,6 +111,13 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * @generated
    */
   private EClass attributeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass referenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -346,6 +354,16 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getIndexPage_Size()
+  {
+    return (EAttribute)indexPageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLink()
   {
     return linkEClass;
@@ -426,7 +444,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getWebClass_UniqueIdentifier()
+  public EReference getWebClass_References()
   {
     return (EReference)webClassEClass.getEStructuralFeatures().get(2);
   }
@@ -459,6 +477,46 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
   public EAttribute getAttribute_Type()
   {
     return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReference()
+  {
+    return referenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getReference_Name()
+  {
+    return (EAttribute)referenceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getReference_LowBound()
+  {
+    return (EAttribute)referenceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getReference_UpBound()
+  {
+    return (EAttribute)referenceEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -523,6 +581,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     detailPageEClass = createEClass(DETAIL_PAGE);
 
     indexPageEClass = createEClass(INDEX_PAGE);
+    createEAttribute(indexPageEClass, INDEX_PAGE__SIZE);
 
     linkEClass = createEClass(LINK);
     createEReference(linkEClass, LINK__PAGE);
@@ -534,11 +593,16 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     webClassEClass = createEClass(WEB_CLASS);
     createEAttribute(webClassEClass, WEB_CLASS__NAME);
     createEReference(webClassEClass, WEB_CLASS__ATTRIBUTES);
-    createEReference(webClassEClass, WEB_CLASS__UNIQUE_IDENTIFIER);
+    createEReference(webClassEClass, WEB_CLASS__REFERENCES);
 
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__NAME);
     createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
+
+    referenceEClass = createEClass(REFERENCE);
+    createEAttribute(referenceEClass, REFERENCE__NAME);
+    createEAttribute(referenceEClass, REFERENCE__LOW_BOUND);
+    createEAttribute(referenceEClass, REFERENCE__UP_BOUND);
 
     // Create enums
     appTypesEEnum = createEEnum(APP_TYPES);
@@ -601,6 +665,7 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     initEClass(detailPageEClass, DetailPage.class, "DetailPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(indexPageEClass, IndexPage.class, "IndexPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndexPage_Size(), ecorePackage.getEInt(), "size", null, 0, 1, IndexPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLink_Page(), this.getPage(), null, "page", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -612,11 +677,16 @@ public class WappmPackageImpl extends EPackageImpl implements WappmPackage
     initEClass(webClassEClass, WebClass.class, "WebClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getWebClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWebClass_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getWebClass_UniqueIdentifier(), this.getAttribute(), null, "uniqueIdentifier", null, 0, 1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWebClass_References(), this.getReference(), null, "references", null, 0, -1, WebClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAttribute_Type(), this.getAppTypes(), "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getReference_Name(), ecorePackage.getEString(), "name", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getReference_LowBound(), ecorePackage.getEInt(), "lowBound", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getReference_UpBound(), ecorePackage.getEInt(), "upBound", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(appTypesEEnum, AppTypes.class, "AppTypes");

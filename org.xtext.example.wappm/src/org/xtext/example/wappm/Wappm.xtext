@@ -43,6 +43,7 @@ IndexPage :
 	'index' name=ID 'uses' displayedClass=[WebClass|ID]
 	'{'
 		'path' path=URL
+		'size' size=INT
 		('links' '{' links+=Link ( "," links+=Link)* '}' )?
 	'}'
 ;
@@ -61,11 +62,18 @@ ContentLayer :
 WebClass :
   'class' name=ID '{' 
   	attributes+=Attribute+
-  	'uniqueIdentifier' uniqueIdentifier=[Attribute|ID]
+  	references+=Reference*
   '}' ;
   
 Attribute : 
 	'attr' name=ID ':' type=AppTypes
+;
+
+Reference : 
+	'ref' '{'
+		'role' name=ID 
+		'bound['lowBound=INT',' upBound=INT']'
+	'}'
 ;
   
 enum AppTypes :

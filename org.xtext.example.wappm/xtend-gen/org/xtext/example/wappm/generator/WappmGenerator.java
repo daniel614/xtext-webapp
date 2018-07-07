@@ -23,6 +23,7 @@ import org.xtext.example.wappm.wappm.HypertextLayer;
 import org.xtext.example.wappm.wappm.IndexPage;
 import org.xtext.example.wappm.wappm.Link;
 import org.xtext.example.wappm.wappm.Page;
+import org.xtext.example.wappm.wappm.Reference;
 import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
@@ -130,6 +131,12 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.append("\";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
+    _builder.append("private int size = ");
+    int _size = ip.getSize();
+    _builder.append(_size, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
     String _name_1 = ip.getDisplayedClass().getName();
@@ -139,6 +146,56 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.append(_name_2, "\t");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public String getPath() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return path;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public boolean getSize() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return ");
+    int _size_1 = ip.getSize();
+    _builder.append(_size_1, "\t\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t        ");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public void set");
+    String _firstUpper = StringExtensions.toFirstUpper(ip.getName());
+    _builder.append(_firstUpper, "\t");
+    _builder.append("(int ");
+    String _name_3 = ip.getName();
+    _builder.append(_name_3, "\t");
+    _builder.append(") {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("this.");
+    String _name_4 = ip.getName();
+    _builder.append(_name_4, "\t\t");
+    _builder.append(" = ");
+    String _name_5 = ip.getName();
+    _builder.append(_name_5, "\t\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
     {
@@ -180,6 +237,17 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public String getPath() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return path;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
     {
       EList<Link> _links = dp.getLinks();
       for(final Link l : _links) {
@@ -207,6 +275,17 @@ public class WappmGenerator extends AbstractGenerator {
     _builder.append(_path, "\t");
     _builder.append("\";");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public String getPath() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return path;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
     {
@@ -261,6 +340,17 @@ public class WappmGenerator extends AbstractGenerator {
         _builder.append("\t");
         CharSequence _compile = this.compile(a);
         _builder.append(_compile, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<Reference> _references = cl.getReferences();
+      for(final Reference r : _references) {
+        _builder.append("\t");
+        CharSequence _compile_1 = this.compile(r);
+        _builder.append(_compile_1, "\t");
         _builder.newLineIfNotEmpty();
       }
     }
@@ -497,6 +587,51 @@ public class WappmGenerator extends AbstractGenerator {
         }
       }
     }
+    return _builder;
+  }
+  
+  public CharSequence compile(final Reference ref) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("private String ");
+    String _name = ref.getName();
+    _builder.append(_name);
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("public boolean get");
+    String _firstUpper = StringExtensions.toFirstUpper(ref.getName());
+    _builder.append(_firstUpper);
+    _builder.append("() {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("return ");
+    String _name_1 = ref.getName();
+    _builder.append(_name_1, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("        ");
+    _builder.newLine();
+    _builder.append("public void set");
+    String _firstUpper_1 = StringExtensions.toFirstUpper(ref.getName());
+    _builder.append(_firstUpper_1);
+    _builder.append("(String ");
+    String _name_2 = ref.getName();
+    _builder.append(_name_2);
+    _builder.append(") {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("this.");
+    String _name_3 = ref.getName();
+    _builder.append(_name_3, "\t");
+    _builder.append(" = ");
+    String _name_4 = ref.getName();
+    _builder.append(_name_4, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
     return _builder;
   }
 }

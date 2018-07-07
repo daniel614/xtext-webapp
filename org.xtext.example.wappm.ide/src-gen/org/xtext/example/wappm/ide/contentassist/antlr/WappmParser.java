@@ -43,12 +43,13 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDetailPageAccess().getGroup_7(), "rule__DetailPage__Group_7__0");
 			builder.put(grammarAccess.getDetailPageAccess().getGroup_7_3(), "rule__DetailPage__Group_7_3__0");
 			builder.put(grammarAccess.getIndexPageAccess().getGroup(), "rule__IndexPage__Group__0");
-			builder.put(grammarAccess.getIndexPageAccess().getGroup_7(), "rule__IndexPage__Group_7__0");
-			builder.put(grammarAccess.getIndexPageAccess().getGroup_7_3(), "rule__IndexPage__Group_7_3__0");
+			builder.put(grammarAccess.getIndexPageAccess().getGroup_9(), "rule__IndexPage__Group_9__0");
+			builder.put(grammarAccess.getIndexPageAccess().getGroup_9_3(), "rule__IndexPage__Group_9_3__0");
 			builder.put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 			builder.put(grammarAccess.getContentLayerAccess().getGroup(), "rule__ContentLayer__Group__0");
 			builder.put(grammarAccess.getWebClassAccess().getGroup(), "rule__WebClass__Group__0");
 			builder.put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
+			builder.put(grammarAccess.getReferenceAccess().getGroup(), "rule__Reference__Group__0");
 			builder.put(grammarAccess.getURLAccess().getGroup(), "rule__URL__Group__0");
 			builder.put(grammarAccess.getURLAccess().getGroup_1(), "rule__URL__Group_1__0");
 			builder.put(grammarAccess.getWebModelAccess().getNameAssignment_1(), "rule__WebModel__NameAssignment_1");
@@ -68,16 +69,20 @@ public class WappmParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getIndexPageAccess().getNameAssignment_1(), "rule__IndexPage__NameAssignment_1");
 			builder.put(grammarAccess.getIndexPageAccess().getDisplayedClassAssignment_3(), "rule__IndexPage__DisplayedClassAssignment_3");
 			builder.put(grammarAccess.getIndexPageAccess().getPathAssignment_6(), "rule__IndexPage__PathAssignment_6");
-			builder.put(grammarAccess.getIndexPageAccess().getLinksAssignment_7_2(), "rule__IndexPage__LinksAssignment_7_2");
-			builder.put(grammarAccess.getIndexPageAccess().getLinksAssignment_7_3_1(), "rule__IndexPage__LinksAssignment_7_3_1");
+			builder.put(grammarAccess.getIndexPageAccess().getSizeAssignment_8(), "rule__IndexPage__SizeAssignment_8");
+			builder.put(grammarAccess.getIndexPageAccess().getLinksAssignment_9_2(), "rule__IndexPage__LinksAssignment_9_2");
+			builder.put(grammarAccess.getIndexPageAccess().getLinksAssignment_9_3_1(), "rule__IndexPage__LinksAssignment_9_3_1");
 			builder.put(grammarAccess.getLinkAccess().getPageAssignment_3(), "rule__Link__PageAssignment_3");
 			builder.put(grammarAccess.getContentLayerAccess().getContentNameAssignment_1(), "rule__ContentLayer__ContentNameAssignment_1");
 			builder.put(grammarAccess.getContentLayerAccess().getClassesAssignment_3(), "rule__ContentLayer__ClassesAssignment_3");
 			builder.put(grammarAccess.getWebClassAccess().getNameAssignment_1(), "rule__WebClass__NameAssignment_1");
 			builder.put(grammarAccess.getWebClassAccess().getAttributesAssignment_3(), "rule__WebClass__AttributesAssignment_3");
-			builder.put(grammarAccess.getWebClassAccess().getUniqueIdentifierAssignment_5(), "rule__WebClass__UniqueIdentifierAssignment_5");
+			builder.put(grammarAccess.getWebClassAccess().getReferencesAssignment_4(), "rule__WebClass__ReferencesAssignment_4");
 			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 			builder.put(grammarAccess.getAttributeAccess().getTypeAssignment_3(), "rule__Attribute__TypeAssignment_3");
+			builder.put(grammarAccess.getReferenceAccess().getNameAssignment_3(), "rule__Reference__NameAssignment_3");
+			builder.put(grammarAccess.getReferenceAccess().getLowBoundAssignment_5(), "rule__Reference__LowBoundAssignment_5");
+			builder.put(grammarAccess.getReferenceAccess().getUpBoundAssignment_7(), "rule__Reference__UpBoundAssignment_7");
 		}
 	}
 	

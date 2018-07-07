@@ -21,6 +21,7 @@ import org.xtext.example.wappm.wappm.DetailPage;
 import org.xtext.example.wappm.wappm.HypertextLayer;
 import org.xtext.example.wappm.wappm.IndexPage;
 import org.xtext.example.wappm.wappm.Link;
+import org.xtext.example.wappm.wappm.Reference;
 import org.xtext.example.wappm.wappm.StaticPage;
 import org.xtext.example.wappm.wappm.WappmPackage;
 import org.xtext.example.wappm.wappm.WebClass;
@@ -57,6 +58,9 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case WappmPackage.LINK:
 				sequence_Link(context, (Link) semanticObject); 
+				return; 
+			case WappmPackage.REFERENCE:
+				sequence_Reference(context, (Reference) semanticObject); 
 				return; 
 			case WappmPackage.STATIC_PAGE:
 				sequence_StaticPage(context, (StaticPage) semanticObject); 
@@ -138,7 +142,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     IndexPage returns IndexPage
 	 *
 	 * Constraint:
-	 *     (name=ID displayedClass=[WebClass|ID] path=URL (links+=Link links+=Link*)?)
+	 *     (name=ID displayedClass=[WebClass|ID] path=URL size=INT (links+=Link links+=Link*)?)
 	 */
 	protected void sequence_IndexPage(ISerializationContext context, IndexPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -165,6 +169,30 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     Reference returns Reference
+	 *
+	 * Constraint:
+	 *     (name=ID lowBound=INT upBound=INT)
+	 */
+	protected void sequence_Reference(ISerializationContext context, Reference semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, WappmPackage.Literals.REFERENCE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WappmPackage.Literals.REFERENCE__NAME));
+			if (transientValues.isValueTransient(semanticObject, WappmPackage.Literals.REFERENCE__LOW_BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WappmPackage.Literals.REFERENCE__LOW_BOUND));
+			if (transientValues.isValueTransient(semanticObject, WappmPackage.Literals.REFERENCE__UP_BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WappmPackage.Literals.REFERENCE__UP_BOUND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getReferenceAccess().getNameIDTerminalRuleCall_3_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getReferenceAccess().getLowBoundINTTerminalRuleCall_5_0(), semanticObject.getLowBound());
+		feeder.accept(grammarAccess.getReferenceAccess().getUpBoundINTTerminalRuleCall_7_0(), semanticObject.getUpBound());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Page returns StaticPage
 	 *     StaticPage returns StaticPage
 	 *
@@ -181,7 +209,7 @@ public class WappmSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     WebClass returns WebClass
 	 *
 	 * Constraint:
-	 *     (name=ID attributes+=Attribute+ uniqueIdentifier=[Attribute|ID])
+	 *     (name=ID attributes+=Attribute+ references+=Reference*)
 	 */
 	protected void sequence_WebClass(ISerializationContext context, WebClass semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

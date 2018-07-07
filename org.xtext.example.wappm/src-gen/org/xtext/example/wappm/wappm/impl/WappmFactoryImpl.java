@@ -77,6 +77,7 @@ public class WappmFactoryImpl extends EFactoryImpl implements WappmFactory
       case WappmPackage.CONTENT_LAYER: return createContentLayer();
       case WappmPackage.WEB_CLASS: return createWebClass();
       case WappmPackage.ATTRIBUTE: return createAttribute();
+      case WappmPackage.REFERENCE: return createReference();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -235,6 +236,17 @@ public class WappmFactoryImpl extends EFactoryImpl implements WappmFactory
   {
     AttributeImpl attribute = new AttributeImpl();
     return attribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Reference createReference()
+  {
+    ReferenceImpl reference = new ReferenceImpl();
+    return reference;
   }
 
   /**

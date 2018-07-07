@@ -3,8 +3,13 @@
  */
 package org.xtext.example.wappm.validation;
 
+import com.google.common.base.Objects;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
 import org.xtext.example.wappm.validation.AbstractWappmValidator;
+import org.xtext.example.wappm.wappm.ContentLayer;
+import org.xtext.example.wappm.wappm.Reference;
 import org.xtext.example.wappm.wappm.WappmPackage;
 import org.xtext.example.wappm.wappm.WebClass;
 import org.xtext.example.wappm.wappm.WebModel;
@@ -33,6 +38,29 @@ public class WappmValidator extends AbstractWappmValidator {
     if (_not) {
       this.warning("Name should start with a capital letter", 
         WappmPackage.Literals.WEB_CLASS__NAME);
+    }
+  }
+  
+  @Check
+  public void checkClassNameUnique(final WebClass webclass) {
+    EObject _eContainer = webclass.eContainer();
+    EList<WebClass> allClasses = ((ContentLayer) _eContainer).getClasses();
+    for (final WebClass c : allClasses) {
+      for (final WebClass c2 : allClasses) {
+        if ((Objects.equal(c.getName(), c2.getName()) && (!c.equals(c2)))) {
+          this.error("Class name must be unique", WappmPackage.Literals.WEB_CLASS__NAME);
+        }
+      }
+    }
+  }
+  
+  @Check
+  public void checkUpBoundIsGreaterEqualsThanLowBound(final Reference ref) {
+    int _lowBound = ref.getLowBound();
+    int _upBound = ref.getUpBound();
+    boolean _greaterThan = (_lowBound > _upBound);
+    if (_greaterThan) {
+      this.error("lowbound must be smaller or equal to upBound", WappmPackage.Literals.REFERENCE__UP_BOUND);
     }
   }
 }

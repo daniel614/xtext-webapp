@@ -3,43 +3,32 @@
  */
 package org.xtext.example.wappm.wappm.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.example.wappm.wappm.Attribute;
 import org.xtext.example.wappm.wappm.Reference;
 import org.xtext.example.wappm.wappm.WappmPackage;
-import org.xtext.example.wappm.wappm.WebClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Web Class</b></em>'.
+ * An implementation of the model object '<em><b>Reference</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link org.xtext.example.wappm.wappm.impl.WebClassImpl#getReferences <em>References</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.ReferenceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.ReferenceImpl#getLowBound <em>Low Bound</em>}</li>
+ *   <li>{@link org.xtext.example.wappm.wappm.impl.ReferenceImpl#getUpBound <em>Up Bound</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WebClassImpl extends MinimalEObjectImpl.Container implements WebClass
+public class ReferenceImpl extends MinimalEObjectImpl.Container implements Reference
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -62,31 +51,51 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+   * The default value of the '{@link #getLowBound() <em>Low Bound</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributes()
+   * @see #getLowBound()
    * @generated
    * @ordered
    */
-  protected EList<Attribute> attributes;
+  protected static final int LOW_BOUND_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getReferences() <em>References</em>}' containment reference list.
+   * The cached value of the '{@link #getLowBound() <em>Low Bound</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReferences()
+   * @see #getLowBound()
    * @generated
    * @ordered
    */
-  protected EList<Reference> references;
+  protected int lowBound = LOW_BOUND_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getUpBound() <em>Up Bound</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUpBound()
+   * @generated
+   * @ordered
+   */
+  protected static final int UP_BOUND_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getUpBound() <em>Up Bound</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUpBound()
+   * @generated
+   * @ordered
+   */
+  protected int upBound = UP_BOUND_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected WebClassImpl()
+  protected ReferenceImpl()
   {
     super();
   }
@@ -99,7 +108,7 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
   @Override
   protected EClass eStaticClass()
   {
-    return WappmPackage.Literals.WEB_CLASS;
+    return WappmPackage.Literals.REFERENCE;
   }
 
   /**
@@ -122,7 +131,7 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.WEB_CLASS__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.REFERENCE__NAME, oldName, name));
   }
 
   /**
@@ -130,13 +139,9 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Attribute> getAttributes()
+  public int getLowBound()
   {
-    if (attributes == null)
-    {
-      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, WappmPackage.WEB_CLASS__ATTRIBUTES);
-    }
-    return attributes;
+    return lowBound;
   }
 
   /**
@@ -144,13 +149,12 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Reference> getReferences()
+  public void setLowBound(int newLowBound)
   {
-    if (references == null)
-    {
-      references = new EObjectContainmentEList<Reference>(Reference.class, this, WappmPackage.WEB_CLASS__REFERENCES);
-    }
-    return references;
+    int oldLowBound = lowBound;
+    lowBound = newLowBound;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.REFERENCE__LOW_BOUND, oldLowBound, lowBound));
   }
 
   /**
@@ -158,17 +162,22 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public int getUpBound()
   {
-    switch (featureID)
-    {
-      case WappmPackage.WEB_CLASS__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-      case WappmPackage.WEB_CLASS__REFERENCES:
-        return ((InternalEList<?>)getReferences()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return upBound;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUpBound(int newUpBound)
+  {
+    int oldUpBound = upBound;
+    upBound = newUpBound;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WappmPackage.REFERENCE__UP_BOUND, oldUpBound, upBound));
   }
 
   /**
@@ -181,12 +190,12 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
   {
     switch (featureID)
     {
-      case WappmPackage.WEB_CLASS__NAME:
+      case WappmPackage.REFERENCE__NAME:
         return getName();
-      case WappmPackage.WEB_CLASS__ATTRIBUTES:
-        return getAttributes();
-      case WappmPackage.WEB_CLASS__REFERENCES:
-        return getReferences();
+      case WappmPackage.REFERENCE__LOW_BOUND:
+        return getLowBound();
+      case WappmPackage.REFERENCE__UP_BOUND:
+        return getUpBound();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -196,22 +205,19 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case WappmPackage.WEB_CLASS__NAME:
+      case WappmPackage.REFERENCE__NAME:
         setName((String)newValue);
         return;
-      case WappmPackage.WEB_CLASS__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends Attribute>)newValue);
+      case WappmPackage.REFERENCE__LOW_BOUND:
+        setLowBound((Integer)newValue);
         return;
-      case WappmPackage.WEB_CLASS__REFERENCES:
-        getReferences().clear();
-        getReferences().addAll((Collection<? extends Reference>)newValue);
+      case WappmPackage.REFERENCE__UP_BOUND:
+        setUpBound((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -227,14 +233,14 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
   {
     switch (featureID)
     {
-      case WappmPackage.WEB_CLASS__NAME:
+      case WappmPackage.REFERENCE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case WappmPackage.WEB_CLASS__ATTRIBUTES:
-        getAttributes().clear();
+      case WappmPackage.REFERENCE__LOW_BOUND:
+        setLowBound(LOW_BOUND_EDEFAULT);
         return;
-      case WappmPackage.WEB_CLASS__REFERENCES:
-        getReferences().clear();
+      case WappmPackage.REFERENCE__UP_BOUND:
+        setUpBound(UP_BOUND_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -250,12 +256,12 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
   {
     switch (featureID)
     {
-      case WappmPackage.WEB_CLASS__NAME:
+      case WappmPackage.REFERENCE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case WappmPackage.WEB_CLASS__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
-      case WappmPackage.WEB_CLASS__REFERENCES:
-        return references != null && !references.isEmpty();
+      case WappmPackage.REFERENCE__LOW_BOUND:
+        return lowBound != LOW_BOUND_EDEFAULT;
+      case WappmPackage.REFERENCE__UP_BOUND:
+        return upBound != UP_BOUND_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -273,8 +279,12 @@ public class WebClassImpl extends MinimalEObjectImpl.Container implements WebCla
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", lowBound: ");
+    result.append(lowBound);
+    result.append(", upBound: ");
+    result.append(upBound);
     result.append(')');
     return result.toString();
   }
 
-} //WebClassImpl
+} //ReferenceImpl

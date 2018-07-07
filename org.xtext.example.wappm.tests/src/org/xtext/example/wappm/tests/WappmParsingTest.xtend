@@ -29,7 +29,7 @@ class WappmParsingTest {
 			webapp TestApp {
 				hypertext TestHyper {
 					detail TestDetail uses SomeClass {
-						path /test1/
+						path /test/
 						links {
 							link {
 								page TestIndex
@@ -37,18 +37,28 @@ class WappmParsingTest {
 						}
 					}
 					index TestIndex uses TestClass {
-						path /test2/
+						path /test/
+						size 3
+					}
+					
+					static TestStatic {
+						path /home/
 					}
 				}
 				
 				content TestContent {
+					class Blub {
+						attr name: Integer
+						ref {
+							 role test
+							 bound[3,5]
+						}
+					}
 					class TestClass {
 						attr SampleAttr : String
-						uniqueIdentifier SampleAttr
 					}
 					class SomeClass {
 						attr SampleAttr2 : String
-						uniqueIdentifier SampleAttr2
 					}
 				}
 			}
@@ -57,13 +67,13 @@ class WappmParsingTest {
 		validator.assertNoErrors(model)
 	}
 	
-		@Test
+	@Test
 	def void shouldOutputWarningAboutCapitalLetterWebModel() {
 		val model = parser.parse('''
 			webapp testApp {
 				hypertext TestHyper {
 					detail TestDetail uses SomeClass {
-						path /test1/
+						path /test/
 						links {
 							link {
 								page TestIndex
@@ -71,23 +81,165 @@ class WappmParsingTest {
 						}
 					}
 					index TestIndex uses TestClass {
-						path /test2/
+						path /test/
+						size 3
+					}
+					
+					static TestStatic {
+						path /home/
 					}
 				}
 				
 				content TestContent {
+					class Blub {
+						attr name: Integer
+						ref {
+							 role test
+							 bound[3,5]
+						}
+					}
 					class TestClass {
 						attr SampleAttr : String
-						uniqueIdentifier SampleAttr
 					}
 					class SomeClass {
 						attr SampleAttr2 : String
-						uniqueIdentifier SampleAttr2
 					}
 				}
 			}
 		''')
 		
 		validator.assertWarning(model, WappmPackage.Literals.WEB_MODEL, null, "Name should start with a capital letter")
+	}
+	
+	@Test
+	def void shouldOutputWarningAboutCapitalLetterClass() {
+		val model = parser.parse('''
+			webapp TestApp {
+				hypertext TestHyper {
+					detail TestDetail uses SomeClass {
+						path /test/
+						links {
+							link {
+								page TestIndex
+							}
+						}
+					}
+					index TestIndex uses TestClass {
+						path /test/
+						size 3
+					}
+					
+					static TestStatic {
+						path /home/
+					}
+				}
+				
+				content TestContent {
+					class blub {
+						attr name: Integer
+						ref {
+							 role test
+							 bound[3,5]
+						}
+					}
+					class TestClass {
+						attr SampleAttr : String
+					}
+					class SomeClass {
+						attr SampleAttr2 : String
+					}
+				}
+			}
+		''')
+		
+		validator.assertWarning(model, WappmPackage.Literals.WEB_CLASS, null, "Name should start with a capital letter")
+	}
+	
+	@Test
+	def void shouldOutputWarningAboutUniqueClass() {
+		val model = parser.parse('''
+			webapp TestApp {
+				hypertext TestHyper {
+					detail TestDetail uses SomeClass {
+						path /test/
+						links {
+							link {
+								page TestIndex
+							}
+						}
+					}
+					index TestIndex uses TestClass {
+						path /test/
+						size 3
+					}
+					
+					static TestStatic {
+						path /home/
+					}
+				}
+				
+				content TestContent {
+					class Blub {
+						attr name: Integer
+						ref {
+							 role test
+							 bound[3,5]
+						}
+					}
+					class Blub {
+						attr SampleAttr : String
+					}
+					class SomeClass {
+						attr SampleAttr2 : String
+					}
+				}
+			}
+		''')
+		
+		validator.assertError(model, WappmPackage.Literals.WEB_CLASS, null, "Class name must be unique")
+	}
+	
+	@Test
+	def void shouldOutputWarningAboutUpBoundLowBound() {
+		val model = parser.parse('''
+			webapp TestApp {
+				hypertext TestHyper {
+					detail TestDetail uses SomeClass {
+						path /test/
+						links {
+							link {
+								page TestIndex
+							}
+						}
+					}
+					index TestIndex uses TestClass {
+						path /test/
+						size 3
+					}
+					
+					static TestStatic {
+						path /home/
+					}
+				}
+				
+				content TestContent {
+					class Blub {
+						attr name: Integer
+						ref {
+							 role test
+							 bound[4,3]
+						}
+					}
+					class Blub {
+						attr SampleAttr : String
+					}
+					class SomeClass {
+						attr SampleAttr2 : String
+					}
+				}
+			}
+		''')
+		
+		validator.assertError(model, WappmPackage.Literals.REFERENCE, null, "lowbound must be smaller or equal to upBound")
 	}
 }
